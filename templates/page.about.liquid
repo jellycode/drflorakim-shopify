@@ -1,0 +1,347 @@
+{% comment %}
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header text-center">
+        <h1>{{ page.title }}</h1>
+      </div>
+
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endcomment %}
+
+<div class="about-kim">
+  <div class="page-title page-width">
+    <h1>About<br> Dr.Kim</h1>
+  </div>
+<!--  section for banner image  -->
+  {% section 'hero-about' %}
+<!--  end banner section  -->
+<!--  section for video  -->
+  {% comment %}
+  {% section 'video-about' %}
+  {% endcomment %}
+<!--  end video section  -->
+<!--  section for testimonial  -->
+  {% section 'quotes-custom' %}
+<!--  end testimonial section  --> 
+  
+<div class="skincare-routine">
+  <h1 class="section-title">Dr. Kim’s Skincare ROUTINE</h1>
+  <div class="skincare-inner">
+    <ul id="tabs">
+      <li class="selected"><a id="tab1">morning</a></li>
+      <li><a id="tab2">evening</a></li>
+<!--       <li><a id="tab3">misc</a></li> -->
+    </ul>
+    <div class="tabs-content">
+      <div class="tabs-content-wrapper active" id="tab1C">
+        {% section 'about-morning-tab' %}
+      </div>
+      <div class="tabs-content-wrapper" id="tab2C">
+        {% section 'about-evening-tab' %}
+      </div>
+      {% comment %} 
+	  <div class="tabs-content-wrapper" id="tab3C">
+        {% section 'about-misc-tab' %}
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+ 
+ {% comment %} 
+  <div class="skincare-routine">
+    <h1 class="section-title">Dr. Kim’s Skincare ROUTINE</h1>
+    <ul id="tabs">
+      <li  class="selected"><a id="tab1">morning</a></li>
+      <li><a id="tab2">evening</a></li>
+<!--       <li><a id="tab3">misc</a></li> -->
+    </ul>
+    <div class="tabs-content">
+      <div class="tabs-content-wrapper active" id="tab1C">
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/xVI5ehKgJOI?autoplay=0&controls=1&loop=1" frameborder="0" width="100%" height="579" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="content-wrapper">
+          <h1>morning</h1>
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>cleanser</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">Environ Hydra-Intense Cleansing Lotion</h3>
+              <p class="product-desc">This luxurious conditioning cream cleanser is formulated to help remove make-up and surface impurities while maintaining the effects of the natural pH balance levels of the skin.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">environ</p>
+                  <p class="product-sub-desc">environ</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>TREATMENT</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">Environ Radiance Mela-Smart System</h3>
+              <p class="product-desc">Environ’s revolutionary 3-step system helps inhibit the appearance of hyperpigmentation.</p>
+              <h3 class="product-title product-inner-title">1. Multi-Bioactive Mela-Prep Lotion</h3>
+              <p class="product-desc">This contains a combination of highly specialized ingredients that assist in improving the appearance of uneven skin tone and visible sun damage, leaving the skin looking brighter and more evenly toned.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Multi-Bioactive</p>
+                  <p class="product-sub-desc">Mela-Prep Lotion</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">2. Vita Botanical Mela-Fade Serum A+B</h3>
+              <p class="product-desc">This serum system contains a concentrated blend of vitamins and botanicals to assist in targeting and improving the appearance of discolorations.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Vita</p>
+                  <p class="product-sub-desc">Multi-Bioactive Mela-Prep Lotion</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">3. Intense C-Boost Mela Even Cream</h3>
+              <p class="product-desc">A special oil soluble vitamin C infused cream which helps to reclaim the appearance of a younger, more healthy-looking luminous skin that has an even radiance glow.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Intense</p>
+                  <p class="product-sub-desc">C-Boost Mela Even Cream</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>EYE CREAM</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">ISDIN K-OX Eyes</h3>
+              <p class="product-desc">Helps combat bags, puffiness, crow’s feet and dark circles.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">ISDIN</p>
+                  <p class="product-sub-desc">K-OX Eyes</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>SUNSCREEN</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">Mix ISDIN Eryfotona Actinica and Eryfotona Ageless</h3>
+<!--               <p class="product-desc">Environ’s revolutionary 3-step system helps inhibit the appearance of hyperpigmentation.</p> -->
+              <h3 class="product-title product-inner-title">1. Eryfotona Actinica</h3>
+              <p class="product-desc">Daily mineral sun protection is fast-absorbing, ultralight emulsion providing all-mineral broad spectrum sun protection.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">ERYFOTONA</p>
+                  <p class="product-sub-desc">Actinica</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">2. Eryfotona Ageless</h3>
+              <p class="product-desc">An ultralight tinted mineral sunscreen which helps fight the signs of photaging. Its innovative formula uses 100% mineral SPF 50 sunscreen, a special blend of peptides, antioxidants and DNA Repairsomes to repair existing sun damage and reduce the appearance of fine lines and wrinkles.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">ERYFOTONA</p>
+                  <p class="product-sub-desc">Ageless</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+<!--    2nd tab content    -->
+      <div class="tabs-content-wrapper" id="tab2C">
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/xVI5ehKgJOI?autoplay=0&controls=1&loop=1" frameborder="0" width="100%" height="579" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="content-wrapper">
+          <h1>evening</h1>
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>cleanser</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">Mix Environ Dual Action Pre-Cleansing Oil & Hydrating Clay Mask</h3>
+              <p class="product-desc">Apply the Hydrating Clay Masque over the Dual Action Pre-Cleansing Oil. Micro-exfoliate by massaging with your fingertips in a circular motion before rinsing off.</p>
+              <h3 class="product-title">1. Environ Dual Action Pre-Cleansing Oil</h3>
+              <p class="product-desc">This pre-cleansing oil helps to lift and remove excess surface oil, sunscreen, make-up and environmental pollutants.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">environ</p>
+                  <p class="product-sub-desc">environ</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">2. Environ Hydrating Clay Mask</h3>
+              <p class="product-desc">This luxurious, creamy clay masque assists in absorbing excess surface oils and gently polishes the skin’s surface, leaving it feeling smoother and looking more radiant and refined.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Vita</p>
+                  <p class="product-sub-desc">Multi-Bioactive Mela-Prep Lotion</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="content-item-wrapper">
+            <h2 class="item-title"><span>TREATMENT</span></h2>
+            <div class="product-info">
+              <h3 class="product-title">Microneedling & Age Prevention</h3>
+<!--               <p class="product-desc">Environ’s revolutionary 3-step system helps inhibit the appearance of hyperpigmentation.</p> -->
+              <h3 class="product-title product-inner-title">1. Environ Gold Roll-CIT</h3>
+              <p class="product-desc">This elegant instrument is 14c gold plated and has 260 ultra-fine needles of the highest grade surgical 316 stainless steel. The needles are 0.2mm in length. Microneedling tools work with to dramatically enhance product absorption, allowing every last drop of your skincare products to be soaked up, enhancing their effectiveness for maximum benefits. Watch my tutorial below:</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Multi-Bioactive</p>
+                  <p class="product-sub-desc">Mela-Prep Lotion</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">2. Prescription Topical Altreno 0.05% Gel</h3>
+              <p class="product-desc">Prescription tretinoin creams can be used to treat fine lines and wrinkles, dark spots, or rough skin caused by sun damage.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Vita</p>
+                  <p class="product-sub-desc">Multi-Bioactive Mela-Prep Lotion</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">3. Biopelle Tensage Intensive Serum 50</h3>
+              <p class="product-desc">Powered by antioxidants, humectants, peptides and brightening agents, this serum has the ability to reduce the appearance of lines and wrinkles while providing superior, long-lasting hydration.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Intense</p>
+                  <p class="product-sub-desc">C-Boost Mela Even Cream</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              <h3 class="product-title product-inner-title">4. Environ Vita-Peptide Intensive Serum 4 Plus</h3>
+              <p class="product-desc">Together with Antioxidant Defense Cream Plus this advance combination contains the highest concentration of vitamin A, in the form of Retinyl Palmitate as well as vitamin C, antioxidants, peptides targeting visible signs of aging, taking the look of youthfulness to the next level.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Intense</p>
+                  <p class="product-sub-desc">C-Boost Mela Even Cream</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+              
+              <h3 class="product-title product-inner-title">5. Antioxidant Defense Cream Plus</h3>
+              <p class="product-desc">Together with Intensive Serum 4 Plus, this advance combination contains the highest concentration of vitamin A, in the form of Retinyl Palmitate as well as vitamin C, antioxidants, peptides targeting visible signs of aging, taking the look of youthfulness to the next level.</p>
+              <div class="image-button">
+                <div class="image-part">
+                  <img src="{{ 'prod_image.png' | asset_url }}">
+                </div>
+                <div class="button-part">
+                  <p class="product-sub-title">Intense</p>
+                  <p class="product-sub-desc">C-Boost Mela Even Cream</p>
+                  <p class="product-sub-price">$34.05</p>
+                  <a class="product-sub-button" href="#">view more</a>
+                  <a class="product-sub-button add-to-Cart" href="#">add to cart</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>         
+          
+        </div>
+      </div>
+      
+<!--   3rd tab content     -->
+<!--       <div class="tabs-content-wrapper" id="tab3C">
+        3Some content
+      </div> -->
+    </div>
+  </div>
+  {% endcomment %}
+</div>
+
+

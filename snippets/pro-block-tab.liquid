@@ -1,0 +1,353 @@
+<!-- Product 1 --->
+{% if block.settings.pro_title1 != blank %}
+<h3 class="product-title product-inner-title">{{ block.settings.pro_title1 | escape }}</h3>
+{% endif %}
+{% if block.settings.pro_dec1 != blank %}
+<p class="product-desc">{{ block.settings.pro_dec1 | escape }}</p>
+{% endif %}
+
+{% if block.settings.product1 != blank %}
+  {% assign product = all_products[block.settings.product1] %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      <p class="product-sub-title">{{ product.title | escape }}</p>
+      <p class="product-sub-desc">{{ product.type }}</p>
+      {% comment %}<p class="product-sub-desc">{{ product.description }}</p>{% endcomment %}
+      <p class="product-sub-price">{{ product.price | money_with_currency }}</p>
+      {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <a class="product-sub-button" href="{{ product.url }}">View More</a>
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+      <button type="submit" name="add"
+              {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+              aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+              class="product-sub-button add-to-Cart"
+              {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+              data-add-to-cart>
+        <span data-add-to-cart-text>
+          {% unless current_variant.available %}
+          {{ 'products.product.sold_out' | t }}
+          {% else %}
+          {{ 'products.product.add_to_cart' | t }}
+          {% endunless %}
+        </span>
+        <span class="hide" data-loader>
+          {% include 'icon-spinner' %}
+        </span>
+      </button>
+      {% endform %}
+    </div>
+  </div>
+{% else %}
+  {% if block.settings.pro_img1 != blank %}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ block.settings.pro_img1 | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      {% if block.settings.pro_main_title1 != blank %}
+      <p class="product-sub-title">{{ block.settings.pro_main_title1 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_sub_title1 != blank %}
+      <p class="product-sub-desc">{{ block.settings.pro_sub_title1 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_price1 != blank %}
+      <p class="product-sub-price">{{ block.settings.pro_price1 | escape }}</p>
+      {% endif %}
+      {% if block.settings.more_link1 != blank %}
+      <a class="product-sub-button" href="{{ block.settings.more_link1 }}">{{ block.settings.more_link_txt1 | escape }}</a>
+      {% endif %}
+      {% if block.settings.add_cart_link1 != blank %}
+      <a class="product-sub-button add-to-Cart" href="{{ block.settings.add_cart_link1 }}">{{ block.settings.add_cart_txt1 | escape }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
+
+<!-- Product 2 --->
+{% if block.settings.pro_title2 != blank %}
+<h3 class="product-title product-inner-title">{{ block.settings.pro_title2 | escape }}</h3>
+{% endif %}
+{% if block.settings.pro_dec2 != blank %}
+<p class="product-desc">{{ block.settings.pro_dec2 | escape }}</p>
+{% endif %}
+
+{% if block.settings.product2 != blank %}
+  {% assign product = all_products[block.settings.product2] %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      
+      <p class="product-sub-title">{{ product.title | escape }}</p>
+      <p class="product-sub-desc">{{ product.type }}</p>
+      {% comment %}<p class="product-sub-desc">{{ product.description }}</p>{% endcomment %}
+      <p class="product-sub-price">{{ product.price | money_with_currency }}</p>
+      {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <a class="product-sub-button" href="{{ product.url }}">View More</a>
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+      <button type="submit" name="add"
+              {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+              aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+              class="product-sub-button add-to-Cart"
+              {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+              data-add-to-cart>
+        <span data-add-to-cart-text>
+          {% unless current_variant.available %}
+          {{ 'products.product.sold_out' | t }}
+          {% else %}
+          {{ 'products.product.add_to_cart' | t }}
+          {% endunless %}
+        </span>
+        <span class="hide" data-loader>
+          {% include 'icon-spinner' %}
+        </span>
+      </button>
+      {% endform %}
+    </div>
+  </div>
+{% else %}
+  {% if block.settings.pro_img2 != blank %}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ block.settings.pro_img2 | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      {% if block.settings.pro_main_title2 != blank %}
+      <p class="product-sub-title">{{ block.settings.pro_main_title2 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_sub_title2 != blank %}
+      <p class="product-sub-desc">{{ block.settings.pro_sub_title2 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_price2 != blank %}
+      <p class="product-sub-price">{{ block.settings.pro_price2 | escape }}</p>
+      {% endif %}
+      {% if block.settings.more_link2 != blank %}
+      <a class="product-sub-button" href="{{ block.settings.more_link2 }}">{{ block.settings.more_link_txt2 | escape }}</a>
+      {% endif %}
+      {% if block.settings.add_cart_link2 != blank %}
+      <a class="product-sub-button add-to-Cart" href="{{ block.settings.add_cart_link2 }}">{{ block.settings.add_cart_txt2 | escape }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
+
+<!-- Product 3 --->
+{% if block.settings.pro_title3 != blank %}
+<h3 class="product-title product-inner-title">{{ block.settings.pro_title3 | escape }}</h3>
+{% endif %}
+{% if block.settings.pro_dec3 != blank %}
+<p class="product-desc">{{ block.settings.pro_dec3 | escape }}</p>
+{% endif %}
+
+{% if block.settings.product3 != blank %}
+  {% assign product = all_products[block.settings.product3] %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      <p class="product-sub-title">{{ product.title | escape }}</p>
+      <p class="product-sub-desc">{{ product.type }}</p>
+      {% comment %}<p class="product-sub-desc">{{ product.description }}</p>{% endcomment %}
+      <p class="product-sub-price">{{ product.price | money_with_currency }}</p>
+      {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <a class="product-sub-button" href="{{ product.url }}">View More</a>
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+      <button type="submit" name="add"
+              {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+              aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+              class="product-sub-button add-to-Cart"
+              {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+              data-add-to-cart>
+        <span data-add-to-cart-text>
+          {% unless current_variant.available %}
+          {{ 'products.product.sold_out' | t }}
+          {% else %}
+          {{ 'products.product.add_to_cart' | t }}
+          {% endunless %}
+        </span>
+        <span class="hide" data-loader>
+          {% include 'icon-spinner' %}
+        </span>
+      </button>
+      {% endform %}
+    </div>
+  </div>
+{% else %}
+
+  {% if block.settings.pro_img3 != blank %}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ block.settings.pro_img3 | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      {% if block.settings.pro_main_title3 != blank %}
+      <p class="product-sub-title">{{ block.settings.pro_main_title3 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_sub_title3 != blank %}
+      <p class="product-sub-desc">{{ block.settings.pro_sub_title3 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_price3 != blank %}
+      <p class="product-sub-price">{{ block.settings.pro_price3 | escape }}</p>
+      {% endif %}
+      {% if block.settings.more_link3 != blank %}
+      <a class="product-sub-button" href="{{ block.settings.more_link3 }}">{{ block.settings.more_link_txt3 | escape }}</a>
+      {% endif %}
+      {% if block.settings.add_cart_link3 != blank %}
+      <a class="product-sub-button add-to-Cart" href="{{ block.settings.add_cart_link3 }}">{{ block.settings.add_cart_txt3 | escape }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
+
+<!-- Product 4 --->
+{% if block.settings.pro_title4 != blank %}
+<h3 class="product-title product-inner-title">{{ block.settings.pro_title4 | escape }}</h3>
+{% endif %}
+{% if block.settings.pro_dec4 != blank %}
+<p class="product-desc">{{ block.settings.pro_dec4 | escape }}</p>
+{% endif %}
+
+{% if block.settings.product4 != blank %}
+  {% assign product = all_products[block.settings.product4] %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      <p class="product-sub-title">{{ product.title | escape }}</p>
+      <p class="product-sub-desc">{{ product.type }}</p>
+      {% comment %}<p class="product-sub-desc">{{ product.description }}</p>{% endcomment %}
+      <p class="product-sub-price">{{ product.price | money_with_currency }}</p>
+      {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <a class="product-sub-button" href="{{ product.url }}">View More</a>
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+      <button type="submit" name="add"
+              {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+              aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+              class="product-sub-button add-to-Cart"
+              {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+              data-add-to-cart>
+        <span data-add-to-cart-text>
+          {% unless current_variant.available %}
+          {{ 'products.product.sold_out' | t }}
+          {% else %}
+          {{ 'products.product.add_to_cart' | t }}
+          {% endunless %}
+        </span>
+        <span class="hide" data-loader>
+          {% include 'icon-spinner' %}
+        </span>
+      </button>
+      {% endform %}
+    </div>
+  </div>
+{% else %}
+
+  {% if block.settings.pro_img4 != blank %}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ block.settings.pro_img4 | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      {% if block.settings.pro_main_title4 != blank %}
+      <p class="product-sub-title">{{ block.settings.pro_main_title4 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_sub_title4 != blank %}
+      <p class="product-sub-desc">{{ block.settings.pro_sub_title4 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_price4 != blank %}
+      <p class="product-sub-price">{{ block.settings.pro_price4 | escape }}</p>
+      {% endif %}
+      {% if block.settings.more_link4 != blank %}
+      <a class="product-sub-button" href="{{ block.settings.more_link4 }}">{{ block.settings.more_link_txt4 | escape }}</a>
+      {% endif %}
+      {% if block.settings.add_cart_link4 != blank %}
+      <a class="product-sub-button add-to-Cart" href="{{ block.settings.add_cart_link4 }}">{{ block.settings.add_cart_txt4 | escape }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
+
+<!-- Product 5 --->
+{% if block.settings.pro_title5 != blank %}
+<h3 class="product-title product-inner-title">{{ block.settings.pro_title5 | escape }}</h3>
+{% endif %}
+{% if block.settings.pro_dec5 != blank %}
+<p class="product-desc">{{ block.settings.pro_dec5 | escape }}</p>
+{% endif %}
+
+{% if block.settings.product4 != blank %}
+  {% assign product = all_products[block.settings.product4] %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      <p class="product-sub-title">{{ product.title | escape }}</p>
+      <p class="product-sub-desc">{{ product.type }}</p>
+      {% comment %}<p class="product-sub-desc">{{ product.description }}</p>{% endcomment %}
+      <p class="product-sub-price">{{ product.price | money_with_currency }}</p>
+      {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <a class="product-sub-button" href="{{ product.url }}">View More</a>
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+      <button type="submit" name="add"
+              {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+              aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+              class="product-sub-button add-to-Cart"
+              {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+              data-add-to-cart>
+        <span data-add-to-cart-text>
+          {% unless current_variant.available %}
+          {{ 'products.product.sold_out' | t }}
+          {% else %}
+          {{ 'products.product.add_to_cart' | t }}
+          {% endunless %}
+        </span>
+        <span class="hide" data-loader>
+          {% include 'icon-spinner' %}
+        </span>
+      </button>
+      {% endform %}
+    </div>
+  </div>
+{% else %}
+
+  {% if block.settings.pro_img5 != blank %}
+  <div class="image-button">
+    <div class="image-part">
+      <img src="{{ block.settings.pro_img5 | img_url: '600x' }}" alt="">
+    </div>
+    <div class="button-part">
+      {% if block.settings.pro_main_title5 != blank %}
+      <p class="product-sub-title">{{ block.settings.pro_main_title5 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_sub_title5 != blank %}
+      <p class="product-sub-desc">{{ block.settings.pro_sub_title5 | escape }}</p>
+      {% endif %}
+      {% if block.settings.pro_price5 != blank %}
+      <p class="product-sub-price">{{ block.settings.pro_price5 | escape }}</p>
+      {% endif %}
+      {% if block.settings.more_link5 != blank %}
+      <a class="product-sub-button" href="{{ block.settings.more_link5 }}">{{ block.settings.more_link_txt5 | escape }}</a>
+      {% endif %}
+      {% if block.settings.add_cart_link5 != blank %}
+      <a class="product-sub-button add-to-Cart" href="{{ block.settings.add_cart_link5 }}">{{ block.settings.add_cart_txt5 | escape }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}

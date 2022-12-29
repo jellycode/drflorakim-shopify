@@ -1,0 +1,138 @@
+{% comment %}
+    Renders a pagination bar
+
+    Accepts:
+    - paginate: {Object} Paginate Liquid object (required)
+
+    Usage:
+    {% include 'pagination', paginate: paginate %}
+{% endcomment %}
+{% comment %}
+<ul class="list--inline pagination page-width">
+  {% unless paginate.previous.is_link %}
+    <li aria-hidden="true" class="prev-button">
+      <button class="btn  btn--narrow" disabled>
+        {% comment %}{% include 'icon-arrow-left' %}{% endcomment %}
+        <span class="blog-arrow blog-arrow-prev">{{ 'general.pagination.previous' | t }}</span>
+      </button>
+    </li>
+    {% else %}
+    <li class="prev-button">
+      <a href="{{ paginate.previous.url }}" class="btn btn--narrow">
+        {% comment %}{% include 'icon-arrow-left' %}{% endcomment %}
+        <span class="blog-arrow blog-arrow-prev">{{ 'general.pagination.previous' | t }}</span>
+      </a>
+    </li>
+  {% endunless %}
+  <li class="pagination__text">
+    <span class="current-page">{{ 'general.pagination.current_page' | t: current: paginate.current_page, total: paginate.pages }}</span><span class="total-page">{{ paginate.pages }}</span>
+  </li>
+  {% unless paginate.next.is_link %}
+    <li aria-hidden="true" class="next-button">
+      <button class="btn btn--narrow" disabled>
+        {% comment %}{% include 'icon-arrow-right' %}{% endcomment %}
+        <span class="blog-arrow blog-arrow-next">{{ 'general.pagination.next' | t }}</span>
+      </button>
+    </li>
+  {% else %}
+    <li class="next-button">
+      <a href="{{ paginate.next.url }}" class="btn btn--narrow">
+        {% comment %}{% include 'icon-arrow-right' %}{% endcomment %}
+        <span class="blog-arrow blog-arrow-next">{{ 'general.pagination.next' | t }}</span>
+      </a>
+    </li>
+  {% endunless %}
+</ul>
+{% endcomment %}
+
+
+{%- if paginate.pages > 1 -%}
+ 
+      <ol class="list--inline pagination page-width">
+        {%- if paginate.previous-%}
+          <li class="prev-button">
+            <a href="{{ paginate.previous.url }}">
+       
+              Previous
+            </a>
+          </li>
+        {%- else -%}
+          <li class="disabled prev-button">
+          
+            Previous
+          </li>
+        {%- endif -%}
+
+        {%- for part in paginate.parts -%}
+          {%- if part.is_link -%}
+            <li>
+              <a href="{{ part.url }}">
+                <span class="visuallyhidden">page</span> {{ part.title }}
+              </a>
+            </li>
+          {%- else -%}
+            {%- if part.title == paginate.current_page -%}
+              <li class="active" aria-current="page">
+                <span class="visuallyhidden">page</span> {{ part.title }}
+              </li>
+            {%- else -%}
+              <li>
+                <span class="visuallyhidden">page</span> {{ part.title }}
+              </li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if paginate.next -%}
+          <li class="next-button">
+            <a href="{{ paginate.next.url }}">
+              Next 
+        
+            </a>
+          </li>
+        {%- else -%}
+          <li class="disabled next-button" >
+            Next
+          
+          </li>
+        {%- endif -%}
+      </ol>
+  
+  {%- endif -%}
+
+
+<style>
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+  
+.pagination li {
+  display: inline; 
+  margin: 0 5px;
+}
+  ol.list--inline.pagination.page-width li.active {
+    color: #000;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+  li.prev-button a, li.next-button a {
+  font-family: 'Gotham-Bold';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    font-size: 13px;
+    color: #000;
+  
+  }
+</style>

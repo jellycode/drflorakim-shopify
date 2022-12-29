@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'Gotham-Bold';
+  	font-display: block;
+	src: url('Gotham-Bold.woff2') format('woff2'),
+		url('Gotham-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'GothamBookRegular';
+  	font-display: block;
+    src: url('gotham-book.eot');
+    src: url('gotham-book.eot') format('embedded-opentype'),
+         url('gotham-book.woff') format('woff'),
+         url('gotham-book.ttf') format('truetype'),
+         url('gotham-book.svg#GothamBookRegular') format('svg');
+}
+
+.btn { 
+  font-family:"Gotham-Bold", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.modal-title {
+    line-height: 1.4;
+}

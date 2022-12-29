@@ -1,0 +1,60 @@
+<section class="Section-insta">
+  <div class="page-width">
+  {%- if section.settings.title != blank -%}
+    <div class="SectionHeader">
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+    </div>
+  {%- endif -%}
+  
+  {% comment %}
+  <div class="elfsight-sapp-b74db26e-cc82-4f57-a209-702cd0a0031f"></div>
+  {% endcomment %}
+  <div id="insta-feed"></div>  
+  {%- if section.settings.subheading != blank -%}
+  <div class="insta_tag">
+  	<h3>{{ section.settings.subheading | escape }}</h3>
+  </div>
+  {%- endif -%}
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Instagram Feed App",
+  "class": "instagram_app",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "@YourStore"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Follow us"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "New",
+      "name": "Instagram Feed App",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

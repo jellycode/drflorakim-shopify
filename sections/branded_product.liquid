@@ -1,0 +1,125 @@
+{%- assign product1 = all_products[section.settings.product1] -%}
+{%- assign product2 = all_products[section.settings.product2] -%}
+{%- assign product3 = all_products[section.settings.product3] -%}
+<div class="branded_products">  
+  <div class="product_container">
+    <div class="product_item">
+      <div class="featured_image">        
+        <iframe src="{{ section.settings.video_url_1 }}" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="product_content">
+        <h4>{{ section.settings.title_1_1 }}</h4>
+        <h3>{{ section.settings.title_1_2 }}</h3>
+        <p>{{ section.settings.title_1_3 }}</p>
+      </div>
+    </div>
+    <div class="product_item">
+      <div class="featured_image">        
+        <iframe src="{{ section.settings.video_url_2 }}" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="product_content">
+        <h4>{{ section.settings.title_2_1 }}</h4>
+        <h3>{{ section.settings.title_2_2 }}</h3>
+        <p>{{ section.settings.title_2_3 }}</p>
+      </div>
+    </div>
+    <div class="product_item">
+      <div class="featured_image">        
+        <iframe src="{{ section.settings.video_url_3 }}" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="product_content">
+        <h4>{{ section.settings.title_3_1 }}</h4>
+        <h3>{{ section.settings.title_3_2 }}</h3>
+        <p>{{ section.settings.title_3_3 }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Branded Products",
+    "settings": [
+		{
+          "type": "header",
+          "content": "First Block"
+        },		
+        {
+          "type": "text",
+          "id": "video_url_1",
+          "label": "Video Url",
+		  "default": "https://www.youtube.com/embed/tgbNymZ7vqY"
+        },
+		{
+          "type": "text",
+          "id": "title_1_1",
+          "label": "Heading 1-1"
+        },
+		{
+          "type": "text",
+          "id": "title_1_2",
+          "label": "Heading 1-2"
+        },
+		{
+          "type": "text",
+          "id": "title_1_3",
+          "label": "Heading 1-3"
+        },
+		{
+          "type": "header",
+          "content": "Second Block"
+        },		
+        {
+          "type": "text",
+          "id": "video_url_2",
+          "label": "Video Url",
+		  "default": "https://www.youtube.com/embed/tgbNymZ7vqY"
+        },
+		{
+          "type": "text",
+          "id": "title_2_1",
+          "label": "Heading 2-1"
+        },
+		{
+          "type": "text",
+          "id": "title_2_2",
+          "label": "Heading 2-2"
+        },
+		{
+          "type": "text",
+          "id": "title_2_3",
+          "label": "Heading 2-3"
+        },
+{
+          "type": "header",
+          "content": "Third Block"
+        },		
+        {
+          "type": "text",
+          "id": "video_url_3",
+          "label": "Video Url",
+		  "default": "https://www.youtube.com/embed/tgbNymZ7vqY"
+        },
+		{
+          "type": "text",
+          "id": "title_3_1",
+          "label": "Heading 3-1"
+        },
+		{
+          "type": "text",
+          "id": "title_3_2",
+          "label": "Heading 3-2"
+        },
+		{
+          "type": "text",
+          "id": "title_3_3",
+          "label": "Heading 3-3"
+        }
+	],
+	"presets": [
+		{
+			"name": "Branded Products"
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,54 @@
+<!-- BEGIN AFTERPAY-PRESENT -->
+
+<script type="application/javascript" src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
+
+<script>
+
+ let amount = 0, priceSelector = "", locale = 'en_US';
+ let afterpayLogoColor = "color"; // ['black', 'white', or 'color']
+ let showUpperLimit = true;
+ let currentObserver = { activated: true, isDecimalPrice: true };
+ let hideAfterpay = false;
+ 
+ {%case template.name%} 
+   
+    {%when "product"%}
+      amount = {{product.selected_or_first_available_variant.price | json}};    
+      priceSelector= ".quantity_price"
+      currentObserver.observerTarget = ".price__pricing-group";
+      currentObserver.targetPriceSelector = "[data-regular-price]";
+
+     let type = {{product.type | json}};
+     if (type === "Gift Card") hideAfterpay = true;
+        
+    {%when "cart"%}     
+      amount = {{cart.total_price | json}};
+        priceSelector = ".cart-subtotal"
+//       priceSelector = ".cart__row:last-of-type .cart__row--table"
+      currentObserver = null;
+      
+      let cartItems = {{cart.items | json }};
+      hideAfterpay = cartItems.some(item => item.gift_card);
+  
+    {%when "product" or "cart"%}
+       const apConfig = {
+          afterpayLogoColor, priceSelector, locale, amount, showUpperLimit,
+         minMaxThreshold:{min: 100, max: 200000}, giftCard: hideAfterpay,
+          mutationObserver: currentObserver
+        };
+        
+         new presentAfterpay(apConfig).init();
+      
+  {%endcase%}
+</script>
+<style>
+  .c-afterpay-info-modal-annotation__p{ margin-top: 3px; }
+  .afterpay-link{font-size: 12px; }
+  .afterpay-paragraph{ font-size: 14px;}
+  .cart-subtotal + .afterpay-paragraph{ margin-top: 10px; margin-bottom: 0px; }
+  .quantity_price ~ .afterpay-paragraph {
+    text-align: center;
+    margin-top: -5px;
+  }
+</style>
+<!-- END AFTERPAY PRESENT -->

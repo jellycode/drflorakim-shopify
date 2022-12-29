@@ -1,0 +1,36 @@
+<div class="page-width top_text">
+  <div class="content">
+    <h1>{{ section.settings.section_title }}</h1>
+    <p>{{ section.settings.section_text }}</p>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Top Text Section",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "ALL ABOUT SKIN"
+    },
+	{
+      "type": "text",
+      "id": "section_text",
+      "label": "Text",
+      "default": "We know skincare isn't one size fits all. Dr. Kim reveals the best skincare tips for face and body based on your skin condition."
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Top Text section",
+      "category": "text"
+    }
+  ]
+}
+{% endschema %}

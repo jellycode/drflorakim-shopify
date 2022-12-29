@@ -1,0 +1,122 @@
+<div class="footer_section">
+  <div class="footer_container">
+    <div class="page-width">
+      <div class="menu1">
+        <ul class="footer_menu">
+          {%- for link in linklists[section.settings.menu1].links -%}
+          <li class="site-footer__linklist-item">
+            <a href="{{ link.url }}"
+               {% if link.current %} aria-current="page"{% endif %}
+               >
+              {{ link.title | escape }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div class="menu2">
+        <ul class="footer_menu">
+          {%- for link in linklists[section.settings.menu2].links -%}
+          <li class="site-footer__linklist-item">
+            <a href="{{ link.url }}"
+               {% if link.current %} aria-current="page"{% endif %}
+               >
+              {{ link.title | escape }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div class="newsletter_part">
+      <p>Stay up-to-date with Dr. Kim's innovative procedures, products, and skincare advice.</p>
+      <div class="site-footer__newsletter
+                  {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
+        {%- assign formId = 'ContactFooter' -%}
+        {% form 'customer', id: formId, novalidate: 'novalidate' %}
+        {%- if form.posted_successfully? -%}
+        <p class="form-message form-message--success" tabindex="-1" data-form-status>
+          {{ 'general.newsletter_form.confirmation' | t }}
+        </p>
+        {%- endif -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+          <input type="email"
+                 name="contact[email]"
+                 id="ContactFooter-email"
+                 class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}"
+                 value=""
+                 placeholder="Enter Email Address"
+                 aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                 aria-required="true"
+                 required
+                 autocorrect="off"
+                 autocapitalize="off"
+                 {% if form.errors %}
+                 aria-invalid="true"
+                 aria-describedby="{{ formId }}-email-error"
+                 data-form-status
+                 {% endif %}>
+          <span class="input-group__btn">
+            <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
+              <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
+            </button>
+          </span>          
+        </div>
+        <p style="display: none;">Lorem ipsum solor site amet consectular met sit.</p>
+        {% if form.errors contains 'email' %}
+        <span id="{{ formId }}-email-error" class="input-error-message">
+          <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+          {% include 'icon-error' %}
+          <span class="site-footer__newsletter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+        </span>
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="social_icons">
+        <a href="{{ section.settings.ig_link }}" class=""><i class="fab fa-instagram"></i></a>
+        <a href="{{ section.settings.fb_link }}" class=""><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="text">
+        <p>©{{ 'now' | date: "%Y" }} Flora Kim Dermatology.</p>
+      </div>
+      <div class="terms_policy">
+        <a href="#">TERMS & CONDITIONS</a>
+        <a href="/pages/privacy-policy">PRIVACY POLICY</a>
+        <a href="https://mesasix.com/">Powered by <span><img loading="lazy" src="{{ 'mesasix_icon.png' | asset_url }}" alt="Mesasix"></span></a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+		{
+          "type": "link_list",
+          "id": "menu1",
+			"label": "Menu1"
+		},
+		{
+          "type": "link_list",
+          "id": "menu2",
+			"label": "Menu2"
+		},
+		{
+			"type": "text",
+			"id": "fb_link",
+			"label": "Facebook Link"
+		},
+		{
+			"type": "text",
+			"id": "ig_link",
+			"label": "Instagram Link"
+		}
+	]
+  }
+{% endschema %}

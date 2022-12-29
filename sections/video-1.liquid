@@ -1,0 +1,29 @@
+<div class="video-wrapper">
+  {% if section.settings.video_url.type == "youtube" %}
+  	<iframe src="//www.youtube.com/embed/{{ section.settings.video_url.id }}?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+  {% endif %}
+  {% if section.settings.video_url.type == "vimeo" %}
+  	<iframe src="//player.vimeo.com/video/{{ section.settings.video_url.id }}?autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Desktop Video Section",
+    "settings": [
+	  {
+        "type": "video_url",
+        "id": "video_url",
+        "label": "YouTube or Vimeo link",
+        "accept": ["youtube", "vimeo"]
+      }
+	],
+	"presets": [
+		{
+			"name": "Desk Video Section",
+			"category": "Video"
+		}
+	]
+  }
+{% endschema %}
+

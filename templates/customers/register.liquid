@@ -1,0 +1,86 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item">
+
+      <div class="form-vertical">
+
+        <h1 class="text-center register-account">REGISTER</h1>
+
+        {%- assign formId = 'RegisterForm' -%}
+        {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
+          {% include 'form-status', form: form, form_id: formId %}
+
+        <label for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
+        <input
+               type="email"
+               name="customer[email]"
+               id="{{ formId }}-email"
+               placeholder="lorem@email.com"
+               class="{% if form.errors contains 'email' %} input--error{% endif %}"
+               {% if form.email %} value="{{ form.email }}"{% endif %}
+               autocorrect="off"
+               autocapitalize="off"
+               autocomplete="email"
+               aria-required="true"
+               {%- if form.errors contains 'email' -%}
+               class="input--error"
+               aria-invalid="true"
+               aria-describedby="{{ formId }}-email-error"
+               {%- endif -%}
+               >
+        
+          <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
+          <input type="text" name="customer[first_name]" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} placeholder="First Name" autocomplete="given-name">
+
+          <label for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
+          <input type="text" name="customer[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} placeholder="Last Name" autocomplete="family-name">
+          
+          {%- if form.errors contains 'email' -%}
+            <span id="{{ formId }}-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+          {%- endif -%}
+
+          <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
+          <input
+            type="password"
+            name="customer[password]"
+            id="{{ formId }}-password"
+            placeholder="Password"
+            class="{% if form.errors contains 'password' %} input--error{% endif %}"
+            aria-required="true"
+            {%- if form.errors contains 'password' -%}
+              class="input--error"
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-password-error"
+            {%- endif -%}
+          >
+          <label for="confirm-password">confirm password</label>
+          <input type="password" placeholder="Confirm Password" value="" name="customer[password_confirmation]" id="confirm-password" class="password text" size="30" />
+          {%- if form.errors contains 'password' -%}
+            <span id="{{ formId}}-password-error" class="input-error-message">
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
+            </span>
+          {%- endif -%}
+          <p class="have-account">Already have an account? <a href="/account/login">Login</a></p>
+
+          <p class="text-center submit-btn">
+            <input type="submit" value="REGISTER NOW" class="btn">
+          </p>
+
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>  
+    $('#RegisterForm').submit(function(e) {     
+      if ( $('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
+        e.preventDefault();
+        alert('Passwords do not match.');
+      }
+    });  
+</script>
