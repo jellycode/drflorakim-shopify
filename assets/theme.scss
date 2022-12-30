@@ -498,76 +498,16 @@ $color-slideshow-dots: #fff;
 
 /*================ Typography ================*/
 
-@font-face {
- font-family: Helvetica;
- font-weight: 700;
- font-style: normal;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=d33654d93e7c6de571ca320f4fbbfd2a3b72fb572a3ac68ce42ff74b93a9354a')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.b95359461a6788d5549e702cb2123bc40c227e49.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=32298d709e0a01fab3931f22b145a097d29b07be91c51057f04e94e73e76387a')
-   format('woff');
-}
-
-@font-face {
- font-family: Helvetica;
- font-weight: 400;
- font-style: normal;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=6f2039d162010b4672cf774e2a80cc3942484e6113288ff90705780d69a66c3e')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=7d5d67a4913f4387537fd1079ceacf7701b391b9918ee53edf66c372d5a07902')
-   format('woff');
-}
-
-@font-face {
- font-family: Helvetica;
- font-weight: 700;
- font-style: normal;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=d33654d93e7c6de571ca320f4fbbfd2a3b72fb572a3ac68ce42ff74b93a9354a')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.b95359461a6788d5549e702cb2123bc40c227e49.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=32298d709e0a01fab3931f22b145a097d29b07be91c51057f04e94e73e76387a')
-   format('woff');
-}
-
-@font-face {
- font-family: Helvetica;
- font-weight: 700;
- font-style: normal;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=d33654d93e7c6de571ca320f4fbbfd2a3b72fb572a3ac68ce42ff74b93a9354a')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_n7.b95359461a6788d5549e702cb2123bc40c227e49.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=32298d709e0a01fab3931f22b145a097d29b07be91c51057f04e94e73e76387a')
-   format('woff');
-}
-
-@font-face {
- font-family: Helvetica;
- font-weight: 400;
- font-style: oblique;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_o4.f9832a0fc1ee8fc5a359636e410d6941e1e4ca03.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=e0ae8496c794e8cb0ab1a848736ee6efa1c45d80d6728e7a980218a04181be65')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_o4.0063286aec443697ebae04eeb9c78b820f9f7805.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=e608c71c79124d94db924264c0724b5727f9cb426d76c5ed8af3ab13dd050209')
-   format('woff');
-}
-
-@font-face {
- font-family: Helvetica;
- font-weight: 700;
- font-style: oblique;
- src: url('https://fonts.shopifycdn.com/helvetica/helvetica_o7.215fd4ca1a06214fa01e44328a1992c977700ea2.woff2?h1=ZHJmbG9yYWtpbS5jb20&hmac=0fb70790fc537c120b46db2ec87f03bbc970ecbf9c0dec0ce7edd227f9109cf9')
-   format('woff2'),
-  url('https://fonts.shopifycdn.com/helvetica/helvetica_o7.b0a2026ae2aa64d060f9ce0ee1b3c3c1aa21bf88.woff?h1=ZHJmbG9yYWtpbS5jb20&hmac=97d08dad89fa10415d2a5a6091122100b3565bf1a06f6c44f61eb3cade058d3f')
-   format('woff');
-}
-
 $font-weight-body--bold: 700;
 $font-weight-body--bolder: 700;
 
-$font-stack-header: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande',
- sans-serif;
+$font-stack-header: Montserrat, Helvetica, 'Helvetica Neue', Arial,
+ 'Lucida Grande', sans-serif;
 $font-style-header: normal;
 $font-weight-header: 700;
 
-$font-stack-body: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande',
- sans-serif;
+$font-stack-body: Montserrat, Helvetica, 'Helvetica Neue', Arial,
+ 'Lucida Grande', sans-serif;
 $font-style-body: normal;
 $font-weight-body: 400;
 
@@ -575,8 +515,8 @@ $font-size-header: 26 * 1px;
 
 $font-size-base: 15px; // Henceforth known as 1em
 
-$font-stack-cart-notification: 'HelveticaNeue', 'Helvetica Neue', Helvetica,
- Arial, sans-serif;
+$font-stack-cart-notification: Montserrat, 'HelveticaNeue', 'Helvetica Neue',
+ Helvetica, Arial, sans-serif;
 
 $font-size-mobile-input: 16px; // min 16px to prevent zooming
 
@@ -729,7 +669,7 @@ a:focus {
 /* Icons */
 @font-face {
  font-family: 'slick';
- font-weight: normal;
+ font-weight: 400;
  font-style: normal;
 
  src: url('./fonts/slick.eot');
@@ -1084,10 +1024,8 @@ $grid-breakpoints: (
  list-style: none;
  margin: 0;
  padding: 0;
- margin-left: -$grid-gutter;
 
  @include media-query($small) {
-  margin-left: -$grid-gutter-mobile;
  }
 }
 
@@ -2136,7 +2074,6 @@ a[href^='tel'] {
  background-color: $color-btn-primary;
  color: $color-btn-primary-text;
  //font-family: $font-stack-header;
- font-family: 'Gotham-Bold';
  font-style: $font-style-header;
  font-weight: $font-weight-header;
  text-transform: uppercase;
@@ -2317,7 +2254,7 @@ td {
 
 tbody th,
 tfoot th {
- font-weight: normal;
+ font-weight: 400;
 }
 
 /*============================================================================
@@ -2347,7 +2284,7 @@ tfoot th {
    text-align: center;
    font-size: 12px;
    padding-right: 10px;
-   font-weight: normal;
+   font-weight: 400;
   }
  }
 
@@ -4847,7 +4784,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
  tbody th,
  tfoot th {
-  font-weight: normal;
+  font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
  }
@@ -5181,7 +5118,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
  position: absolute;
  right: 0.4rem;
  top: 0.2rem;
- font-weight: bold;
+ font-weight: 700;
  background-color: $color-btn-primary;
  color: $color-btn-primary-text;
  border-radius: 50%;

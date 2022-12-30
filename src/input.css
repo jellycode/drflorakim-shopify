@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
- @apply mb-6;
+@layer base {
+ html,
+ body {
+  @apply font-body;
+ }
+ h1 {
+  @apply font-body mb-10 whitespace-nowrap;
+ }
+ h3 {
+  @apply font-body font-bold mb-2;
+ }
+ p {
+  @apply font-body mb-6;
+ }
+}
+
+#shopify-section-rich-text {
+ @apply mt-10 md:mt-14;
+}
+
+h1.article__title {
+ @apply whitespace-normal;
 }

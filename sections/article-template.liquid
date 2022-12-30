@@ -1,9 +1,26 @@
-
 <div class="article-breadcrumb" style="{% if blog.title == 'NON-JOURNAL' %} visibility:hidden {% endif %}">
-  <div class="breadcrumb_text left" itemscope itemtype="http://schema.org/BreadcrumbList">    
-    <span class="parent-title" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{ blog.url }}" title="{{ blog.title | escape }}" itemprop="item"><span itemprop="name">{{ blog.title }}</span></a></span>    
+  <div
+    class="breadcrumb_text left"
+    itemscope
+    itemtype="http://schema.org/BreadcrumbList">
+    <span
+      class="parent-title"
+      itemprop="itemListElement"
+      itemscope
+      itemtype="http://schema.org/ListItem">
+      <a
+        href="{{ blog.url }}"
+        title="{{ blog.title | escape }}"
+        itemprop="item">
+        <span itemprop="name">{{ blog.title }}</span>
+      </a>
+    </span>
     &nbsp;<span class="icon-slash">/</span>
-    <span class="real-title" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">{{ article.title | truncate: 20 }}</span>    
+    <span
+      class="real-title"
+      itemprop="itemListElement"
+      itemscope
+      itemtype="http://schema.org/ListItem">{{ article.title | truncate: 20 }}</span>
   </div>
 </div>
 <div class="section-header text-center">
@@ -20,43 +37,48 @@
 </div>
 <div class="article-featured-image">
   {% if article.image %}
-  {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
-  {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
-  {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-  {% include 'image-style' with image: article.image, small_style: true, width: 345, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
-  <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
-    <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
-      <img id="{{ img_id }}"
-           class="article__grid-image lazyload"
-           src="{{ article.image | img_url: 'master' }}"
-           data-src="{{ img_url }}"
-           data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-           data-aspectratio="{{ article.image.aspect_ratio }}"
-           data-sizes="auto"
-           alt="">
+    {% include 'image-style' with image: article.image, small_style: true, width: 345, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+    <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+      <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
+        <img
+          id="{{ img_id }}"
+          class="article__grid-image lazyload"
+          src="{{ article.image | img_url: 'master' }}"
+          data-src="{{ img_url }}"
+          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+          data-aspectratio="{{ article.image.aspect_ratio }}"
+          data-sizes="auto"
+          alt="">
+      </div>
     </div>
-  </div>
-  <noscript>
-    <div class="article__grid-image-wrapper">
-      {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
-    </div>
-  </noscript>
+    <noscript>
+      <div class="article__grid-image-wrapper">
+        {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+      </div>
+    </noscript>
   {% endif %}
 </div>
 
 <div class="rte article_content">
   {% if section.settings.show_share_buttons %}
-  <div class="social-sharing-wrapper">
-  	{% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
-  </div>
+    <div class="social-sharing-wrapper">
+      {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+    </div>
   {% endif %}
   <div class="audio-wrapper">
     <div style="{% if article.metafields["global"]["LISTENTOARTICLE"] %}visibility: visible{% else %}visibility: hidden{% endif %}">
       <i class="fas fa-play-circle"></i>
       <i class="fas fa-pause-circle" style="display: none;"></i>
-      <span class="desktop-view">LISTEN<br> TO ARTICLE</span><span class="mobile-view">LISTEN TO ARTICLE</span>
-      <audio controls id="audio" style="display: none;">
+      <span class="desktop-view">LISTEN<br> TO ARTICLE</span>
+      <span class="mobile-view">LISTEN TO ARTICLE</span>
+      <audio
+        controls
+        id="audio"
+        style="display: none;">
         <source src="{{ article.metafields["global"]["LISTENTOARTICLE"] | strip_html }}" type="audio/ogg">
         <source src="{{ article.metafields["global"]["LISTENTOARTICLE"] | strip_html  }}" type="audio/mpeg">
       </audio>
@@ -65,25 +87,25 @@
   <div class="content-wrapper">
     {{ article.content | stripe_html }}
   </div>
-  
+
 </div>
 <script>
   var vid = new Audio('{{ article.metafields["global"]["LISTENTOARTICLE"] }}');
 
   function playVid() {
-      vid.play();
+    vid.play();
   }
 
   function pauseVid() {
-      vid.pause();
+    vid.pause();
   }
-  
-  $(".fa-play-circle").click(function(){
+
+  $(".fa-play-circle").click(function() {
     $(".fa-pause-circle").show();
     $(this).hide();
     playVid();
   });
-  $(".fa-pause-circle").click(function(){
+  $(".fa-pause-circle").click(function() {
     $(".fa-play-circle").show();
     $(this).hide();
     pauseVid();
@@ -92,103 +114,101 @@
 
 
 {% schema %}
-{
-  "name": {
-    "da": "Opslag",
-    "de": "Posts",
-    "en": "Posts",
-    "es": "Publicaciones",
-    "fi": "Julkaisut",
-    "fr": "Articles",
-    "hi": "पोस्ट",
-    "it": "Articoli",
-    "ja": "投稿",
-    "ko": "게시물",
-    "nb": "Innlegg",
-    "nl": "Berichten",
-    "pt-BR": "Posts",
-    "pt-PT": "Publicações",
-    "sv": "Inlägg",
-    "th": "โพสต์",
-    "zh-CN": "文章",
-    "zh-TW": "貼文"
-  },
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "blog_show_author",
-      "label": {
-        "da": "Vis forfatter",
-        "de": "Autor anzeigen",
-        "en": "Show author",
-        "es": "Mostrar autor",
-        "fi": "Näytä tekijä",
-        "fr": "Afficher l'auteur",
-        "hi": "लेखक दिखाएं",
-        "it": "Mostra autore",
-        "ja": "執筆者を表示する",
-        "ko": "작성자 표시",
-        "nb": "Vis forfatter",
-        "nl": "Auteur weergeven",
-        "pt-BR": "Exibir autor",
-        "pt-PT": "Mostrar autor",
-        "sv": "Visa författare",
-        "th": "แสดงผู้เขียน",
-        "zh-CN": "显示作者",
-        "zh-TW": "顯示作者"
-      },
-      "default": true
+  {
+    "name": {
+      "da": "Opslag",
+      "de": "Posts",
+      "en": "Posts",
+      "es": "Publicaciones",
+      "fi": "Julkaisut",
+      "fr": "Articles",
+      "hi": "पोस्ट",
+      "it": "Articoli",
+      "ja": "投稿",
+      "ko": "게시물",
+      "nb": "Innlegg",
+      "nl": "Berichten",
+      "pt-BR": "Posts",
+      "pt-PT": "Publicações",
+      "sv": "Inlägg",
+      "th": "โพสต์",
+      "zh-CN": "文章",
+      "zh-TW": "貼文"
     },
-    {
-      "type": "checkbox",
-      "id": "blog_show_date",
-      "label": {
-        "da": "Vis dato",
-        "de": "Datum anzeigen",
-        "en": "Show date",
-        "es": "Mostrar fecha",
-        "fi": "Näytä päivämäärä",
-        "fr": "Afficher la date",
-        "hi": "दिनांक दिखाएं",
-        "it": "Mostra data",
-        "ja": "日付を表示する",
-        "ko": "날짜 표시",
-        "nb": "Vis dato",
-        "nl": "Datum weergeven",
-        "pt-BR": "Exibir data",
-        "pt-PT": "Mostrar data",
-        "sv": "Visa datum",
-        "th": "แสดงวันที่",
-        "zh-CN": "显示日期",
-        "zh-TW": "顯示日期"
-      },
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_share_buttons",
-      "label": {
-        "da": "Vis knapper til deling på sociale medier",
-        "de": "Buttons für Social Media anzeigen",
-        "en": "Show social sharing buttons",
-        "es": "Mostrar botones para compartir en redes sociales",
-        "fi": "Näytä sosiaalisen median jakamispainikkeet",
-        "fr": "Afficher les boutons de partage sur les médias sociaux",
-        "hi": "सोशल शेयरिंग बटन दिखाएं",
-        "it": "Mostra i pulsanti per la condivisione sui social",
-        "ja": "ソーシャルメディアでの共有ボタンを表示する",
-        "ko": "소셜 공유 버튼 표시",
-        "nb": "Vis knapper for deling på sosiale medier",
-        "nl": "Knoppen voor sociaal delen weergeven",
-        "pt-BR": "Exibir botões de compartilhamento em redes sociais",
-        "pt-PT": "Mostrar botões de partilha nas redes sociais",
-        "sv": "Visa knappar för delning i sociala medier",
-        "th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
-        "zh-CN": "显示社交分享按钮",
-        "zh-TW": "顯示社群分享按鈕"
-      },
-      "default": true
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": {
+          "da": "Vis forfatter",
+          "de": "Autor anzeigen",
+          "en": "Show author",
+          "es": "Mostrar autor",
+          "fi": "Näytä tekijä",
+          "fr": "Afficher l'auteur",
+          "hi": "लेखक दिखाएं",
+          "it": "Mostra autore",
+          "ja": "執筆者を表示する",
+          "ko": "작성자 표시",
+          "nb": "Vis forfatter",
+          "nl": "Auteur weergeven",
+          "pt-BR": "Exibir autor",
+          "pt-PT": "Mostrar autor",
+          "sv": "Visa författare",
+          "th": "แสดงผู้เขียน",
+          "zh-CN": "显示作者",
+          "zh-TW": "顯示作者"
+        },
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": {
+          "da": "Vis dato",
+          "de": "Datum anzeigen",
+          "en": "Show date",
+          "es": "Mostrar fecha",
+          "fi": "Näytä päivämäärä",
+          "fr": "Afficher la date",
+          "hi": "दिनांक दिखाएं",
+          "it": "Mostra data",
+          "ja": "日付を表示する",
+          "ko": "날짜 표시",
+          "nb": "Vis dato",
+          "nl": "Datum weergeven",
+          "pt-BR": "Exibir data",
+          "pt-PT": "Mostrar data",
+          "sv": "Visa datum",
+          "th": "แสดงวันที่",
+          "zh-CN": "显示日期",
+          "zh-TW": "顯示日期"
+        },
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": {
+          "da": "Vis knapper til deling på sociale medier",
+          "de": "Buttons für Social Media anzeigen",
+          "en": "Show social sharing buttons",
+          "es": "Mostrar botones para compartir en redes sociales",
+          "fi": "Näytä sosiaalisen median jakamispainikkeet",
+          "fr": "Afficher les boutons de partage sur les médias sociaux",
+          "hi": "सोशल शेयरिंग बटन दिखाएं",
+          "it": "Mostra i pulsanti per la condivisione sui social",
+          "ja": "ソーシャルメディアでの共有ボタンを表示する",
+          "ko": "소셜 공유 버튼 표시",
+          "nb": "Vis knapper for deling på sosiale medier",
+          "nl": "Knoppen voor sociaal delen weergeven",
+          "pt-BR": "Exibir botões de compartilhamento em redes sociais",
+          "pt-PT": "Mostrar botões de partilha nas redes sociais",
+          "sv": "Visa knappar för delning i sociala medier",
+          "th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+          "zh-CN": "显示社交分享按钮",
+          "zh-TW": "顯示社群分享按鈕"
+        },
+        "default": true
+      }
+    ]
+  }
 {% endschema %}

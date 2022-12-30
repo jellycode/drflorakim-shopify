@@ -8,7 +8,10 @@ module.exports = {
   './templates/**/*.{json,liquid}',
  ],
  theme: {
-  fontFamily: {},
+  fontFamily: {
+   title: ['Montserrat', 'Helvetica', 'Tahoma', 'Arial', 'sans-serif'],
+   body: ['Montserrat', 'Helvetica', 'Tahoma', 'Arial', 'sans-serif'],
+  },
   container: {
    padding: {
     DEFAULT: '1rem',
