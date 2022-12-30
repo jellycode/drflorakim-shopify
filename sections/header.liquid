@@ -66,8 +66,8 @@
     {% endif %}
   {% endif %}
 
-  <header class="site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
-    <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
+  <header class="mt-4 md:mt-0 site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
+    <div class="flex grid--no-gutters grid--table site-header__mobile-nav justify-between items-center">
       {% if section.settings.align_logo == 'center' %}
         {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
       {% else %}
@@ -227,8 +227,8 @@
 <script type="application/ld+json">
   {
   "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": {{ shop.name | json }},
+                        "@type": "Organization",
+                        "name": {{ shop.name | json }},
   {% if section.settings.logo %}
     {% assign image_size = section.settings.logo.width | append: 'x' %}
     "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
@@ -252,14 +252,14 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org",
-          "@type": "WebSite",
-          "name": {{ shop.name | json }},
+                                                  "@type": "WebSite",
+                                                  "name": {{ shop.name | json }},
     "potentialAction": {
-            "@type": "SearchAction",
-            "target": {{ potential_action_target | json }},
+                                                    "@type": "SearchAction",
+                                                    "target": {{ potential_action_target | json }},
     "query-input": "required name=search_term_string"
-          },
-          "url": {{ shop.url | append: page.url | json }}
+                                                  },
+                                                  "url": {{ shop.url | append: page.url | json }}
     }
   </script>
 {% endif %}
