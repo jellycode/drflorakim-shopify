@@ -603,6 +603,14 @@ a:focus {
 }
 
 .slick-track {
+ display: flex !important;
+}
+
+.slick-slide {
+ height: inherit !important;
+}
+
+.slick-track {
  position: relative;
  top: 0;
  left: 0;
@@ -1029,7 +1037,7 @@ $grid-breakpoints: (
  }
 }
 
-.grid__item {
+.grid__item1 {
  float: left;
  padding-left: $grid-gutter;
  width: 100%;
@@ -3082,7 +3090,7 @@ hr {
  margin-bottom: -$section-spacing-small;
 }
 
-.grid-view-item {
+.grid-view-item1 {
  margin: 0 auto $section-spacing-small;
  .custom__item & {
   margin-bottom: 0;

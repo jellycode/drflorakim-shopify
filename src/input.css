@@ -11,7 +11,7 @@
   @apply font-body mb-10 whitespace-nowrap;
  }
  h3 {
-  @apply font-body font-bold mb-2;
+  @apply font-body font-bold mb-2 text-2xl;
  }
  p {
   @apply font-body mb-6;
@@ -24,4 +24,10 @@
 
 h1.article__title {
  @apply whitespace-normal;
+}
+
+.product-card__image-with-placeholder-wrapper {
+ .product-card_background {
+  @apply h-[400px];
+ }
 }
