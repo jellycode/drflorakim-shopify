@@ -8,14 +8,44 @@
   @apply font-body;
  }
  h1 {
-  @apply font-body mb-10 whitespace-nowrap;
+  @apply font-body mb-10 text-4xl lg:text-6xl lg:leading-snug tracking-widest uppercase;
+ }
+
+ h2 {
+  @apply font-body text-lg uppercase font-bold;
  }
  h3 {
-  @apply font-body font-bold mb-2 text-2xl;
+  @apply font-body font-bold mb-4 text-lg uppercase tracking-widest;
  }
  p {
-  @apply font-body mb-6;
+  @apply font-body mb-6 leading-relaxed;
  }
+ b,
+ strong {
+  @apply font-semibold;
+ }
+}
+
+@layer components {
+ .btn {
+  @apply bg-sky-600 text-sky-50 font-semibold uppercase inline-flex border-none py-3 px-6 rounded-md hover:shadow-sm hover:bg-sky-100 hover:text-sky-600 transition tracking-widest self-start justify-center items-center;
+  &.btn--tertiary {
+   @apply bg-sky-200 text-sky-700;
+  }
+ }
+
+ .c-button {
+  @apply btn;
+ }
+}
+
+.top_text h1,
+.page-title h1 {
+ @apply lg:whitespace-nowrap px-10 xl:px-0;
+}
+
+h3 + p {
+ @apply mb-10;
 }
 
 #shopify-section-rich-text {
@@ -29,5 +59,105 @@ h1.article__title {
 .product-card__image-with-placeholder-wrapper {
  .product-card_background {
   @apply h-[400px];
+ }
+}
+
+.main-content {
+ h1 {
+  @apply mt-0;
+ }
+}
+
+.blog_item {
+ @apply grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20;
+ .post_image {
+  img {
+   @apply max-h-[500px] w-full object-cover;
+  }
+ }
+ .post_content {
+  @apply flex flex-col justify-between lg:pr-40 space-y-6;
+  .summary {
+   @apply my-0 py-0 md:text-lg;
+  }
+  h3 {
+   @apply font-medium my-0 py-0 normal-case text-2xl;
+  }
+ }
+}
+
+.june_blogs {
+ @apply px-6;
+ .page-width {
+  @apply flex flex-col space-y-20 lg:space-y-32;
+ }
+}
+
+.content {
+ @apply container;
+}
+
+.page-width {
+ @apply my-4 lg:my-20;
+}
+
+main {
+ .shopify-section {
+  @apply mb-20 md:mb-40;
+ }
+ .shopify-section:last-of-type {
+  @apply mb-10;
+ }
+}
+
+.image_with_text,
+.image_with_text1 {
+ @apply py-0 container border-none m-auto;
+ .page-width {
+  @apply px-0 flex flex-col md:flex-row md:space-x-20;
+  .right_content,
+  .left_content {
+   @apply w-full md:w-1/2 pt-10 flex flex-col justify-end;
+   a {
+    @apply btn;
+   }
+  }
+  .left_image,
+  .right_image {
+   @apply w-full md:w-3/4;
+   img {
+    @apply h-full object-cover;
+   }
+  }
+ }
+}
+
+.image_with_text1 {
+ .page-width {
+  @apply flex-col-reverse md:flex-row;
+ }
+}
+
+#shopify-section-quotes-custom {
+ .page-width {
+  @apply mt-0 pt-0;
+ }
+}
+
+.product-sub-button {
+ @apply btn w-full flex text-center justify-center;
+}
+
+button {
+ @apply btn;
+}
+
+.name-field {
+ @apply font-semibold text-neutral-800 uppercase text-sm tracking-wide;
+}
+
+.shopify-policy__body {
+ h1 {
+  @apply text-2xl mt-20;
  }
 }

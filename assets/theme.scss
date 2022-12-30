@@ -1750,7 +1750,6 @@ p {
  margin: 0 0 ($section-spacing-small / 1.8);
 
  @include media-query($small) {
-  font-size: em($font-size-base - 1);
  }
 
  &:last-child {
@@ -1765,7 +1764,6 @@ li {
 
 /*================ Misc styles ================*/
 .fine-print {
- font-size: em(14);
  font-style: italic;
 }
 
@@ -2024,8 +2022,6 @@ ol {
  }
 
  a:not(.btn) {
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
  }
 }
 
@@ -2067,7 +2063,7 @@ a[href^='tel'] {
 }
 
 /*================ Buttons ================*/
-.btn {
+.btn1 {
  @include user-select();
  @include prefix(appearance, none, webkit moz spec);
  display: inline-block;
@@ -2601,7 +2597,7 @@ textarea {
  }
 
  [type='submit'],
- .btn {
+ .btn1 {
   display: inline-block;
   width: auto;
  }
@@ -2694,7 +2690,7 @@ textarea {
 
 .input-group__field,
 .input-group__field input,
-.input-group__btn .btn {
+.input-group__btn .btn1 {
  min-height: $input-group-height-small;
 
  @include media-query($medium-up) {
@@ -2730,7 +2726,7 @@ textarea {
 .input-group__btn {
  flex-grow: 1;
 
- .btn {
+ .btn1 {
   width: 100%;
   border-radius: 0 $border-radius $border-radius 0;
  }
@@ -2885,7 +2881,7 @@ textarea {
  margin: 4px 0;
 }
 
-.page-width {
+.page-width9 {
  padding-left: $gutter-site;
  padding-right: $gutter-site;
 
@@ -3322,7 +3318,7 @@ $slick-dot-size-small: 10px;
 }
 
 /*================ Index sections ================*/
-.index-section {
+.index-section9 {
  padding-top: $section-spacing-small;
  padding-bottom: $section-spacing-small;
 

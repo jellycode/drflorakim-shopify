@@ -1,69 +1,77 @@
-<div class="june_video_section" data-aos="fade-up" data-aos-delay="50">
+<div
+  class="june_video_section"
+  data-aos="fade-up"
+  data-aos-delay="50">
   <div class="video_sec">
     <div class="video_container">
-      <iframe class="lazyload" data-src="{{ section.settings.video_url }}" frameborder="0" rel="0" allow="fullscreen" allowfullscreen></iframe>
+      <iframe
+        class="lazyload"
+        data-src="{{ section.settings.video_url }}"
+        frameborder="0"
+        rel="0"
+        allow="fullscreen"
+        allowfullscreen></iframe>
     </div>
   </div>
-  <div class="content page-width">
-    <div>
-      <h3>{{ section.settings.title }}</h3>
-      <p>{{ section.settings.summary }}</p>
-      
-      {% if section.settings.call_to_action_url %}
-      	<a href="{{ section.settings.call_to_action_url }}" class="c-button c-button--black c-button--black-xs">{{ section.settings.call_to_action_text }}</a>
-      {% endif %}
+  <div class="content">
+    <div class=" container m-auto border-none">
+      <div class="pt-4 md:pt-10">
+        <h3>{{ section.settings.title }}</h3>
+        <p>{{ section.settings.summary }}</p>
+
+        {% if section.settings.call_to_action_url %}
+          <a href="{{ section.settings.call_to_action_url }}" class="c-button c-button--black c-button--black-xs">{{ section.settings.call_to_action_text }}</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
-
 
 
 {% schema %}
   {
     "name": "June Video Section",
     "settings": [
-		{
-			"type": "image_picker",
-			"id": "image",
-			"label": "Video Cover Image"
-		},
-		{
-          "type": "text",
-          "id": "title",
-          "label": "Section Title"
-        },
-		{
-          "type": "html",
-          "id": "summary",
-          "label": "Summary"
-        },
-		{
-          "type": "text",
-          "id": "video_url",
-          "label": "Video Url",
-		  "default": "https://www.youtube.com/embed/tgbNymZ7vqY"
-        },
-        {
-          "id": "call_to_action_url",
-          "type": "url",
-          "label": "Button link"
-        },
-		{
-          "id": "call_to_action_text",
-          "type": "text",
-          "label": "Button text"
-        }
-	],
-	"presets": [
-		{
-			"name": "June Video Section"
-		}
-	]
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Video Cover Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      },
+      {
+        "type": "html",
+        "id": "summary",
+        "label": "Summary"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video Url",
+        "default": "https://www.youtube.com/embed/tgbNymZ7vqY"
+      }, {
+        "id": "call_to_action_url",
+        "type": "url",
+        "label": "Button link"
+      }, {
+        "id": "call_to_action_text",
+        "type": "text",
+        "label": "Button text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "June Video Section"
+      }
+    ]
   }
 {% endschema %}
 
 <script>
-var iframe = document.querySelector('iframe');
+  var iframe = document.querySelector('iframe');
 
   function handleLazyLoad() {
     if (iframe.classList.contains('lazyload')) {
@@ -73,7 +81,7 @@ var iframe = document.querySelector('iframe');
         delete iframe.dataset.src;
         iframe.src = storeSRC;
       });
-    } 
+    }
   }
 
   handleLazyLoad();
