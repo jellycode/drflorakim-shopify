@@ -23,7 +23,7 @@
       itemtype="http://schema.org/ListItem">{{ article.title | truncate: 20 }}</span>
   </div>
 </div>
-<div class="section-header text-center">
+<div class="page-title">
   <h1 class="article__title" id="title-0">{{ article.title }}</h1>
   {% if section.settings.blog_show_author %}
     <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>

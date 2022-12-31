@@ -1,9 +1,10 @@
 <div>
-  {% if section.settings.title != blank %}
-    <header class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
+
+    <header class="section-header text-center mt-52 mb-20 px-8">
+		<h5>A healthier skin journey</h5>
+      <h2 class="mb-8">SkinJournal</h2>
+	  <p class="text-lg leading-relaxed">Weekly information and musings focused on healthier skin through new treatments and technologies.</p>
     </header>
-  {% endif %}
 
   {%- assign blog = blogs[section.settings.blog] -%}
 

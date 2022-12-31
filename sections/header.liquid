@@ -91,9 +91,9 @@
           Site name gets precedence with H1 tag on homepage, div on other pages.
         {% endcomment %}
         {% if request.page_type == 'index' %}
-          <h1 class="h2 site-header__logo">
+          <h1 class="h2 site-header__logo mb-0">
           {% else %}
-            <div class="site-header__logo">
+            <div class="site-header__logo mb-0">
             {% endif %}
             {% if section.settings.logo %}
               {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
@@ -205,8 +205,8 @@
 <script type="application/ld+json">
   {
   "@context": "http://schema.org",
-                                                          "@type": "Organization",
-                                                          "name": {{ shop.name | json }},
+                                                            "@type": "Organization",
+                                                            "name": {{ shop.name | json }},
   {% if section.settings.logo %}
     {% assign image_size = section.settings.logo.width | append: 'x' %}
     "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
@@ -230,14 +230,14 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org",
-                                                                                                                      "@type": "WebSite",
-                                                                                                                      "name": {{ shop.name | json }},
+                                                                                                                          "@type": "WebSite",
+                                                                                                                          "name": {{ shop.name | json }},
     "potentialAction": {
-                                                                                                                        "@type": "SearchAction",
-                                                                                                                        "target": {{ potential_action_target | json }},
+                                                                                                                            "@type": "SearchAction",
+                                                                                                                            "target": {{ potential_action_target | json }},
     "query-input": "required name=search_term_string"
-                                                                                                                      },
-                                                                                                                      "url": {{ shop.url | append: page.url | json }}
+                                                                                                                          },
+                                                                                                                          "url": {{ shop.url | append: page.url | json }}
     }
   </script>
 {% endif %}
@@ -622,13 +622,3 @@
     ]
   }
 {% endschema %}
-
-
-<style>
-  @media(max-width:767px) {
-    .site-header__logo-image {
-      /*max-width: 80px !important;*/
-      margin: 0 auto;
-    }
-  }
-</style>

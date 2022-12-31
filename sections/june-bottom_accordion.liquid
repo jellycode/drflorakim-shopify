@@ -1,8 +1,17 @@
-<div class="june_services  lazy-bg"  data-aos="fade-up" data-aos-delay="50">
+<div
+  class="june_services  lazy-bg"
+  data-aos="fade-up"
+  data-aos-delay="50">
+
+  <header class="section-header text-center mb-20 max-w-3xl m-auto px-8">
+    <h5>How We Can Help You</h5>
+    <h2 class="mb-8">{{ section.settings.title }}</h2>
+    <p class="text-lg leading-relaxed">{{ section.settings.summary }}</p>
+  </header>
+
+
   <div class="service_container">
-    <h3>{{ section.settings.title }}</h3>
     <div class="left_content">
-      <p>{{ section.settings.summary }}</p>
       <div class="tabs">
         <div class="tab_title">
           <p data-id="content_1" class="active">FACE</p>
@@ -12,66 +21,87 @@
         <div class="tab_content">
           {% for block in section.blocks %}
             {% if block.settings.type == 'face' %}
-            <div class="tab_content-wrapper" data-id="content_1">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}
-              <i class="fa fa-caret-down" style="font-size:24px"></i>
-            </div>
+              <div class="tab_content-wrapper" data-id="content_1">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+                <i class="fa fa-caret-down" style="font-size:24px"></i>
+              </div>
             {% elsif block.settings.type == 'body' %}
-            <div class="tab_content-wrapper" data-id="content_2">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}
-              <i class="fa fa-caret-down" style="font-size:24px"></i>
-            </div>
+              <div class="tab_content-wrapper" data-id="content_2">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+                <i class="fa fa-caret-down" style="font-size:24px"></i>
+              </div>
             {% else %}
-            <div class="tab_content-wrapper" data-id="content_3">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}
-              <i class="fa fa-caret-down" style="font-size:24px"></i>
-            </div>
+              <div class="tab_content-wrapper" data-id="content_3">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+                <i class="fa fa-caret-down" style="font-size:24px"></i>
+              </div>
             {% endif %}
           {% endfor %}
         </div>
       </div>
-<!--    tabs for mobile    -->
+      <!--    tabs for mobile    -->
       <div class="tabs-mobile">
         <div class="tab_title-mobile">
           <p data-id="content_1" class="active">FACE</p>
           <p data-id="content_2">BODY</p>
           <p data-id="content_3">HAIR</p>
-        </div>        
-        <div class="tab_content-mobile">          
+        </div>
+        <div class="tab_content-mobile">
           {% for block in section.blocks %}
             {% if block.settings.type == 'face' %}
-            <div class="tab_content-wrapper-mobile" data-id="content_1">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}              
-            </div>
+              <div class="tab_content-wrapper-mobile" data-id="content_1">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+              </div>
             {% elsif block.settings.type == 'body' %}
-            <div class="tab_content-wrapper-mobile" data-id="content_2">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}
-            </div>
+              <div class="tab_content-wrapper-mobile" data-id="content_2">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+              </div>
             {% else %}
-            <div class="tab_content-wrapper-mobile" data-id="content_3">
-              <a data-image="{{ block.settings.service_image | img_url: '1000x1000' }}" data-title="{{ block.settings.overlay_title }}" data-content="{{ block.settings.overlay_cont }}"></a>
-              {{ block.settings.tag_name }}
-            </div>
+              <div class="tab_content-wrapper-mobile" data-id="content_3">
+                <a
+                  data-image="{{ block.settings.service_image | img_url: '1000x1000' }}"
+                  data-title="{{ block.settings.overlay_title }}"
+                  data-content="{{ block.settings.overlay_cont }}"></a>
+                {{ block.settings.tag_name }}
+              </div>
             {% endif %}
-          {% endfor %}  
+          {% endfor %}
           <i class="fa fa-caret-down" style="font-size:24px"></i>
         </div>
       </div>
-      
+
     </div>
     <div class="right_image">
-      <img loading="lazy" src="" style="width:100%;height:100%;object-fit:cover" />
+      <img
+        loading="lazy"
+        src=""
+        style="width:100%;height:100%;object-fit:cover" />
       <div class="overlay">
         <h3></h3>
         <p></p>
       </div>
     </div>
-    
+
     <div class="overlay" style="display: none;">
       <h3></h3>
       <p></p>
@@ -84,70 +114,66 @@
   {
     "name": "June Services",
     "settings": [
-    {
-          "type": "text",
-          "id": "title",
-          "label": "Section Title"
-        },
-    {
-          "type": "html",
-          "id": "summary",
-          "label": "Summary"
-        }
-  ],
-  "blocks": [ 
-    
-    {
-    "type": "text",
-    "name": "services", 
-    "settings": [
-      {
-              "type": "radio",
-              "id": "type",
-              "label": "Service Category",
-              "default": "face",
-              "options": [
-                {
-                  "value": "face",
-                  "label": "Face"
-                },
-                {
-                  "value": "body",
-                  "label": "Body"
-                },
-                {
-                  "value": "hair",
-                  "label": "Hair"
-                }
-              ]
-            },
-            {
-                "type": "image_picker",
-                "id": "service_image",
-                "label": "service_image"
-            },
       {
         "type": "text",
-        "id": "tag_name",
-        "label": "Tag name"
-      },
+        "id": "title",
+        "label": "Section Title"
+      }, {
+        "type": "html",
+        "id": "summary",
+        "label": "Summary"
+      }
+    ],
+    "blocks": [
+
       {
         "type": "text",
-        "id": "overlay_title",
-        "label": "Overlay Title"
-      },
+        "name": "services",
+        "settings": [
+          {
+            "type": "radio",
+            "id": "type",
+            "label": "Service Category",
+            "default": "face",
+            "options": [
+              {
+                "value": "face",
+                "label": "Face"
+              }, {
+                "value": "body",
+                "label": "Body"
+              }, {
+                "value": "hair",
+                "label": "Hair"
+              }
+            ]
+          },
+          {
+            "type": "image_picker",
+            "id": "service_image",
+            "label": "service_image"
+          },
+          {
+            "type": "text",
+            "id": "tag_name",
+            "label": "Tag name"
+          },
+          {
+            "type": "text",
+            "id": "overlay_title",
+            "label": "Overlay Title"
+          }, {
+            "type": "text",
+            "id": "overlay_cont",
+            "label": "Overlay Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
       {
-        "type": "text",
-        "id": "overlay_cont",
-        "label": "Overlay Content"
+        "name": "June Services"
       }
     ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "June Services"
-    }
-  ]
   }
 {% endschema %}

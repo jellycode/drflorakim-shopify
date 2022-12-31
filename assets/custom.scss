@@ -458,11 +458,7 @@ body {
  margin: 0 auto;
 }
 .main-content {
- padding-top: 22px;
- margin-top: 156px;
  @media (max-width: 767px) {
-  padding-top: 20px;
-  margin-top: 115px;
  }
 }
 
@@ -1183,7 +1179,7 @@ body {
     .tab_content-mobile {
      width: 100%;
      position: relative;
-     i {
+     .fa-caret-down {
       display: block;
       position: absolute;
       top: 0;
@@ -1390,7 +1386,13 @@ body {
  }
 }
 
-.june_services .service_container .left_content .tabs .tab_content div i {
+.june_services
+ .service_container
+ .left_content
+ .tabs
+ .tab_content
+ div
+ .fa-caret-down {
  display: none;
 }
 
@@ -1670,7 +1672,7 @@ body {
   &.active {
    display: block;
   }
-  &.active i {
+  &.active .fa-caret-down {
    display: block;
    position: absolute;
    right: 0;
@@ -1755,25 +1757,8 @@ body {
 .about-kim {
  .page-title {
   @media (min-width: 1200px) {
-   padding-left: 275px;
   }
   h1 {
-   font-style: normal;
-   font-weight: 300;
-   font-size: 72px;
-   line-height: 120%;
-   letter-spacing: 0.2em;
-   color: #000000;
-   text-transform: uppercase;
-   margin-top: 20px;
-   @media (max-width: 767px) {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 45px;
-    line-height: 120%;
-    letter-spacing: 0.2em;
-    color: #000000;
-   }
   }
  }
  #shopify-section-hero-about {
@@ -1920,8 +1905,6 @@ body {
  }
  #shopify-section-blog-template {
   .section-header {
-   max-width: 900px;
-   margin: 0 auto;
    h1 {
     font-style: normal;
     font-weight: 300;
@@ -5042,12 +5025,9 @@ body.menu-opened {
 
     .site-header__logo-image {
      img {
-      height: 80px;
      }
 
      svg {
-      width: 80px;
-      height: 80px;
      }
     }
    }
