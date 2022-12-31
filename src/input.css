@@ -28,7 +28,7 @@
 
 @layer components {
  .btn {
-  @apply bg-sky-600 text-sky-50 font-semibold uppercase inline-flex border-none py-3 px-6 rounded-md hover:shadow-sm hover:bg-sky-100 hover:text-sky-600 transition tracking-widest self-start justify-center items-center;
+  @apply bg-sky-600 text-sky-50 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:bg-sky-100 hover:text-sky-600 transition tracking-widest self-start justify-center items-center;
   &.btn--tertiary {
    @apply bg-sky-200 text-sky-700;
   }
@@ -148,8 +148,17 @@ main {
  @apply btn w-full flex text-center justify-center;
 }
 
-button {
+button,
+button[type='submit'] {
  @apply btn;
+}
+
+button.site-header__icon,
+a.site-header__icon {
+ @apply hover:border-none hover:shadow-none text-neutral-900 hover:text-sky-600 transition bg-transparent hover:bg-transparent;
+}
+.btn-link:not([disabled]) {
+ @apply text-neutral-900 hover:text-sky-600;
 }
 
 .name-field {
@@ -159,5 +168,20 @@ button {
 .shopify-policy__body {
  h1 {
   @apply text-2xl mt-20;
+ }
+}
+
+.newsletter_part p {
+ @apply mb-4;
+}
+
+.button-part {
+ @apply flex flex-col space-y-4;
+}
+
+button.search-bar__submit {
+ @apply bg-transparent text-neutral-800 hover:bg-transparent hover:text-sky-600;
+ .search_icon {
+  @apply bg-transparent;
  }
 }

@@ -15,8 +15,6 @@
   </style>
 {% endif %}
 
-{% include 'search-drawer' %}
-
 <div
   data-section-id="{{ section.id }}"
   data-section-type="header-section"
@@ -50,7 +48,8 @@
       </style>
 
       {% if section.settings.message_link == blank %}
-        <div class="announcement-bar">
+        <div
+          class="announcement-bar">
         {% else %}
           <a href="{{ section.settings.message_link }}" class="announcement-bar announcement-bar--link">
           {% endif %}
@@ -67,14 +66,14 @@
   {% endif %}
 
   <header class="py-4 site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
-    <div class="flex grid--no-gutters grid--table site-header__mobile-nav justify-between items-center">
+    <div class="grid grid-cols-3 site-header__mobile-nav justify-between items-center">
       {% if section.settings.align_logo == 'center' %}
-        {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
+        {%- assign logo_classes = '' -%}
       {% else %}
-        {%- assign logo_classes = 'medium-up--one-quarter logo-align--left' -%}
+        {%- assign logo_classes = '' -%}
       {% endif %}
 
-      <div class="grid__item medium-up--one-third medium-up--push-one-third header-hamburger">
+      <div class="grid__item header-hamburger flex flex-row">
         <div class="hamburger-wrapper">
           <span class="hamburger-first"></span>
           <span class="hamburger-last"></span>
@@ -86,7 +85,7 @@
         </button>
       </div>
 
-      <div class="grid__item {{ logo_classes }} header-logo">
+      <div class="grid__item {{ logo_classes }} header-logo flex justify-center items-center">
         {% comment %}
           Use the uploaded logo from theme settings if enabled.
           Site name gets precedence with H1 tag on homepage, div on other pages.
@@ -94,24 +93,14 @@
         {% if request.page_type == 'index' %}
           <h1 class="h2 site-header__logo">
           {% else %}
-            <div class="h2 site-header__logo">
+            <div class="site-header__logo">
             {% endif %}
             {% if section.settings.logo %}
               {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <a href="{{ routes.root_url }}" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
+              <a href="{{ routes.root_url }}" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
                 {% capture logo_alt %}
                   {{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
                 {% include 'flora-kim-logo' %}
-                {% comment %}
-                  <img class="lazyload js"
-                  src="{{ section.settings.logo | img_url: '300x300' }}"
-                  data-src="{{ img_url }}"
-                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                  data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
-                  data-sizes="auto"
-                  alt="{{ logo_alt | escape }}"
-                  style="max-width: {{ section.settings.logo_max_width }}px">
-                {% endcomment %}
                 <noscript>
                   {% capture image_size %}
                     {{ section.settings.logo_max_width | escape }}x{% endcapture %}
@@ -141,13 +130,13 @@
         </nav>
       {% endif %}
 
-      <div class="header-icons grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
+      <div class="header-icons site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
         <div class="site-header__icons-wrapper">
 
-          <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top">
+          <button type="button" class="group btn--link site-header__icon site-header__search-toggle js-drawer-open-top">
             {% include 'icon-search' %}
             {% comment %}<img src="{{ 'search_icon.svg' | asset_url }}" style="max-width: 20px;">{% endcomment %}
-            <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+            <span class="icon__fallback-text ">{{ 'layout.navigation.search' | t }}</span>
           </button>
 
           {% if shop.customer_accounts_enabled %}
@@ -178,18 +167,6 @@
               <span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
             </div>
           </a>
-
-          {% unless linklists[section.settings.main_linklist] == blank %}
-            <button
-              type="button"
-              class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open"
-              aria-controls="MobileNav"
-              aria-expanded="false"
-              aria-label="{{ 'layout.navigation.menu' | t }}">
-              {% include 'icon-hamburger' %}
-              {% include 'icon-close' %}
-            </button>
-          {% endunless %}
         </div>
 
       </div>
@@ -223,12 +200,13 @@
   {% endif %}
 </div>
 
+{% include 'search-drawer' %}
 
 <script type="application/ld+json">
   {
   "@context": "http://schema.org",
-                                "@type": "Organization",
-                                "name": {{ shop.name | json }},
+                                                          "@type": "Organization",
+                                                          "name": {{ shop.name | json }},
   {% if section.settings.logo %}
     {% assign image_size = section.settings.logo.width | append: 'x' %}
     "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
@@ -252,14 +230,14 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org",
-                                                                  "@type": "WebSite",
-                                                                  "name": {{ shop.name | json }},
+                                                                                                                      "@type": "WebSite",
+                                                                                                                      "name": {{ shop.name | json }},
     "potentialAction": {
-                                                                    "@type": "SearchAction",
-                                                                    "target": {{ potential_action_target | json }},
+                                                                                                                        "@type": "SearchAction",
+                                                                                                                        "target": {{ potential_action_target | json }},
     "query-input": "required name=search_term_string"
-                                                                  },
-                                                                  "url": {{ shop.url | append: page.url | json }}
+                                                                                                                      },
+                                                                                                                      "url": {{ shop.url | append: page.url | json }}
     }
   </script>
 {% endif %}

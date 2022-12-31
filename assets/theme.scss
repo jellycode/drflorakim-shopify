@@ -2160,24 +2160,6 @@ a[href^='tel'] {
  }
 }
 
-.btn--link {
- background-color: transparent;
- border: 0;
- margin: 0;
- color: $color-text;
- text-align: left;
-
- &:not([disabled]):hover,
- &:focus {
-  color: $color-text-focus;
-  background-color: transparent;
- }
-
- .icon {
-  vertical-align: middle;
- }
-}
-
 .btn--narrow {
  padding-left: 15px;
  padding-right: 15px;
@@ -2733,11 +2715,6 @@ textarea {
 }
 
 /*================ #Site Nav and Dropdowns ================*/
-.site-header__logo {
- img {
-  display: block;
- }
-}
 
 .site-nav {
  position: relative;
@@ -4996,53 +4973,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 ///
 /// Logo
 
-.site-header__logo {
- margin: 15px 0;
-
- .logo-align--center & {
-  text-align: center;
-  margin: 0 auto;
-
-  @include media-query($small) {
-   text-align: center;
-   margin: 15px 0;
-   padding: 0;
-  }
- }
-
- @include media-query($small) {
-  padding-left: $gutter-site-mobile;
-  text-align: left;
-
-  img {
-   margin: 0;
-  }
- }
-}
-
-.site-header__logo-link {
- display: inline-block;
- word-break: break-word;
-
- .logo-align--center & {
-  @include media-query($medium-up) {
-   margin: 0 auto;
-  }
- }
-}
-
-.site-header__logo-image {
- display: block;
-
- @include media-query($medium-up) {
-  margin: 0 auto;
- }
-}
-
-.site-header__logo-image--centered img {
- margin: 0 auto;
-}
-
 ///
 /// Icons
 
@@ -5517,7 +5447,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .cart-popup-wrapper--hidden {
- display: none;
+ transform: translate(100%);
 }
 
 .cart-popup {
@@ -5909,8 +5839,6 @@ $search-bar-button-hover: rgba($color-text-field-text, 0.6);
  flex: 1;
 
  @include media-query($medium-up) {
-  padding-left: $gutter-site;
-  padding-right: $gutter-site;
   height: auto;
  }
 }
