@@ -78,14 +78,6 @@
 
 /*================ #Mixins ================*/
 @mixin clearfix() {
- &::after {
-  content: '';
-  display: table;
-  clear: both;
- }
-
- // sass-lint:disable no-misspelled-properties
- *zoom: 1;
 }
 
 /*============================================================================
@@ -652,14 +644,11 @@ a:focus {
  pointer-events: none;
 }
 .slick-initialized .slick-slide {
- display: block;
 }
 .slick-loading .slick-slide {
  visibility: hidden;
 }
 .slick-vertical .slick-slide {
- display: block;
-
  height: auto;
 
  border: 1px solid transparent;
@@ -1509,22 +1498,9 @@ html {
  background-color: $color-body;
 }
 
-.page-width {
- @include clearfix();
- max-width: $width-site;
- margin: 0 auto;
-}
-
 .main-content {
- display: block;
- padding-top: $section-spacing-small;
-
  &:before {
   display: none;
- }
-
- @include media-query($medium-up) {
-  padding-top: $section-spacing;
  }
 }
 
@@ -2050,7 +2026,6 @@ a {
 
  &:not([disabled]):hover,
  &:focus {
-  color: $color-text-focus;
  }
 
  &.classic-link {
@@ -2350,8 +2325,6 @@ label {
 
  [type='radio'] + &,
  [type='checkbox'] + & {
-  display: inline-block;
-  margin-bottom: 0;
  }
 
  &[for] {
@@ -2573,9 +2546,6 @@ textarea {
 
  [type='radio'],
  [type='checkbox'] {
-  display: inline-block;
-  width: auto;
-  margin-right: 5px;
  }
 
  [type='submit'],
@@ -4127,7 +4097,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 @include media-query($small) {
  .template-product .main-content {
-  padding-top: $grid-gutter-mobile;
  }
  .product-single__media-group {
   position: relative;

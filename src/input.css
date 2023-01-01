@@ -18,6 +18,10 @@
   @apply font-body font-bold mb-4 text-lg uppercase tracking-widest;
  }
 
+ h4 {
+  @apply font-semibold font-body text-base;
+ }
+
  h5 {
   @apply uppercase text-sm font-medium text-sky-500 mb-2;
  }
@@ -28,6 +32,14 @@
  strong {
   @apply font-semibold;
  }
+
+ a {
+  @apply hover:text-sky-500;
+ }
+
+ input[type='checkbox'] {
+  @apply form-checkbox w-4 h-4;
+ }
 }
 
 @layer components {
@@ -35,6 +47,9 @@
   @apply bg-sky-600 text-sky-50 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:bg-sky-100 hover:text-sky-600 transition tracking-widest self-start justify-center items-center;
   &.btn--tertiary {
    @apply bg-sky-200 text-sky-700;
+  }
+  &.btn--secondary {
+   @apply bg-sky-100 text-sky-700;
   }
  }
 
@@ -48,21 +63,13 @@ h3 + p {
 }
 
 #shopify-section-rich-text {
- @apply mt-10 md:mt-14;
-}
-
-h1.article__title {
- @apply whitespace-normal;
+ @apply max-w-5xl m-auto;
 }
 
 .product-card__image-with-placeholder-wrapper {
  .product-card_background {
   @apply h-[400px];
  }
-}
-
-.main-content {
- @apply mt-20;
 }
 
 .blog_item {
@@ -84,10 +91,19 @@ h1.article__title {
  }
 }
 
+.slick-track {
+ .blog_item {
+  @apply flex gap-0;
+ }
+}
+
 .june_blogs {
  @apply px-6;
  .page-width {
   @apply flex flex-col space-y-20 lg:space-y-32;
+ }
+ .slick-dots {
+  @apply relative !mt-0 mb-20;
  }
 }
 
@@ -96,7 +112,7 @@ h1.article__title {
 }
 
 .page-width {
- @apply my-4 lg:my-20;
+ @apply px-4 xl:px-0 max-w-7xl m-auto w-full;
 }
 
 main {
@@ -192,15 +208,6 @@ button.search-bar__submit {
  }
 }
 
-.template-index {
- .section-header {
-  &:before {
-   content: '';
-   @apply border-t-neutral-200 relative block top-0 mb-40 w-1/2 m-auto border;
-  }
- }
-}
-
 @screen lg {
  .site-header--scrolled {
   .site-header__logo-image {
@@ -211,13 +218,51 @@ button.search-bar__submit {
  }
 }
 
-.page-title {
- @apply max-w-4xl m-auto px-4 lg:px-10 pt-10 lg:py-20;
+.main-content {
+ @apply mt-40;
+}
+
+.page-title,
+.shopify-policy__title {
+ @apply max-w-4xl m-auto px-4 lg:px-10 pt-10 lg:py-14;
 
  h1 {
   @apply mb-10 ml-0 lg:whitespace-nowrap;
+  &.article__title {
+   @apply whitespace-normal;
+  }
  }
  p {
   @apply text-lg max-w-lg;
  }
+}
+
+.home-header {
+ @apply mt-20 lg:mt-52 mb-20 px-8;
+}
+
+.template-index {
+ .section-header {
+  &:before {
+   content: '';
+   @apply border-t-neutral-200 relative block top-0 mb-20 lg:mb-40 w-1/2 m-auto border;
+  }
+ }
+}
+
+main {
+ .shopify-policy__title {
+  @apply page-title text-left;
+ }
+ .shopify-policy__container {
+  @apply max-w-none px-4;
+ }
+
+ .shopify-policy__body {
+  @apply container m-auto;
+ }
+}
+
+.remember-me-wrapper {
+ @apply flex flex-row space-x-2;
 }

@@ -1,66 +1,90 @@
-<section data-section-id="{{ section.id }}">
-  	<div class="press-listing">
-        <div class="page-width">
-            {% for block in section.blocks %}          
-                <div class="blog_item" data-aos="fade-up">
-                    <div class="post_image">
-                      {% if block.settings.press_article_image != blank %}
-                      <img    
-                           class="lazyload"
-                           src="{{ block.settings.press_article_image | img_url: '670x430' }}"
-                           loading="lazy"
-                           alt="">
-                      {% else %}
-                        <img class="lazyload" loading="lazy" src="{{ 'default.jpg' | asset_url }}" />
-                      {% endif %}
-                    </div>
-                    <div class="post_content">
-                      <a target="_blank" rel="noopener noreferrer" href="{{ block.settings.press_article_button_url }}" class="article__link">
-                        <h3 class="article__title">
-                          {{ block.settings.press_article_title }}
-                        </h3>
-                      </a>
+<section
+  data-section-id="{{ section.id }}">
 
-                      {% if block.settings.press_article_caption != blank %}
-                      <div class="summary">
-                        {{ block.settings.press_article_caption }}
-                      </div>
-                      {% endif %}
-
-                      {% if block.settings.press_article_button_text != blank %}
-                      <a target="_blank" rel="noopener noreferrer" class="button" href="{{ block.settings.press_article_button_url }}" aria-label="{{ block.settings.press_article_title }}" title="Go to website">
-                        {{ block.settings.press_article_button_text }}
-                      </a>
-                      {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
+  <ul
+    class="blog-list-view page-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 m-auto px-0">
+    {% for block in section.blocks %}
+      <li
+        class="flex flex-col"
+        data-aos="fade-up"
+        data-aos-delay="50">
+        <div
+          class="post_image">
+          <a
+            href="{{ block.settings.press_article_button_url }}"
+            class="relative h-[300px] block mb-8">
+            {% if block.settings.press_article_image != blank %}
+              <img
+                class="lazyload  object-cover w-full h-full hover:opacity-80 transition"
+                src="{{ block.settings.press_article_image | img_url: '670x430' }}"
+                loading="lazy"
+                alt="">
+            {% else %}
+              <img
+                class="lazyload"
+                loading="lazy"
+                src="{{ 'default.jpg' | asset_url }}" />
+            {% endif %}
+          </a>
         </div>
-  	</div>
+        <div
+          class="post_content">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{ block.settings.press_article_button_url }}"
+            class="article__link">
+            <h2
+              class="article__title normal-case font-semibold tracking-normal">
+              {{ block.settings.press_article_title }}
+            </h2>
+          </a>
+
+          {% if block.settings.press_article_caption != blank %}
+            <div
+              class="summary">
+              {{ block.settings.press_article_caption }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.press_article_button_text != blank %}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button"
+              href="{{ block.settings.press_article_button_url }}"
+              aria-label="{{ block.settings.press_article_title }}"
+              title="Go to website">
+              {{ block.settings.press_article_button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 {% schema %}
   {
     "name": "Press Listings",
-    "settings": [
-    ],
+    "settings": [],
     "presets": [
       {
         "name": "Press Article",
         "category": "Press",
-        "blocks":[
+        "blocks": [
           {
             "type": "image"
           }
         ]
       }
     ],
-    "blocks" : [
+    "blocks": [
       {
         "type": "image",
         "name": "Image",
         "settings": [
-		  {
+          {
             "type": "image_picker",
             "id": "press_article_image",
             "label": "Image"
@@ -79,8 +103,7 @@
             "type": "text",
             "id": "press_article_button_text",
             "label": "Button Text"
-          },
-          {
+          }, {
             "type": "url",
             "id": "press_article_button_url",
             "label": "Button URL"
@@ -90,4 +113,3 @@
     ]
   }
 {% endschema %}
-

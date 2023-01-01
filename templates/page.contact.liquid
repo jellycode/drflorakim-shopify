@@ -1,23 +1,115 @@
-<div class="contact-us">
-      <div class="page-title">
-        <h1>{{ page.title }}</h1>
+<div
+  class="contact-us page-width">
+  <div
+    class="page-title">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+
+  <div
+    class="container m-auto border-none">
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-10 xl:gap-x-20">
+
+      <div
+        class="bg-neutral-100 p-10 my-20 md:my-0">
+        <h3
+          class="">Our Location</h3>
+
+        <div
+          class="about-flora">
+          <h4>Flora Kim Dermatology</h4>
+          <p
+            class="contact-content text-neutral-600">
+            4300 MacArthur Avenue, Suite 100 <br>
+            Highland Park, Texas 75209
+          </p>
+          <p
+            class="contact-item flex flex-row space-x-4 mb-4">
+            <span
+              class="">
+              <i
+                class="fa-light fa-clock fa-lg text-sky-700 fa-fw"></i>
+            </span>
+            <span class="text-sm font-medium">Monday-Friday | 8:30am - 4pm</span>
+          </p>
+		  <p class="mb-4">
+          <a
+            class="contact-item flex flex-row space-x-4 underline"
+            href="tel:214-521-1900">
+            <span
+              class="text-sm">
+              <i
+                class="fa-light fa-mobile fa-lg text-sky-700 fa-fw"></i>
+            </span>
+            <span class="text-sm font-medium">214.521.1900</span>
+        </a></p>
+		  <p class="mb-4">
+          <a
+            class="contact-item flex flex-row space-x-4 underline"
+            href="sms:216-714-1864">
+            <span
+              class="">
+              <i
+                class="fa-light fa-message fa-lg text-sky-700 fa-fw"></i>
+            </span>
+            <span class="text-sm font-medium">216-714-1864</span>
+        </a></p>
+
+        <h3
+          class=" mt-10 mb-0">Plan Your Visit</h3>
+		<div
+        class="border border-neutral-300 mt-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.8462823348978!2d-96.81928128481678!3d32.82283768095816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9ebef77a0191%3A0x2ee8fadf0b14c169!2s4300%20MacArthur%20Ave%20%23100%2C%20Dallas%2C%20TX%2075209!5e0!3m2!1sen!2sus!4v1593446269094!5m2!1sen!2sus"
+          width="100%"
+          height="250"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+
+	  <div class="text-xs mt-6"><p
+          class="text-neutral-700 mb-2">
+          Our office is located at Highland Park West, which is a brown brick building just west of the Dallas Tollway, south of Bordeaux Avenue but north of Lemmon Avenue.
+        </p>
+        <p
+          class="text-neutral-500 mb-0">
+          Please park in the north parking lot which is the parking lot with green awnings. 
+          Please feel free to park in any unreserved parking spot. When you enter the building, our office will be the first suite on your left.
+        </p></div>
+
+
+
+        <!--             <p class="contact-item"><span class="individual"><img src="{{ 'communications.png' | asset_url }}"></span>214.521.1902</p> -->
       </div>
 
 
+    </div>
+    <div class="pt-10 order-first md:order-last">
 
-		<div class="container m-auto border-none">
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
 
-		<div class="bg-neutral-100 p-10"><h4>Contact Information</h4></div>
-		<div>
-			
+        <h3
+          class="">Book an Appointment</h3>
+
+		  <p class="mb-4 text-sm leading-relaxed">Whether it is virtual or in-person, a consultation is the first step toward healthier skin. Dr. Kim will actively listen to your skin concerns and formulate an effective treatment plan combining a thorough at-home skincare regimen with in-office procedures and technologies.</p>
+
+		  <p class="mb-4 text-sm leading-relaxed">Please use the form below to contact us, and if you are booking an appointment please leave a phone number so we can get in touch with you.</p>
+
+		  <div class="mt-10 border-t border-neutral-200 pt-10">
+
       {%- assign formId = 'ContactForm' -%}
       {% form 'contact', id: formId %}
         {% include 'form-status', form: form, form_id: formId %}
 
-        <div class="w-full">
-          <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+        <div
+          class="w-full">
+          <label
+            for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
           <input
             type="text"
             class="w-full shadow-sm text-base py-2 px-4 mb-6"
@@ -25,9 +117,12 @@
             name="contact[{{ 'contact.form.name' | t }}]"
             value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
         </div>
-        <div class="">
-          <label for="{{ formId }}-email">{{ 'contact.form.email' | t }}
-            <span aria-hidden="true">*</span>
+        <div
+          class="">
+          <label
+            for="{{ formId }}-email">{{ 'contact.form.email' | t }}
+            <span
+              aria-hidden="true">*</span>
           </label>
           <input
             type="email"
@@ -44,8 +139,11 @@
             aria-describedby="{{ formId }}-email-error"
             {%- endif -%}>
           {%- if form.errors contains 'email' -%}
-            <span id="{{ formId}}-email-error" class="input-error-message">
-              <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
+            <span
+              id="{{ formId}}-email-error"
+              class="input-error-message">
+              <span
+                class="visually-hidden">{{ 'general.accessibility.error' | t }}
               </span>
               {% include 'icon-error' %}
               <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
@@ -53,78 +151,42 @@
           {%- endif -%}
         </div>
 
-      <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
-      <input
-        type="tel"
-        class="w-full shadow-sm text-base py-2 px-4 mb-6"
-        id="{{ formId }}-phone"
-        name="contact[{{ 'contact.form.phone' | t }}]"
-        pattern="[0-9\-]*"
-        value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+        <label
+          for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+        <input
+          type="tel"
+          class="w-full shadow-sm text-base py-2 px-4 mb-6"
+          id="{{ formId }}-phone"
+          name="contact[{{ 'contact.form.phone' | t }}]"
+          pattern="[0-9\-]*"
+          value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
 
-      <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
-      <textarea
-        rows="10"
-        class="w-full shadow-sm text-base py-2 px-4 mb-6"
-        id="{{ formId }}-message"
-        name="contact[{{ 'contact.form.message' | t }}]">
-        {% if form.body %}
-          {{ form.body }}{% endif %}
-      </textarea>
+        <label
+          for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
+        <textarea
+          rows="10"
+          class="w-full shadow-sm text-base py-2 px-4 mb-6"
+          id="{{ formId }}-message"
+          name="contact[{{ 'contact.form.message' | t }}]">
+          {% if form.body %}
+            {{ form.body }}{% endif %}
+        </textarea>
 
-      <input
-        type="submit"
-        class="btn bg-sky-600"
-        value="{{ 'contact.form.submit' | t }}">
+        <input
+          type="submit"
+          class="btn bg-sky-600"
+          value="{{ 'contact.form.submit' | t }}">
 
-    {% endform %}
+      {% endform %}
+	</div>
 
-
-		</div>
-
-
-
-
-
-
-    <div class="contact-content-wrapper">
-      <div class="left-widget ">
-        <p class="sub-title">find us</p>
-        <p class="contact-content">
-          Our office is located at Highland Park West, which is a brown brick building just west of the Dallas Tollway, south of Bordeaux Avenue but north of Lemmon Avenue.
-        </p>
-        <p class="contact-content">
-          Please park in the north parking lot which is the parking lot with green awnings. 
-          Please feel free to park in any unreserved parking spot. When you enter the building, our office will be the first suite on your left.
-        </p>
-        <div class="about-flora">
-          <p class="sub-title">flora kim dermatology</p>
-          <p class="contact-content">
-            4300 MacArthur Avenue, Suite 100 <br>
-            Highland Park, Texas 75209
-          </p>
-          <p class="contact-item">
-            <span class="individual"><img src="{{ 'clock.png' | asset_url }}"></span>Monday-Friday | 8:30am - 4pm</p>
-          <a class="contact-item" href="tel:214-521-1900">
-            <span class="individual"><img src="{{ 'phone.png' | asset_url }}"></span>214.521.1900</a>
-          <!--             <p class="contact-item"><span class="individual"><img src="{{ 'communications.png' | asset_url }}"></span>214.521.1902</p> -->
-        </div>
-      </div>
-      <div class="right-widget ">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.8462823348978!2d-96.81928128481678!3d32.82283768095816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9ebef77a0191%3A0x2ee8fadf0b14c169!2s4300%20MacArthur%20Ave%20%23100%2C%20Dallas%2C%20TX%2075209!5e0!3m2!1sen!2sus!4v1593446269094!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          frameborder="0"
-          style="border:0;"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex="0"></iframe>
-      </div>
     </div>
 
+
+
     {% if page.content.size > 0 %}
-      <div class="rte">
+      <div
+        class="rte">
         {{ page.content }}
       </div>
     {% endif %}

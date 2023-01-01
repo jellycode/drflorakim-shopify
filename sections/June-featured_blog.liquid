@@ -1,6 +1,6 @@
 <div>
 
-    <header class="section-header text-center mt-52 mb-20 px-8">
+    <header class="section-header text-center home-header">
 		<h5>A healthier skin journey</h5>
       <h2 class="mb-8">SkinJournal</h2>
 	  <p class="text-lg leading-relaxed">Weekly information and musings focused on healthier skin through new treatments and technologies.</p>
@@ -10,14 +10,14 @@
 
   {% unless blog.articles_count == 0 %}
   <div class="june_blogs">
-    <div class="page-width">
+    <div class="page-width relative">
       {% for article in blogs.JOURNAL.articles limit: section.settings.post_limit %}
-        <div class="blog_item" data-aos="fade-up">
-          <div class="post_image">
+        <div class="blog_item slick_blog_item flex flex-col flex-1" data-aos="fade-up">
+          <div class="post_image relative h-[300px] lg:h-[500px]">
             {%- assign img_url = article.image | img_url: '720x720' | replace: '_1x1.', '_{width}x.' -%}
             {% if article.image %}
             <img    
-                 class="lazyload"
+                 class="lazyload object-cover h-full w-full"
                  src="{{ article.image | img_url: '720x720' }}"
                  data-src="{{ img_url }}"
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -29,7 +29,7 @@
             <img class="lazyload" loading="lazy" src="{{ 'default.jpg' | asset_url }}" />
             {% endif %}
           </div>
-          <div class="post_content">
+          <div class="post_content flex-1 h-full">
             <a href="{{ article.url }}" class="article__link">
               <h3 class="article__title">
                 {{ article.title | strip_html | truncate: 65 }}

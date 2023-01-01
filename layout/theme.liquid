@@ -1,15 +1,28 @@
 <!doctype html>
-<html class="no-js" lang="{{ shop.locale }}">
+<html
+  class="no-js"
+  lang="{{ shop.locale }}">
   <head>
     {% include 'elevar-head' %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="{{ settings.color_button }}">
-    <meta name="google-site-verification" content="h_fAWmjfXVrJCZiVvAMq6vMmud7vnFrDvPq8WqkO_yw" />
+    <meta
+      charset="utf-8">
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge,chrome=1">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1">
+    <meta
+      name="theme-color"
+      content="{{ settings.color_button }}">
+    <meta
+      name="google-site-verification"
+      content="h_fAWmjfXVrJCZiVvAMq6vMmud7vnFrDvPq8WqkO_yw" />
 
     {%- if canonical_url != blank -%}
-      <link rel="canonical" href="{{ canonical_url }}">
+      <link
+        rel="canonical"
+        href="{{ canonical_url }}">
     {%- endif -%}
 
     {%- if settings.favicon != blank -%}
@@ -39,7 +52,9 @@
     <title>{{ seo_title | strip }}</title>
 
     {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
+      <meta
+        name="description"
+        content="{{ page_description | escape }}">
     {%- endif -%}
 
     {% include 'social-meta-tags' %}
@@ -52,15 +67,26 @@
       href="{{ 'drflorakim.css' | asset_url }}"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'">
+    {{ 'vue-shopify' | asset_url | script_tag }}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"><link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-      crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      crossorigin>
 
-    <script src="https://kit.fontawesome.com/f0b7e89abe.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f0b7e89abe.js"
+      crossorigin="anonymous"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     {% if template != 'index' %}
       <script
@@ -130,7 +156,9 @@
     </script>
 
     {%- if request.page_type contains 'customers/' -%}
-      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+      <script
+        src="{{ 'shopify_common.js' | shopify_asset_url }}"
+        defer="defer"></script>
     {%- endif -%}
 
 
@@ -141,9 +169,12 @@
       {{ webpanda_hide_price_template }}{% endunless %}
   </head>
 
-  <body class="template-{{ request.page_type | handle }} {{ page.handle }}">
+  <body
+    class="template-{{ request.page_type | handle }} {{ page.handle }}">
 
-    <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    <a
+      class="in-page-link visually-hidden skip-link"
+      href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
     {% include 'cart-popup' %}
     {%- if settings.enable_ajax -%}
@@ -152,7 +183,9 @@
 
     {% section 'header' %}
 
-    <div class="page-container drawer-page-content" id="PageContainer">
+    <div
+      class="page-container drawer-page-content"
+      id="PageContainer">
 
       <main
         class="main-content js-focus-hidden"
@@ -173,9 +206,12 @@
 
     </div>
 
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-      <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+    <ul
+      hidden>
+      <li
+        id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+      <li
+        id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
     </ul>
 
 
@@ -186,19 +222,28 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     {% if template == 'index' %}
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
       {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
 
 
     {% endif %}
 
 
-    <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
-    <script src="{{ 'vendor-compressed.js' | asset_url }}" defer></script>
-    <script src="{{ 'theme-compressed.js' | asset_url }}" defer></script>
+    <script
+      src="{{ 'lazysizes.js' | asset_url }}"
+      async="async"></script>
+    <script
+      src="{{ 'vendor-compressed.js' | asset_url }}"
+      defer></script>
+    <script
+      src="{{ 'theme-compressed.js' | asset_url }}"
+      defer></script>
 
 
-    <script src="{{ 'aos.js' | asset_url }}"></script>
+    <script
+      src="{{ 'aos.js' | asset_url }}"></script>
     <script>
       $(document).ready(function() {
         if ($("#AccessibleNav").hasClass("active")) {

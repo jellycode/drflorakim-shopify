@@ -1,10 +1,16 @@
-<div class="footer_section bg-gradient-to-b from-white to-neutral-100">
-  <div class="footer_container">
-    <div class="page-width">
-      <div class="menu1">
-        <ul class="footer_menu">
+<div
+  class="footer_section bg-gradient-to-b from-sky-50 to-sky-100 border-t border-sky-200 mt-20">
+  <div
+    class="footer_container flex flex-col lg:flex-row w-full max-w-[1400px] border-none m-auto py-16 px-8 text-sky-900">
+    <div
+      class="flex-1">
+      <div
+        class="menu1">
+        <ul
+          class="footer_menu grid grid-cols-2 gap-4">
           {%- for link in linklists[section.settings.menu1].links -%}
-            <li class="site-footer__linklist-item">
+            <li
+              class="text-lg uppercase font-medium">
               <a
                 href="{{ link.url }}"
                 {% if link.current %}
@@ -16,10 +22,13 @@
           {%- endfor -%}
         </ul>
       </div>
-      <div class="menu2">
-        <ul class="footer_menu">
+      <div
+        class="menu2 mt-10">
+        <ul
+          class="footer_menu grid grid-cols-4">
           {%- for link in linklists[section.settings.menu2].links -%}
-            <li class="site-footer__linklist-item">
+            <li
+              class="text-sm uppercase font-normal">
               <a
                 href="{{ link.url }}"
                 {% if link.current %}
@@ -31,94 +40,108 @@
           {%- endfor -%}
         </ul>
       </div>
-      <div class="newsletter_part">
-        <p>Stay up-to-date with Dr. Kim's innovative procedures, products, and skincare advice.</p>
-        <div
-          class="site-footer__newsletter
-          {% if section.blocks.size == 1 %}
-            site-footer__single-block--centered{% endif %}">
-          {%- assign formId = 'ContactFooter' -%}
-          {% form 'customer', id: formId, novalidate: 'novalidate' %}
-            {%- if form.posted_successfully? -%}
-              <p
-                class="form-message form-message--success"
-                tabindex="-1"
-                data-form-status>
-                {{ 'general.newsletter_form.confirmation' | t }}
-              </p>
-            {%- endif -%}
+    </div>
+    <div
+      class="newsletter_part w-full lg:w-1/3 mt-10 lg:mt-0 lg:pt-0 border-t lg:border-none border-neutral-200 pt-10">
+      <h5
+        class="mb-1">A Healthier Skin Journey</h5>
+      <h3
+        class="tracking-widest text-3xl mb-2">SkinJournal</h3>
+      <p
+        class="text-sm">Subscribe to our mailing list and stay up-to-date with Dr. Kim's innovative procedures, products, and skincare advice.</p>
+      <div
+        class="site-footer__newsletter
+        {% if section.blocks.size == 1 %}
+          site-footer__single-block--centered{% endif %}">
+        {%- assign formId = 'ContactFooter' -%}
+        {% form 'customer', id: formId, novalidate: 'novalidate' %}
+          {%- if form.posted_successfully? -%}
+            <p
+              class="form-message form-message--success"
+              tabindex="-1"
+              data-form-status>
+              {{ 'general.newsletter_form.confirmation' | t }}
+            </p>
+          {%- endif -%}
+          <input
+            type="hidden"
+            name="contact[tags]"
+            value="newsletter">
+          <div
+            class="input-group {% if form.errors %} input-group--error{% endif %}">
             <input
-              type="hidden"
-              name="contact[tags]"
-              value="newsletter">
-            <div class="input-group {% if form.errors %} input-group--error{% endif %}">
-              <input
-                type="email"
-                name="contact[email]"
-                id="ContactFooter-email"
-                class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}"
-                value=""
-                placeholder="Enter Email Address"
-                aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
-                aria-required="true"
-                required
-                autocorrect="off"
-                autocapitalize="off"
-                {% if form.errors %}
-                aria-invalid="true"
-                aria-describedby="{{ formId }}-email-error"
-                data-form-status
-                {% endif %}>
-              <span class="input-group__btn">
-                <button
-                  type="submit"
-                  class="btn newsletter__submit"
-                  name="commit"
-                  id="Subscribe">
-                  <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
-                </button>
+              type="email"
+              name="contact[email]"
+              id="ContactFooter-email"
+              class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}"
+              value=""
+              placeholder="Email Address"
+              aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+              aria-required="true"
+              required
+              autocorrect="off"
+              autocapitalize="off"
+              {% if form.errors %}
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-email-error"
+              data-form-status
+              {% endif %}>
+            <span
+              class="input-group__btn">
+              <button
+                type="submit"
+                class="btn newsletter__submit"
+                name="commit"
+                id="Subscribe">
+                <span
+                  class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
+              </button>
+            </span>
+          </div>
+          <p
+            style="display: none;">Lorem ipsum solor site amet consectular met sit.</p>
+          {% if form.errors contains 'email' %}
+            <span
+              id="{{ formId }}-email-error"
+              class="input-error-message">
+              <span
+                class="visually-hidden">{{ 'general.accessibility.error' | t }}
               </span>
-            </div>
-            <p style="display: none;">Lorem ipsum solor site amet consectular met sit.</p>
-            {% if form.errors contains 'email' %}
-              <span id="{{ formId }}-email-error" class="input-error-message">
-                <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
-                </span>
-                {% include 'icon-error' %}
-                <span class="site-footer__newsletter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
-              </span>
-            {% endif %}
-          {% endform %}
-        </div>
+              {% include 'icon-error' %}
+              <span
+                class="site-footer__newsletter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+          {% endif %}
+        {% endform %}
       </div>
     </div>
   </div>
-  <div class="copyright">
-    <div class="container">
-      <div class="social_icons">
-        <a href="{{ section.settings.ig_link }}" class="">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="{{ section.settings.fb_link }}" class="">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-      <div class="text">
-        <p>©{{ 'now' | date: "%Y" }} Flora Kim Dermatology.</p>
-      </div>
-      <div class="terms_policy">
-        <a href="#">TERMS & CONDITIONS</a>
-        <a href="/pages/privacy-policy">PRIVACY POLICY</a>
-        <a href="https://mesasix.com/">Powered by
-          <span><img
-              loading="lazy"
-              src="{{ 'mesasix_icon.png' | asset_url }}"
-              alt="Mesasix"></span>
-        </a>
-      </div>
+  <div
+    class="copyright grid grid-cols-3 text-neutral-100 w-full px-10 bg-neutral-900 justify-center items-center py-6">
+    <div
+      class="social_icons flex flex-row space-x-4">
+      <a
+        href="{{ section.settings.ig_link }}"
+        class="">
+        <i
+          class="fab fa-instagram fa-lg"></i>
+      </a>
+      <a
+        href="{{ section.settings.fb_link }}"
+        class="">
+        <i
+          class="fab fa-facebook-f fa-lg"></i>
+      </a>
     </div>
+    <div
+      class="text text-neutral-100 text-center">
+      <p
+        class="text-neutral-100 text-xs">©{{ 'now' | date: "%Y" }} Flora Kim Dermatology.</p>
+    </div>
+    <div></div>
 
   </div>
+
 </div>
 {% schema %}
   {

@@ -1,25 +1,40 @@
-<div class="page-width">
-  <div class="grid">
+<div
+  class="page-width">
+  <div
+    class="grid">
 
-    <div class="grid__item">
-      <div class="form-message form-message--success hide" id="ResetSuccess" tabindex="-1">
+    <div
+      class="grid__item">
+      <div
+        class="form-message form-message--success hide"
+        id="ResetSuccess"
+        tabindex="-1">
         {{ 'customer.recover_password.success' | t }}
       </div>
 
-      <div id="CustomerLoginForm" class="form-vertical">
+      <div
+        id="CustomerLoginForm"
+        class="form-vertical">
 
-        <h1 id="LoginHeading" class="text-center">{{ 'customer.login.title' | t }}</h1>
+        <h1
+          id="LoginHeading"
+          class="text-center">{{ 'customer.login.title' | t }}</h1>
 
         {% form 'customer_login', novalidate: 'novalidate' %}
 
           {%- if form.errors -%}
-            <div class="form-message form-message--error">
-              <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+            <div
+              class="form-message form-message--error">
+              <h2
+                class="h3 form-message__title "
+                tabindex="-1"
+                data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
               {{ form.errors | default_errors }}
             </div>
           {%- endif -%}
 
-          <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+          <label
+            for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
           <input
             type="email"
             name="customer[email]"
@@ -29,13 +44,13 @@
             placeholder="Enter Email Address"
             autocapitalize="off"
             {%- if form.errors contains 'form' -%}
-              class="input--error"
-              aria-invalid="true"
-            {%- endif -%}
-            >
+            class="input--error"
+            aria-invalid="true"
+            {%- endif -%}>
 
           {% if form.password_needed %}
-            <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+            <label
+              for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
             <input
               type="password"
               value=""
@@ -43,51 +58,73 @@
               placeholder="Password"
               id="CustomerPassword"
               {%- if form.errors contains 'form' -%}
-                class="input--error"
-                aria-invalid="true"
-              {%- endif -%}
-            >
+              class="input--error"
+              aria-invalid="true"
+              {%- endif -%}>
           {% endif %}
 
-        <div class="text-center remember-forgot">  
-          <div class="remember-me-wrapper">
-            <input type="checkbox" id="remember-me">
-            <label for="remember-me">Remember me</label>
-          </div>        
-          <div class="forgot">
-            {% if form.password_needed %}
-            <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
-            {% endif %}
+          <div
+            class="text-center remember-forgot">
+            <div
+              class="remember-me-wrapper">
+              <input
+                type="checkbox"
+                id="remember-me">
+              <label
+                for="remember-me">Remember me</label>
+            </div>
+            <div
+              class="forgot">
+              {% if form.password_needed %}
+                <p
+                  class="m-0 p-0 leading-none">
+                  <a
+                    href="#recover"
+                    id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
+                </p>
+              {% endif %}
+            </div>
           </div>
-        </div>
-        <div class="button-wrapper">
-          <input type="submit" class="btn" value="login">
-          <p>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-          </p>
-        </div>
+          <div
+            class="button-wrapper grid grid-cols-2 gap-x-8">
+            <input
+              type="submit"
+              class="btn w-full"
+              value="login">
+            <p
+              class="w-full btn btn--secondary">
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </p>
+          </div>
 
         {% endform %}
       </div>
 
-      <div id="RecoverPasswordForm" class="hide">
+      <div
+        id="RecoverPasswordForm"
+        class="hide">
 
-        <div class="text-center">
-          <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
+        <div
+          class="text-center">
+          <h2
+            id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
         </div>
 
-        <div class="form-vertical">
+        <div
+          class="form-vertical">
           {% form 'recover_customer_password' %}
 
             {% comment %}
               Add a hidden span to indicate the form was submitted succesfully.
             {% endcomment %}
             {% if form.posted_successfully? %}
-              <span class="hide reset-password-success"></span>
+              <span
+                class="hide reset-password-success"></span>
             {% endif %}
 
-            <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+            <label
+              for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
             <input
               type="email"
               value=""
@@ -97,24 +134,33 @@
               autocorrect="off"
               autocapitalize="off"
               {% if form.errors %}
-                aria-invalid="true"
-                aria-describedby="RecoverEmail-email-error"
-              {%- endif -%}
-              >
+              aria-invalid="true"
+              aria-describedby="RecoverEmail-email-error"
+              {%- endif -%}>
             {%- if form.errors -%}
-              <span id="RecoverEmail-email-error" class="input-error-message">
-                <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              <span
+                id="RecoverEmail-email-error"
+                class="input-error-message">
+                <span
+                  class="visually-hidden">{{ 'general.accessibility.error' | t }}
+                </span>
                 {% include 'icon-error' %}
                 <span>{{ form.errors.messages['form'] }}</span>
               </span>
             {%- endif -%}
 
-            <div class="text-center">
+            <div
+              class="text-center">
               <p>
-                <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+                <input
+                  type="submit"
+                  class="btn"
+                  value="{{ 'customer.recover_password.submit' | t }}">
               </p>
 
-              <a href="#LoginHeading" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a>
+              <a
+                href="#LoginHeading"
+                id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a>
             </div>
           {% endform %}
         </div>
@@ -126,12 +172,17 @@
         during checkout, not on the default /login page.
       {% endcomment %}
       {% if shop.checkout.guest_login %}
-        <div class="text-center">
-          <hr class="hr--invisible">
+        <div
+          class="text-center">
+          <hr
+            class="hr--invisible">
           <h2>{{ 'customer.login.guest_title' | t }}</h2>
 
           {% form 'guest_login' %}
-            <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+            <input
+              type="submit"
+              class="btn"
+              value="{{ 'customer.login.guest_continue' | t }}">
           {% endform %}
         </div>
       {% endif %}
