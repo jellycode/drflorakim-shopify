@@ -141,6 +141,13 @@
 					"button2_url": ""
 				}
 			},
+			"1592846784599": {
+				"type": "testimonials-block",
+				"settings": {
+					"title": "Testimonials",
+					"summary": "My summary."
+				}
+			},
 			"1592848818733": {
 				"type": "June-featured_blog",
 				"settings": {
@@ -1534,6 +1541,7 @@
 			"1595947043307",
 			"1592841162051",
 			"1592846784506",
+			"1592846784599",
 			"1592848818733",
 			"1592851277848"
 		]

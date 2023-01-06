@@ -44,12 +44,12 @@
 
 @layer components {
  .btn {
-  @apply bg-sky-600 text-sky-50 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:bg-sky-100 hover:text-sky-600 transition tracking-widest self-start justify-center items-center;
+  @apply text-sky-100 bg-gradient-to-br from-blue-500 to-sky-600 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:text-white  hover:opacity-80  transition tracking-widest self-start justify-center items-center;
   &.btn--tertiary {
-   @apply bg-sky-200 text-sky-700;
+   @apply bg-gradient-to-br from-sky-200 to-sky-300 text-sky-700 hover:text-sky-900;
   }
   &.btn--secondary {
-   @apply bg-sky-100 text-sky-700;
+   @apply bg-gradient-to-br from-sky-100 to-sky-200 text-sky-700 hover:text-sky-900;
   }
  }
 
@@ -193,8 +193,9 @@ a.site-header__icon {
  @apply flex flex-col space-y-4;
 }
 
-button.search-bar__submit {
- @apply bg-transparent text-neutral-800 hover:bg-transparent hover:text-sky-600;
+button.search-bar__submit,
+button.cart-popup__close {
+ @apply bg-transparent bg-gradient-to-b from-transparent to-transparent text-neutral-800 hover:text-sky-600 hover:shadow-none;
  .search_icon {
   @apply bg-transparent;
  }

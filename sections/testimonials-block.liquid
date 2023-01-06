@@ -1,0 +1,38 @@
+<div class="">
+  <div class="page-width">
+    <div class="flex flex-col md:flex-row w-full">
+
+      <div class="w-3/4 bg-red-200">
+        <div id="testimonial-slider"></div>
+      </div>
+      <div class=" w-1/2 bg-cyan-100">there</div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Testimonials Block",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      }, {
+        "type": "html",
+        "id": "summary",
+        "label": "Summary"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials Block"
+      }
+    ]
+  }
+{% endschema %}
