@@ -47,11 +47,21 @@
     {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
     {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
 
-    <link
+    {{ 'style.min.css' | asset_url | stylesheet_tag }}
+    <script
+      src='{{ 'index.bundle.js' | asset_url }}'
+      defer='defer'
+      type="module"></script>
+
+    <!--
+
+      <link
       rel="preload"
       href="{{ 'drflorakim.css' | asset_url }}"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'">
+
+    -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link
       rel="preconnect"
@@ -65,10 +75,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     {% if template == 'index' %}
-      <script
-        type="module"
-        crossorigin
-        src="{{ 'testimonials.js' | asset_url }}"></script>
       {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
     {% endif %}
 
