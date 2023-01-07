@@ -116,6 +116,7 @@ h3 + p {
 }
 
 main {
+ @apply mb-52;
  .shopify-section {
   @apply mb-20 md:mb-52;
  }
@@ -243,10 +244,11 @@ button.cart-popup__close {
 }
 
 .template-index {
- .section-header {
+ .section-header,
+ .Section-insta {
   &:before {
    content: '';
-   @apply border-t-neutral-200 relative block top-0 mb-20 lg:mb-40 w-1/2 m-auto border;
+   @apply border-t-neutral-200 relative block top-0 mb-20 lg:mb-40 w-full m-auto border max-w-lg;
   }
  }
 }
