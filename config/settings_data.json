@@ -1535,6 +1535,15 @@
         ],
         "settings": {
         }
+      },
+      "cd3accc9-4303-42b1-852d-d8d70b2f3f94": {
+        "type": "instagram-app-section",
+        "settings": {
+          "subheading": "@YourStore",
+          "title": "Follow us",
+          "button_text": "",
+          "button_url": ""
+        }
       }
     },
     "content_for_index": [
@@ -1546,7 +1555,8 @@
       "1592846784506",
       "1592846784599",
       "1592848818733",
-      "1592851277848"
+      "1592851277848",
+      "cd3accc9-4303-42b1-852d-d8d70b2f3f94"
     ]
   },
   "presets": {
