@@ -3,10 +3,10 @@
     <div class="left_content">
       <h3>{{ section.settings.title }}</h3>
       <p>{{ section.settings.summary }}</p>
-      {% if section.settings.button1_text != blank %}
+      {% if section.settings.button1_text != "" %}
         <a href="{{ section.settings.button1_url }}">{{ section.settings.button1_text }}</a>
       {% endif %}
-      {% if section.settings.button2_text != blank %}
+      {% if section.settings.button2_text != "" %}
         <a href="{{ section.settings.button2_url }}">{{ section.settings.button2_text }}</a>
       {% endif %}
     </div>
