@@ -321,6 +321,16 @@
               "overlay_title": "Laser Hair Removal",
               "overlay_cont": "Suitable for any skin type, this treatment can permanently reduce pigmented hair over a series of treatments."
             }
+          },
+          "25139abb-fd9b-406f-9150-64bdb4096b52": {
+            "type": "text",
+            "settings": {
+              "type": "face",
+              "service_image": "shopify:\/\/shop_images\/drflorakim.jpg",
+              "tag_name": "<p><span>EMFACE<\/span><\/p>",
+              "overlay_title": "EMFACE",
+              "overlay_cont": "EMFACE is a needle-free, 20 minute treatment that emits both synchronized RF (radiofrequency) and HIFES (high intensity facial electrical stimulation) energies to simultaneously affect skin, connective tissue, and muscle. Before EMFACE, surgery was the only modality able to lift facial muscles."
+            }
           }
         },
         "block_order": [
@@ -339,7 +349,8 @@
           "1592859529445",
           "1592859525542",
           "1598288381014",
-          "1598288595773"
+          "1598288595773",
+          "25139abb-fd9b-406f-9150-64bdb4096b52"
         ],
         "settings": {
           "title": "DERMATOLOGY SERVICES",
