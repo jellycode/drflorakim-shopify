@@ -269,3 +269,19 @@ main {
 .remember-me-wrapper {
  @apply flex flex-row space-x-2;
 }
+
+#shopify-section-article-template {
+ .article_content .content-wrapper > {
+  p {
+   &:first-child:first-letter {
+    color: #000;
+    font-size: 70px;
+    float: left;
+    line-height: 0.8;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+   }
+  }
+ }
+}
