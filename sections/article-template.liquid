@@ -78,10 +78,14 @@
     {% if article.metafields["global"]["SPOTIFY"] %}
 
       <div>
-        <img src="{{ 'spotify_icon.svg' | asset_url }}" class="w-10">
-
+        <a class="cursor-pointer" href="{{ article.metafields["global"]["SPOTIFY"] }}">
+          <img src="{{ 'spotify_icon.svg' | asset_url }}" class="w-10 h-10 mb-2">
+          <span class="desktop-view">LISTEN<br> TO ARTICLE</span>
+          <span class="mobile-view">LISTEN TO ARTICLE</span>
+        </a>
 
       </div>
+
     {% endif %}
 
     <div style="{% if article.metafields["global"]["LISTENTOARTICLE"] %}visibility: visible{% else %}visibility: hidden{% endif %}">
