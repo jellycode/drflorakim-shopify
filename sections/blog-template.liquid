@@ -77,16 +77,18 @@
                 {% endif %}
               </div>
 
-              {% if article.tags.size > 0 %}
+              {% #  if article.tags.size > 0 %}
+              <!--
                 <div class="article__tags article__tags--list rte">
-                  {{ 'blogs.article.posted_in' | t }}
-                  {% for tag in article.tags %}
-                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-                    {% unless forloop.last %},
-                    {% endunless %}
-                  {% endfor %}
+                {{ 'blogs.article.posted_in' | t }}
+                {% for tag in article.tags %}
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                {% unless forloop.last %},
+                {% endunless %}
+                {% endfor %}
                 </div>
-              {% endif %}
+              -->
+              {% #  endif %}
             </div>
             <div>
               <ul class="list--inline article__meta-buttons">
