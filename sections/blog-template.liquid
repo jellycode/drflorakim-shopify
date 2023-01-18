@@ -1,51 +1,46 @@
 {% paginate blog.articles by 12 %}
 
-  <header
-    class="page-title">
+  <header class="page-title">
     <h1>{{ page_title }}</h1>
-    {% if blog.tags.size > 0 %}
+
+    {% #  if blog.tags.size > 0 %}
+    <!--
       <div
-        class="blog-filter">
-        <label
-          class="blog-filter__label select-label"
-          for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
-        <div
-          class="select-group">
-          <select
-            id="BlogTagFilter"
-            aria-describedby="a11y-refresh-page-message a11y-selection-message">
-            <option
-              value="{{ blog.url }}">{{ 'blogs.article.all_topics' | t }}</option>
-            {% for tag in blog.all_tags %}
-              <option
-                value="{{ blog.url }}/tagged/{{ tag | handleize }}"
-                {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
-            {% endfor %}
-          </select>
-          {% include 'icon-chevron-down' %}
-        </div>
+      class="blog-filter">
+      <label
+      class="blog-filter__label select-label"
+      for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
+      <div
+      class="select-group">
+      <select
+      id="BlogTagFilter"
+      aria-describedby="a11y-refresh-page-message a11y-selection-message">
+      <option
+      value="{{ blog.url }}">{{ 'blogs.article.all_topics' | t }}</option>
+      {% for tag in blog.all_tags %}
+      <option
+      value="{{ blog.url }}/tagged/{{ tag | handleize }}"
+      {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
+      {% endfor %}
+      </select>
+      {% include 'icon-chevron-down' %}
       </div>
-    {% endif %}
+      </div>
+    -->
+    {% # endif %}
   </header>
 
-  <ul
-    class="blog-list-view page-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
+  <ul class="blog-list-view page-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
     {% for article in blog.articles %}
       <li
         class=""
         data-aos="fade-up"
         data-aos-delay="50">
-        <div
-          class="article-listing h-full relative flex flex-col">
-          <div
-            class="graphic-part">
+        <div class="article-listing h-full relative flex flex-col">
+          <div class="graphic-part">
 
-            <div
-              id="{{ img_wrapper_id }}"
-              class="js bg-sky-500">
-              <a
-                href="{{ article.url }}"
-                class="relative h-[300px] block mb-8">
+            <div id="{{ img_wrapper_id }}" class="js bg-sky-500">
+              <a href="{{ article.url }}" class="relative h-[300px] block mb-8">
                 <img
                   id="{{ img_id }}"
                   class="lazyload object-cover w-full h-full hover:opacity-80 transition"
@@ -59,29 +54,22 @@
             </div>
 
           </div>
-          <div
-            class="text-part flex flex-col items-between flex-1">
-            <div
-              class="flex-1 mb-10">
-              <h2
-                class="article__title normal-case font-semibold tracking-normal">
-                <a
-                  href="{{ article.url }}">{{ article.title }}</a>
+          <div class="text-part flex flex-col items-between flex-1">
+            <div class="flex-1 mb-10">
+              <h2 class="article__title normal-case font-semibold tracking-normal">
+                <a href="{{ article.url }}">{{ article.title }}</a>
               </h2>
               {% if section.settings.blog_show_author %}
-                <span
-                  class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
               {% endif %}
 
               {% if section.settings.blog_show_date %}
-                <span
-                  class="article__date">
+                <span class="article__date">
                   {{ article.published_at | time_tag: format: 'date' }}
                 </span>
               {% endif %}
 
-              <div
-                class="rte">
+              <div class="rte">
                 {% if article.excerpt.size > 0 %}
                   {{ article.excerpt }}
                 {% else %}
@@ -90,12 +78,10 @@
               </div>
 
               {% if article.tags.size > 0 %}
-                <div
-                  class="article__tags article__tags--list rte">
+                <div class="article__tags article__tags--list rte">
                   {{ 'blogs.article.posted_in' | t }}
                   {% for tag in article.tags %}
-                    <a
-                      href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
                     {% unless forloop.last %},
                     {% endunless %}
                   {% endfor %}
@@ -103,8 +89,7 @@
               {% endif %}
             </div>
             <div>
-              <ul
-                class="list--inline article__meta-buttons">
+              <ul class="list--inline article__meta-buttons">
                 <li>
                   <a
                     href="{{ article.url }}"
@@ -116,9 +101,7 @@
 
                 {% if blog.comments_enabled? and article.comments_count > 0 %}
                   <li>
-                    <a
-                      href="{{ article.url }}#comments"
-                      class="article__comment-count btn btn--tertiary btn--small">
+                    <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
                       {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
                     </a>
                   </li>

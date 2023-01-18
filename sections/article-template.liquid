@@ -74,6 +74,16 @@
     </div>
   {% endif %}
   <div class="audio-wrapper">
+
+    {% if article.metafields["global"]["SPOTIFY"] %}
+
+      <div>
+        <img src="{{ 'spotify_icon.svg' | asset_url }}" class="w-10">
+
+
+      </div>
+    {% endif %}
+
     <div style="{% if article.metafields["global"]["LISTENTOARTICLE"] %}visibility: visible{% else %}visibility: hidden{% endif %}">
       <i class="fas fa-play-circle"></i>
       <i class="fas fa-pause-circle" style="display: none;"></i>
