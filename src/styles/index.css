@@ -271,8 +271,8 @@ main {
 }
 
 #shopify-section-article-template {
- .article_content .content-wrapper > {
-  p {
+ .article_content .content-wrapper {
+  > p {
    &:first-child:first-letter {
     color: #000;
     font-size: 70px;
@@ -282,6 +282,10 @@ main {
     margin-right: 10px;
     margin-bottom: 0;
    }
+  }
+
+  img {
+   @apply !m-0 ml-0 mr-0 !w-full;
   }
  }
 }

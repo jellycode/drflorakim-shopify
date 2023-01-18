@@ -78,7 +78,7 @@
     {% if article.metafields["global"]["SPOTIFY"] %}
 
       <div>
-        <a class="cursor-pointer" href="{{ article.metafields["global"]["SPOTIFY"] }}">
+        <a class="cursor-pointer" href="{{ article.metafields["global"]["SPOTIFY"] | strip_html }}">
           <img src="{{ 'spotify_icon.svg' | asset_url }}" class="w-10 h-10 mb-2">
           <span class="desktop-view">LISTEN<br> TO ARTICLE</span>
           <span class="mobile-view">LISTEN TO ARTICLE</span>
@@ -104,29 +104,31 @@
   </div>
   <div class="content-wrapper">
 
-    {% # 
-     {{ article.content | stripe_html }} %}
 
-    {% assign my_description = article.content | split: '=== split content ===' %}
+    {{ article.content | stripe_html }}
 
-    {% assign my_description_size = my_description.size | minus: 2 %}
-    {{ my_description | first }}
+
     <div class="show-product-list">
       {% if article.tags.size > 0 %}
-        {% for tag in article.tags %}
-          {% paginate collections.all.products by 100 %}
-            {%- for product in collections.all.products -%}
-              {% if product.handle == tag %}
-                <div class="product_item">
-                  {% include 'product-card-list' %}
-                </div>
-              {% endif %}
-            {%- endfor -%}
-          {% endpaginate %}
-        {% endfor %}
+        <h3>Recommended Products</h3>
+        <p>Depending on the theme of each newsletter, and only if appropriate and helpful, I will include highlights of products that I believe will serve you in achieving your skin goals.</p>
+
+        <p>Remember, having healthy beautiful skin requires a 360 degree approach or a multifaceted strategic action plan. Topicals are super fundamental but they are only a part of the holistic regimen. For truly optimal results, we must combine daily lifestyle commitments that include consciousness in morning & evening skin routine, diet, sleep, exercise, stress-levels (try meditation and nurturing self-care), and regularly scheduled proactive and preventative in-office medical procedures and technologies.</p>
+        <div class="mt-10">
+          {% for tag in article.tags %}
+            {% paginate collections.all.products by 100 %}
+              {%- for product in collections.all.products -%}
+                {% if product.handle == tag %}
+                  <div class="product_item">
+                    {% include 'product-card-list' %}
+                  </div>
+                {% endif %}
+              {%- endfor -%}
+            {% endpaginate %}
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
-    {{ my_description | last }}
 
 
   </div>
