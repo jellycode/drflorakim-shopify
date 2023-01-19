@@ -9,6 +9,7 @@ import {
 
 import TestimonialSlider from '../components/TestimonialSlider.vue';
 import ServicesAccordion from '../components/ServicesAccordion.vue';
+import ServicesList from '../components/ServicesList.vue';
 
 if (document.getElementById('testimonials')) {
  const testimonials = createApp({})
@@ -26,4 +27,13 @@ if (document.getElementById('servicesaccordion')) {
  );
 
  servicesaccordion.mount('#servicesaccordion');
+}
+
+if (document.getElementById('serviceslist')) {
+ const servicesaccordion = createApp({}).component(
+  'ServicesList',
+  ServicesList
+ );
+
+ servicesaccordion.mount('#serviceslist');
 }
