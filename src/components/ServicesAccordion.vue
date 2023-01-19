@@ -19,7 +19,15 @@ const {
 const services = computed(() => {
  if (data.value) {
   const servicesjson = JSON.parse(data.value);
+  console.log(servicesjson);
   return servicesjson.data;
+ }
+});
+
+const servicetopics = computed(() => {
+ if (isFinished) {
+  let topics = services.value.map((a) => a.name);
+  return topics;
  }
 });
 
@@ -29,5 +37,5 @@ onMounted(() => {
 </script>
 
 <template>
- <div v-if="isFinished">{{ services }}</div>
+ <div v-if="isFinished">{{ services }}{{ servicetopics }}</div>
 </template>
