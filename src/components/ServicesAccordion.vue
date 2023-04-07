@@ -17,13 +17,13 @@ const {
  isFetching,
  isFinished,
  canAbort,
- execute,
+ execute
 } = useFetch(url, { refetch }).get();
 
 const services = computed(() => {
  if (data.value) {
   const servicesjson = JSON.parse(data.value);
-  console.log(servicesjson);
+  //console.log(servicesjson);
   return servicesjson.data;
  }
 });
@@ -59,7 +59,7 @@ const serviceImage = () => {
  let image =
   'https://admin.drflora.kim/images/' +
   subCategories.value[currentSubTab.value].image;
- console.log(image);
+ //console.log(image);
  return image;
 };
 

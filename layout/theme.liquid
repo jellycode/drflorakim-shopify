@@ -49,6 +49,10 @@
 
     {{ 'style.min.css' | asset_url | stylesheet_tag }}
     <script
+      src='{{ 'vendor.chunk.js' | asset_url }}'
+      defer='defer'
+      type="module"></script>
+    <script
       src='{{ 'index.bundle.js' | asset_url }}'
       defer='defer'
       type="module"></script>

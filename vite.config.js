@@ -15,9 +15,12 @@ export default defineConfig(({ command, mode, ssrBuild }) => ({
     entryFileNames: '[name].bundle.js',
     chunkFileNames: '[name].chunk.js',
     assetFileNames: '[name].min.[ext]',
-   },
-  },
+    manualChunks: {
+     vendor: ['vue', 'video.js']
+    }
+   }
+  }
  },
  plugins: [vue()],
- resolve: { alias: { vue: 'vue/dist/vue.esm-bundler.js' } },
+ resolve: { alias: { vue: 'vue/dist/vue.esm-bundler.js' } }
 }));
