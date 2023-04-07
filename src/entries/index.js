@@ -4,12 +4,13 @@ import { createApp } from 'vue';
 
 import {
  FontAwesomeIcon,
- FontAwesomeLayers,
+ FontAwesomeLayers
 } from '@fortawesome/vue-fontawesome';
 
 import TestimonialSlider from '../components/TestimonialSlider.vue';
 import ServicesAccordion from '../components/ServicesAccordion.vue';
 import ServicesList from '../components/ServicesList.vue';
+import NewyorkPopup from '../components/NewyorkPopup.vue';
 
 if (document.getElementById('testimonials')) {
  const testimonials = createApp({})
@@ -36,4 +37,9 @@ if (document.getElementById('serviceslist')) {
  );
 
  servicesaccordion.mount('#serviceslist');
+}
+
+if (document.getElementById('newyork')) {
+ const newyorkpopup = createApp({}).component('NewyorkPopup', NewyorkPopup);
+ newyorkpopup.mount('#newyork');
 }
