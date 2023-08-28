@@ -427,7 +427,7 @@
           "1598989887422"
         ],
         "settings": {
-          "free_shipp": "FREE SHIPPING ON ORDERS OVER $50",
+          "free_shipp": "FREE SHIPPING ON ORDERS OVER $100",
           "layout": "grid",
           "grid": 2,
           "rows": 6,
@@ -1005,7 +1005,6 @@
       },
       "1599634229817": {
         "type": "home-slider",
-        "disabled": true,
         "blocks": {
           "1599636134720": {
             "type": "image",
@@ -1074,6 +1073,7 @@
           "1599634229817-0",
           "1600206589985"
         ],
+        "disabled": true,
         "settings": {
         }
       },
@@ -1368,6 +1368,13 @@
       "81761b1d-3533-4aa0-8c0c-fa1aa6695c7b": {
         "type": "newyork",
         "settings": {
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
         }
       }
     },
