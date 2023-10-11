@@ -50,7 +50,7 @@
          class="text-center lg:text-right text-white flex-1 flex justify-center items-center lg:items-end"
         >
          <div>
-          <h4 class="text-slate-300 uppercase">Dallas / NYC / The World</h4>
+          <h4 class="text-zinc-300 uppercase">Dallas / NYC / The World</h4>
           <h2 class="text-4xl font-medium">Skin Journey</h2>
           <p class="text-white mt-6">
            It’s not every day you are featured in Times Square! <br />We
@@ -74,7 +74,7 @@
        <div class="absolute -top-1 -right-1">
         <button
          type="button"
-         class="aspect-square inline-flex justify-center items-center rounded-full border border-transparent w-10 h-10 p-0 bg-slate-200 leading-none text-sm font-medium text-black hover:bg-white hover:opacity-100 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+         class="aspect-square inline-flex justify-center items-center rounded-full border border-transparent w-10 h-10 p-0 bg-zinc-200 leading-none text-sm font-medium text-black hover:bg-white hover:opacity-100 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
          @click="closeModal"
         >
          x

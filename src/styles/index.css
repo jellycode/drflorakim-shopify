@@ -23,7 +23,7 @@
  }
 
  h5 {
-  @apply uppercase text-sm font-medium text-sky-500 mb-2;
+  @apply uppercase text-sm font-medium text-zinc-500 mb-2;
  }
  p {
   @apply font-body mb-6 leading-relaxed;
@@ -34,7 +34,7 @@
  }
 
  a {
-  @apply hover:text-sky-500;
+  @apply hover:text-zinc-500;
  }
 
  input[type='checkbox'] {
@@ -44,12 +44,12 @@
 
 @layer components {
  .btn {
-  @apply text-sky-100 bg-gradient-to-br from-blue-500 to-sky-600 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:text-white  hover:opacity-80  transition tracking-widest self-start justify-center items-center;
+  @apply text-zinc-100 bg-gradient-to-br from-zinc-500 to-zinc-600 font-semibold uppercase inline-flex border-none py-3 px-6 hover:shadow-sm hover:text-white  hover:opacity-80  transition tracking-widest self-start justify-center items-center;
   &.btn--tertiary {
-   @apply bg-gradient-to-br from-sky-200 to-sky-300 text-sky-700 hover:text-sky-900;
+   @apply bg-gradient-to-br from-zinc-200 to-zinc-300 text-zinc-700 hover:text-zinc-900;
   }
   &.btn--secondary {
-   @apply bg-gradient-to-br from-sky-100 to-sky-200 text-sky-700 hover:text-sky-900;
+   @apply bg-gradient-to-br from-zinc-100 to-zinc-200 text-zinc-700 hover:text-zinc-900;
   }
  }
 
@@ -206,7 +206,7 @@ button.cart-popup__close {
  @apply relative;
 
  h2 {
-  @apply text-3xl tracking-[0.5rem];
+  @apply text-xl md:text-2xl lg:text-3xl tracking-[0.5rem];
  }
 }
 
