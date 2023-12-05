@@ -35,7 +35,7 @@
     "social_vimeo_link": "",
     "favicon": "shopify:\/\/shop_images\/fk-favicon-100x100.png",
     "enable_ajax": false,
-    "footer_scripts": "<script type=\"text\/javascript\">\n  if (!Array.isArray(window.qbOptions)) {\n  window.qbOptions = []\n  }\n  window.qbOptions.push({\"use\":\"vkaL4b2AK3E32AYx\/YnoWjb431gE8lVax\"});\n  <\/script>",
+    "footer_scripts": "<script type=\"text\/javascript\">\n  if (!Array.isArray(window.qbOptions)) {\n  window.qbOptions = []\n  }\n  window.qbOptions.push({\"use\":\"vkaL4b2AK3E32AYx\/YnoWjb431gE8lVax\"});\n  <\/script>\n<script type=\"text\/javascript\" src=\"https:\/\/firebasestorage.googleapis.com\/v0\/b\/deardoc-embed-codes.appspot.com\/o\/Flora%20Kim%20Dermatology%2FFlora%20Kim%20Dermatology%20-%20Flora%20Kim%2Fcode.js?alt=media&token=043c09ec-335a-4b61-a665-52f69307a8d7\"><\/script>",
     "checkout_header_image": "",
     "checkout_logo_image": "",
     "checkout_logo_position": "left",
@@ -1796,5 +1796,10 @@
         "1492033809691"
       ]
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+
+    ]
   }
 }
