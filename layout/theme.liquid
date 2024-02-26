@@ -146,7 +146,7 @@
     {%- endif -%}
 
 
-    {{ content_for_header }}
+    <!-- OutlinkStickyBtn CODE Start -->{% if template.name == 'product'%}{% render('outlink-sticky') %}{% endif %}<!-- OutlinkStickyBtn END --> {{ content_for_header }}
     {% capture webpanda_hide_price_template %}
       {% include 'webpanda_hide_price' %}{% endcapture %}
     {% unless webpanda_hide_price_template contains "Liquid error" %}
