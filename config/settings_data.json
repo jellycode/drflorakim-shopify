@@ -322,15 +322,15 @@
           "1598989251553": {
             "type": "select",
             "settings": {
-              "link": "shopify://collections/toners",
-              "linktext": "Toners"
+              "link": "shopify://collections/moisturizers",
+              "linktext": "Moisturizers/Serums"
             }
           },
           "1598989240423": {
             "type": "select",
             "settings": {
-              "link": "shopify://collections/exfoliators",
-              "linktext": "Exfoliators"
+              "link": "shopify://collections/eye-care",
+              "linktext": "Eye/Neck/Lip Care (includes brow and lash)"
             }
           },
           "1598989521892": {
@@ -343,78 +343,43 @@
           "1598989537304": {
             "type": "select",
             "settings": {
-              "link": "shopify://collections/serums",
-              "linktext": "Serums"
+              "link": "shopify://collections/body-treatments",
+              "linktext": "Body Care"
             }
           },
           "1598989617970": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/eye-care",
-              "linktext": "Eye Care"
-            }
-          },
-          "1598989575847": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/moisturizers",
-              "linktext": "Moisturizers"
-            }
-          },
-          "1598989687057": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/neck-chest",
-              "linktext": "Neck & Chest"
-            }
-          },
-          "1598989641976": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/lip-care",
-              "linktext": "Lip Care"
-            }
-          },
-          "1598989666276": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/sun-care",
-              "linktext": "Sun Care"
-            }
-          },
-          "1598989744684": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/hand-sanitizer",
-              "linktext": "Hand Sanitizer"
-            }
-          },
-          "1598989732158": {
-            "type": "select",
-            "settings": {
-              "link": "shopify://collections/body-treatments",
-              "linktext": "Body Treatments"
-            }
-          },
-          "1598989825343": {
             "type": "select",
             "settings": {
               "link": "shopify://collections/hair-care",
               "linktext": "Hair Care"
             }
           },
-          "1598989860786": {
+          "1598989575847": {
+            "type": "select",
+            "settings": {
+              "link": "shopify://collections/sun-care",
+              "linktext": "Sun Care"
+            }
+          },
+          "1598989687057": {
+            "type": "select",
+            "settings": {
+              "link": "shopify://collections/pigment",
+              "linktext": "Pigment"
+            }
+          },
+          "1598989641976": {
             "type": "select",
             "settings": {
               "link": "shopify://collections/supplements",
               "linktext": "Supplements"
             }
           },
-          "1598989887422": {
+          "1598989666276": {
             "type": "select",
             "settings": {
               "link": "shopify://collections/tools-devices",
-              "linktext": "Tools & Devices"
+              "linktext": "Tools"
             }
           }
         },
@@ -428,12 +393,7 @@
           "1598989575847",
           "1598989687057",
           "1598989641976",
-          "1598989666276",
-          "1598989744684",
-          "1598989732158",
-          "1598989825343",
-          "1598989860786",
-          "1598989887422"
+          "1598989666276"
         ],
         "settings": {
           "free_shipp": "FREE SHIPPING ON ORDERS OVER $100",
