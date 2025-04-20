@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_text": "#3a3a3a",
@@ -26,16 +35,16 @@
     "share_twitter": false,
     "share_pinterest": false,
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/facebook.com",
+    "social_facebook_link": "https://facebook.com",
     "social_pinterest_link": "",
     "social_instagram_link": "#",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "favicon": "shopify:\/\/shop_images\/fk-favicon-100x100.png",
+    "favicon": "shopify://shop_images/fk-favicon-100x100.png",
     "enable_ajax": false,
-    "footer_scripts": "<script type=\"text\/javascript\">\n  if (!Array.isArray(window.qbOptions)) {\n  window.qbOptions = []\n  }\n  window.qbOptions.push({\"use\":\"vkaL4b2AK3E32AYx\/YnoWjb431gE8lVax\"});\n  <\/script>\n<script type=\"text\/javascript\" src=\"https:\/\/firebasestorage.googleapis.com\/v0\/b\/deardoc-embed-codes.appspot.com\/o\/Flora%20Kim%20Dermatology%2FFlora%20Kim%20Dermatology%20-%20Flora%20Kim%2Fcode.js?alt=media&token=043c09ec-335a-4b61-a665-52f69307a8d7\"><\/script>",
+    "footer_scripts": "<script type=\"text/javascript\">\n  if (!Array.isArray(window.qbOptions)) {\n  window.qbOptions = []\n  }\n  window.qbOptions.push({\"use\":\"vkaL4b2AK3E32AYx/YnoWjb431gE8lVax\"});\n  </script>\n<script type=\"text/javascript\" src=\"https://firebasestorage.googleapis.com/v0/b/deardoc-embed-codes.appspot.com/o/Flora%20Kim%20Dermatology%2FFlora%20Kim%20Dermatology%20-%20Flora%20Kim%2Fcode.js?alt=media&token=043c09ec-335a-4b61-a665-52f69307a8d7\"></script>",
     "checkout_header_image": "",
     "checkout_logo_image": "",
     "checkout_logo_position": "left",
@@ -55,7 +64,7 @@
         "type": "header",
         "settings": {
           "align_logo": "center",
-          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo": "shopify://shop_images/logo.png",
           "logo_max_width": 100,
           "main_linklist": "main-menu",
           "message": false,
@@ -105,18 +114,18 @@
       "new-header": {
         "type": "new-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/new_logo_ba3da6e6-cdf7-4f36-8c2a-413ae040be99.png",
+          "logo": "shopify://shop_images/new_logo_ba3da6e6-cdf7-4f36-8c2a-413ae040be99.png",
           "main_linklist": "main-menu"
         }
       },
       "1592841162051": {
         "type": "june-image_with_text",
         "settings": {
-          "image": "shopify:\/\/shop_images\/IMG_3664_1_77173951-61bc-4083-b148-60769ca9b148.jpg",
+          "image": "shopify://shop_images/IMG_3664_1_77173951-61bc-4083-b148-60769ca9b148.jpg",
           "title": "SKINCARE PRODUCTS",
           "summary": "Encompassing a wide spectrum of targeted products including cleansers, serums and effective tools and supplements, our skincare collection represents the best in self-care. Each formula has been meticulously hand-picked by Dr. Kim in order to help you achieve your healthy skin goals.",
           "button_text": "SHOP NOW",
-          "button_url": "https:\/\/www.drflorakim.com\/collections\/all"
+          "button_url": "https://www.drflorakim.com/collections/all"
         }
       },
       "1592842563403": {
@@ -124,19 +133,19 @@
         "settings": {
           "title": "Dr. Kim’s Skincare Philosophy",
           "summary": "Science, integrity, customization, and simplicity form Dr. Kim's cutting-edge skincare philosophy. She is committed to achieving your unique skin goals, always respectful of your natural beauty, and works relentlessly to formulate your bespoke beauty blueprint.",
-          "video_url": "https:\/\/player.vimeo.com\/video\/455981775",
-          "call_to_action_url": "shopify:\/\/pages\/about-dr-kim",
+          "video_url": "https://player.vimeo.com/video/455981775",
+          "call_to_action_url": "shopify://pages/about-dr-kim",
           "call_to_action_text": "Learn More About Dr. Kim"
         }
       },
       "1592846784506": {
         "type": "June-text-image",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Screen_Shot_2020-09-21_at_11.00.29_AM_1_3ecb7f07-b442-44a0-b6b8-d300d77624d8.png",
+          "image": "shopify://shop_images/Screen_Shot_2020-09-21_at_11.00.29_AM_1_3ecb7f07-b442-44a0-b6b8-d300d77624d8.png",
           "title": "Book CONSULTATION",
           "summary": "Whether it is virtual or in-person, a consultation is the first step toward healthier skin. Dr. Kim will actively listen to your skin concerns and formulate an effective treatment plan combining a thorough at-home skincare regimen with in-office procedures and technologies.",
           "button1_text": "Contact Us",
-          "button1_url": "\/pages\/contact",
+          "button1_url": "/pages/contact",
           "button2_text": "",
           "button2_url": ""
         }
@@ -164,8 +173,8 @@
         "settings": {
           "menu1": "footer1",
           "menu2": "footer2",
-          "fb_link": "https:\/\/www.facebook.com\/florakimdermatology\/",
-          "ig_link": "https:\/\/www.instagram.com\/drflorakim\/"
+          "fb_link": "https://www.facebook.com/florakimdermatology/",
+          "ig_link": "https://www.instagram.com/drflorakim/"
         }
       },
       "product-template": {
@@ -205,11 +214,11 @@
       "hero-about": {
         "type": "hero-about",
         "settings": {
-          "image": "shopify:\/\/shop_images\/IMG_8904.jpg",
+          "image": "shopify://shop_images/IMG_8904.jpg",
           "alignment": "center",
           "hero_layout": "full_width",
-          "text_header": "<p>Dr. Flora Kim is a board-certified dermatologist who graduated Magna Cum Laude from Harvard College, received a full merit scholarship from the University Of Virginia School Of Medicine, and completed dermatology residency here in Dallas at UT Southwestern.<\/p><p><\/p><p>She was born in Seoul, South Korea, but spent her childhood years in Paris, France before her family transitioned to New York. Before entering the field of medicine, Dr. Kim worked in Manhattan as a financial analyst at Morgan Stanley’s Mergers &amp; Acquisitions Group. However, on 9\/11, her life changed when escaping on the NY Waterway ferry and witnessing the second tower collapse. Dr. Kim experienced a period of introspection and decided to leave banking, instead pursuing a passion and serving her community as a physician.<\/p><p><\/p>",
-          "text": "<p>Her introduction to dermatology was a fortuitous response by the world renowned Dr. Mark Lebwohl, who kindly responded to her mass Harvard alumni email request to shadow any physician in New York City. From there, her passion for skin grew as she conducted research at the Dermatology Branch of the National Institutes of Health under Dr. Mark Udey, and as a medical student at the University of Virginia under the guidance of dermatology chair, Dr. Kenneth Greer.<\/p><p>It is through the collective life and work experiences above that Dr. Kim pours her heart into the art of practicing medical, surgical, and cosmetic dermatology.<\/p>"
+          "text_header": "<p>Dr. Flora Kim is a board-certified dermatologist who graduated Magna Cum Laude from Harvard College, received a full merit scholarship from the University Of Virginia School Of Medicine, and completed dermatology residency here in Dallas at UT Southwestern.</p><p></p><p>She was born in Seoul, South Korea, but spent her childhood years in Paris, France before her family transitioned to New York. Before entering the field of medicine, Dr. Kim worked in Manhattan as a financial analyst at Morgan Stanley’s Mergers &amp; Acquisitions Group. However, on 9/11, her life changed when escaping on the NY Waterway ferry and witnessing the second tower collapse. Dr. Kim experienced a period of introspection and decided to leave banking, instead pursuing a passion and serving her community as a physician.</p><p></p>",
+          "text": "<p>Her introduction to dermatology was a fortuitous response by the world renowned Dr. Mark Lebwohl, who kindly responded to her mass Harvard alumni email request to shadow any physician in New York City. From there, her passion for skin grew as she conducted research at the Dermatology Branch of the National Institutes of Health under Dr. Mark Udey, and as a medical student at the University of Virginia under the guidance of dermatology chair, Dr. Kenneth Greer.</p><p>It is through the collective life and work experiences above that Dr. Kim pours her heart into the art of practicing medical, surgical, and cosmetic dermatology.</p>"
         }
       },
       "video": {
@@ -217,7 +226,7 @@
         "settings": {
           "image": "",
           "image_position": "center center",
-          "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+          "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
           "show_overlay": false,
           "style": "image_with_play",
           "height": "large",
@@ -230,7 +239,7 @@
         "settings": {
           "image": "",
           "image_position": "center center",
-          "video_link": "https:\/\/www.youtube.com\/embed\/xVI5ehKgJOI",
+          "video_link": "https://www.youtube.com/embed/xVI5ehKgJOI",
           "show_overlay": false,
           "style": "image_with_play",
           "height": "medium",
@@ -266,7 +275,7 @@
         "type": "quotes-custom",
         "settings": {
           "title": "",
-          "quote": "<p>As we start each day, our hearts embrace utmost gratefulness for the opportunity to build a lifelong one on one relationship with you, and the privilege to become your trusted skin authority. Begin your journey with us.<\/p>",
+          "quote": "<p>As we start each day, our hearts embrace utmost gratefulness for the opportunity to build a lifelong one on one relationship with you, and the privilege to become your trusted skin authority. Begin your journey with us.</p>",
           "author": "DR. Flora kim",
           "author_job": ""
         }
@@ -306,105 +315,105 @@
           "1598989222425": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/cleansers",
-              "linktext": "Cleansers"
+              "link": "shopify://collections/cleansers",
+              "linktext": "Cleansers/Exfoliators"
             }
           },
           "1598989251553": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/toners",
+              "link": "shopify://collections/toners",
               "linktext": "Toners"
             }
           },
           "1598989240423": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/exfoliators",
+              "link": "shopify://collections/exfoliators",
               "linktext": "Exfoliators"
             }
           },
           "1598989521892": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/masks",
+              "link": "shopify://collections/masks",
               "linktext": "Masks"
             }
           },
           "1598989537304": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/serums",
+              "link": "shopify://collections/serums",
               "linktext": "Serums"
             }
           },
           "1598989617970": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/eye-care",
+              "link": "shopify://collections/eye-care",
               "linktext": "Eye Care"
             }
           },
           "1598989575847": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/moisturizers",
+              "link": "shopify://collections/moisturizers",
               "linktext": "Moisturizers"
             }
           },
           "1598989687057": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/neck-chest",
+              "link": "shopify://collections/neck-chest",
               "linktext": "Neck & Chest"
             }
           },
           "1598989641976": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/lip-care",
+              "link": "shopify://collections/lip-care",
               "linktext": "Lip Care"
             }
           },
           "1598989666276": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/sun-care",
+              "link": "shopify://collections/sun-care",
               "linktext": "Sun Care"
             }
           },
           "1598989744684": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/hand-sanitizer",
+              "link": "shopify://collections/hand-sanitizer",
               "linktext": "Hand Sanitizer"
             }
           },
           "1598989732158": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/body-treatments",
+              "link": "shopify://collections/body-treatments",
               "linktext": "Body Treatments"
             }
           },
           "1598989825343": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/hair-care",
+              "link": "shopify://collections/hair-care",
               "linktext": "Hair Care"
             }
           },
           "1598989860786": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/supplements",
+              "link": "shopify://collections/supplements",
               "linktext": "Supplements"
             }
           },
           "1598989887422": {
             "type": "select",
             "settings": {
-              "link": "shopify:\/\/collections\/tools-devices",
+              "link": "shopify://collections/tools-devices",
               "linktext": "Tools & Devices"
             }
           }
@@ -442,7 +451,7 @@
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<p>We believe in the fundamental principle of helping each other. Social entrepreneurship is thoughtfully woven into our mission, and we strive to cultivate a culture grounded in daily gratitude, mindfulness and servant heart. Every day, we see how the simple act of achieving healthy skin transforms self-confidence and instantly empowers each individual. Women should embrace their worth and radiate their inherent beauty, regardless of the struggles or challenges they face.<\/p><p><\/p><p>We work with both local and national non-profit organizations to find those who are most in need of our skincare expertise. We meet with each individual to discuss their concerns and gift our bespoke services to help boost careers, self-esteem, and outlooks on life.<\/p>",
+          "text": "<p>We believe in the fundamental principle of helping each other. Social entrepreneurship is thoughtfully woven into our mission, and we strive to cultivate a culture grounded in daily gratitude, mindfulness and servant heart. Every day, we see how the simple act of achieving healthy skin transforms self-confidence and instantly empowers each individual. Women should embrace their worth and radiate their inherent beauty, regardless of the struggles or challenges they face.</p><p></p><p>We work with both local and national non-profit organizations to find those who are most in need of our skincare expertise. We meet with each individual to discuss their concerns and gift our bespoke services to help boost careers, self-esteem, and outlooks on life.</p>",
           "text_size": "medium"
         }
       },
@@ -452,19 +461,18 @@
           "1593527138513": {
             "type": "content",
             "settings": {
-              "video_block": "https:\/\/player.vimeo.com\/video\/459015719?background=1",
+              "video_block": "https://player.vimeo.com/video/459015719?background=1",
               "title": "We seek to empower",
               "empower_text": "The tattoos I put on my face have become flags of past rebellion that I no longer wish to fly publicly anymore. I'm fighting CPS in court for my baby girl back and the tattoos, unfortunately, draw an image of me that is not accurate as a mother. They are symbols of huge mistakes in my life that I am working hard to overcome with the help of Flora Kim Dermatology.",
               "author": "Nerissa",
-              "link": "shopify:\/\/blogs\/non-journal\/we-seek-to-empower-women"
+              "link": "shopify://blogs/non-journal/we-seek-to-empower-women"
             }
           }
         },
         "block_order": [
           "1593527138513"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "logo-bar": {
         "type": "logo-bar",
@@ -472,32 +480,32 @@
           "1593531911066": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/download_2_1.png",
-              "image_2": "shopify:\/\/shop_images\/download_2_10.png",
+              "image": "shopify://shop_images/download_2_1.png",
+              "image_2": "shopify://shop_images/download_2_10.png",
               "link": ""
             }
           },
           "1593531939903": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/download_2_10.png",
-              "image_2": "shopify:\/\/shop_images\/download_2_1.png",
+              "image": "shopify://shop_images/download_2_10.png",
+              "image_2": "shopify://shop_images/download_2_1.png",
               "link": ""
             }
           },
           "1593531944969": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/download_2_1.png",
-              "image_2": "shopify:\/\/shop_images\/download_2_10.png",
+              "image": "shopify://shop_images/download_2_1.png",
+              "image_2": "shopify://shop_images/download_2_10.png",
               "link": ""
             }
           },
           "1593531951303": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/download_2_10.png",
-              "image_2": "shopify:\/\/shop_images\/download_2_1.png",
+              "image": "shopify://shop_images/download_2_10.png",
+              "image_2": "shopify://shop_images/download_2_1.png",
               "link": ""
             }
           }
@@ -516,15 +524,15 @@
         "type": "branded_product",
         "disabled": true,
         "settings": {
-          "video_url_1": "https:\/\/player.vimeo.com\/video\/440803067",
+          "video_url_1": "https://player.vimeo.com/video/440803067",
           "title_1_1": "drflorakim",
           "title_1_2": "something",
           "title_1_3": "something",
-          "video_url_2": "https:\/\/player.vimeo.com\/video\/440803097",
+          "video_url_2": "https://player.vimeo.com/video/440803097",
           "title_2_1": "drflorakim",
           "title_2_2": "something",
           "title_2_3": "something",
-          "video_url_3": "https:\/\/player.vimeo.com\/video\/440803123",
+          "video_url_3": "https://player.vimeo.com/video/440803123",
           "title_3_1": "drflorakim",
           "title_3_2": "something",
           "title_3_3": "something"
@@ -607,7 +615,7 @@
               "more_link_txt1": "View More",
               "add_cart_txt1": "add to cart",
               "product2": "24-7-barrier-balance-cream",
-              "pro_title2": "24\/7 Barrier Balance Cream",
+              "pro_title2": "24/7 Barrier Balance Cream",
               "pro_dec2": "Intense hydrating cream infused with multi-action barrier balancing ingredients and skin brightening skincare actives.",
               "pro_main_title2": "",
               "pro_sub_title2": "",
@@ -656,7 +664,7 @@
               "add_cart_txt1": "add to cart",
               "product2": "isdin-eryfotona-actinica-3-7oz",
               "pro_title2": "ISDIN Eryfotona Actinica Ultralight Emulsion SPF 50+",
-              "pro_dec2": "Formulated with DNA repairsomes and vitamin E. It is a 100% mineral based sunscreen designed to have a light weight consistency with broad spectrum UVA\/UVB protection that won't leave your skin feeling greasy.",
+              "pro_dec2": "Formulated with DNA repairsomes and vitamin E. It is a 100% mineral based sunscreen designed to have a light weight consistency with broad spectrum UVA/UVB protection that won't leave your skin feeling greasy.",
               "pro_main_title2": "",
               "pro_sub_title2": "",
               "pro_price2": "",
@@ -695,7 +703,7 @@
           "1597920017460"
         ],
         "settings": {
-          "video_url": "https:\/\/player.vimeo.com\/video\/458660831",
+          "video_url": "https://player.vimeo.com/video/458660831",
           "tab_title": "Morning routine"
         }
       },
@@ -916,7 +924,7 @@
           "1599157141006"
         ],
         "settings": {
-          "video_url": "https:\/\/player.vimeo.com\/video\/458698328",
+          "video_url": "https://player.vimeo.com/video/458698328",
           "tab_title": "evening"
         }
       },
@@ -1015,7 +1023,7 @@
               "show_vimeo_video": false,
               "vimeo_url": "",
               "show_custom_video": true,
-              "mp4_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0400\/8378\/3842\/files\/16_Eye_Radience_Cream.mp4?v=1603475998",
+              "mp4_url": "https://cdn.shopify.com/s/files/1/0400/8378/3842/files/16_Eye_Radience_Cream.mp4?v=1603475998",
               "mov_url": "",
               "wmv_url": "",
               "avi_url": "",
@@ -1023,20 +1031,20 @@
               "sub_label": "Defenage",
               "main_label": "3D Eye Radiance Cream",
               "price_label": "",
-              "link": "shopify:\/\/products\/3d-eye-radiance-cream"
+              "link": "shopify://products/3d-eye-radiance-cream"
             }
           },
           "1599634229817-0": {
             "type": "image",
             "settings": {
               "show_banner_image": false,
-              "image": "shopify:\/\/shop_images\/Screen_Shot_2020-08-24_at_4.28.50_PM.png",
+              "image": "shopify://shop_images/Screen_Shot_2020-08-24_at_4.28.50_PM.png",
               "show_youtube_video": false,
               "youtube_url": "",
               "show_vimeo_video": false,
               "vimeo_url": "",
               "show_custom_video": true,
-              "mp4_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0400\/8378\/3842\/files\/4_Transformative_Skin_Capsules.mp4?v=1604695851",
+              "mp4_url": "https://cdn.shopify.com/s/files/1/0400/8378/3842/files/4_Transformative_Skin_Capsules.mp4?v=1604695851",
               "mov_url": "",
               "wmv_url": "",
               "avi_url": "",
@@ -1044,7 +1052,7 @@
               "sub_label": "Dr. Flora Kim",
               "main_label": "Transformative Skin Capsules",
               "price_label": "",
-              "link": "shopify:\/\/products\/transformative-skin-capsules"
+              "link": "shopify://products/transformative-skin-capsules"
             }
           },
           "1600206589985": {
@@ -1056,7 +1064,7 @@
               "show_vimeo_video": false,
               "vimeo_url": "",
               "show_custom_video": true,
-              "mp4_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0400\/8378\/3842\/files\/9_Gold_Roller_UPDATE_1.mp4?v=1600206522",
+              "mp4_url": "https://cdn.shopify.com/s/files/1/0400/8378/3842/files/9_Gold_Roller_UPDATE_1.mp4?v=1600206522",
               "mov_url": "",
               "wmv_url": "",
               "avi_url": "",
@@ -1064,7 +1072,7 @@
               "sub_label": "ENVIRON",
               "main_label": "Microneedling Gold Roller",
               "price_label": "",
-              "link": "shopify:\/\/products\/environ-gold-roll-cit"
+              "link": "shopify://products/environ-gold-roll-cit"
             }
           }
         },
@@ -1074,8 +1082,7 @@
           "1600206589985"
         ],
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "press-listing": {
         "type": "press-listing",
@@ -1083,17 +1090,17 @@
           "2c041594-3e9f-43d0-8e43-1f721a33b19e": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-05-27_at_9.47.59_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-05-27_at_9.47.59_AM.png",
               "press_article_title": "How to Treat a Sunburn Fast",
               "press_article_caption": "\"While there’s no such thing as getting rid of a sunburn overnight, you can reduce sunburn redness according to our experts, board-certified dermatologists Flora Kim...\"",
               "press_article_button_text": "Glamour.com",
-              "press_article_button_url": "https:\/\/www.glamour.com\/story\/how-to-cover-up-a-bad-sunburn"
+              "press_article_button_url": "https://www.glamour.com/story/how-to-cover-up-a-bad-sunburn"
             }
           },
           "8c4a8687-e97a-4ebc-a59d-8dbd90e7b527": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-04-14_at_12.28.56_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-04-14_at_12.28.56_PM.png",
               "press_article_title": "Can You Exfoliate If You're Already Using A Retinol? Derms Explain",
               "press_article_caption": "\"They have different functions so both can be beneficial as part of your healthy skin routine,\" says Kim. You just have to use them correctly.",
               "press_article_button_text": "mindbodygreen.com"
@@ -1102,221 +1109,221 @@
           "cc1ab0e4-51a5-4dbe-b06a-d87fa5d1f7f7": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-03-30_at_2.22.16_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-03-30_at_2.22.16_PM.png",
               "press_article_title": "4 Dermatologist-Approved Tips For Dealing With Dry & Acne-Prone Skin",
               "press_article_caption": "\"For those of us who have acne-prone and dry skin, we have to be extra careful in terms of which products to use,\" notes board-certified dermatologist Flora Kim, M.D., FAAD",
               "press_article_button_text": "mindbodygreen.com",
-              "press_article_button_url": "https:\/\/www.mindbodygreen.com\/articles\/how-to-treat-dry-and-acne-prone-skin"
+              "press_article_button_url": "https://www.mindbodygreen.com/articles/how-to-treat-dry-and-acne-prone-skin"
             }
           },
           "f82f0195-849f-47ee-99b2-e0e3e76454e6": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-03-16_at_2.21.17_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-03-16_at_2.21.17_PM.png",
               "press_article_title": "Derm Diaries: ‘I’m a Dermatologist With Dark Spots From Sun Exposure—Here’s How I Treat Them’",
               "press_article_caption": "\"Flora Kim, MD, FAAD didn't have becoming a skincare expert in her original plan. The South Korea-born, New York-raised dermatologist actually started her career with a lucrative job as a financial analyst at Morgan Stanley’s Mergers...\"",
               "press_article_button_text": "womenshealthmag.com",
-              "press_article_button_url": "https:\/\/www.womenshealthmag.com\/beauty\/a35633618\/dermatologist-sun-dark-spots-skincare-routine\/"
+              "press_article_button_url": "https://www.womenshealthmag.com/beauty/a35633618/dermatologist-sun-dark-spots-skincare-routine/"
             }
           },
           "721b13c4-cc3d-421d-bd58-72807edbd99b": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-02-11_at_2.46.31_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-02-11_at_2.46.31_PM.png",
               "press_article_title": "4 Retinol Myths You Should Probably Erase From Your Mind",
               "press_article_caption": "\"There is no dermatologist that does not personally use some form of vitamin A on their skin—it is that good and that important. Period.\" Dr. Flora Kim",
               "press_article_button_text": "WHOWHATWEAR.COM",
-              "press_article_button_url": "https:\/\/www.whowhatwear.com\/retinol-benefits"
+              "press_article_button_url": "https://www.whowhatwear.com/retinol-benefits"
             }
           },
           "9f01437c-e25c-448e-b309-7fc6664a3301": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-01-28_at_1.49.03_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-01-28_at_1.49.03_PM.png",
               "press_article_title": "This Night Cream Delivers The Most Perfect Morning Glow",
               "press_article_caption": "Choosing a night cream should depend both on your skin type and goals, as well as the season, notes board-certified dermatologist, Dr. Flora Kim",
               "press_article_button_text": "thezoereport.com",
-              "press_article_button_url": "https:\/\/www.thezoereport.com\/p\/13-of-the-best-night-creams-to-wake-up-with-glowing-skin-57599373"
+              "press_article_button_url": "https://www.thezoereport.com/p/13-of-the-best-night-creams-to-wake-up-with-glowing-skin-57599373"
             }
           },
           "d1566ee1-c286-4778-b3d4-4659cb3fc65c": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-01-28_at_1.45.26_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-01-28_at_1.45.26_PM.png",
               "press_article_title": "Those Small Bumps on the Backs of Your Upper Arms? This Is What to Do About Them",
               "press_article_caption": "This is where it gets tricky—no one really knows the actual cause of KP, but we know it does occur when dead skin cells clog up the pores, according to board-certified dermatologist Flora Kim, MD, FAAD",
               "press_article_button_text": "whowhatwear.com",
-              "press_article_button_url": "https:\/\/www.whowhatwear.com\/keratosis-pilaris-treatments"
+              "press_article_button_url": "https://www.whowhatwear.com/keratosis-pilaris-treatments"
             }
           },
           "ecd00f1a-48b5-440b-8bb7-525c2fb5a88e": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2021-01-06_at_2.06.19_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2021-01-06_at_2.06.19_PM.png",
               "press_article_title": "12 Signs of Sleep Deprivation You Need to Know, According to Experts",
               "press_article_caption": "“When a good night’s sleep is hindered, you will look significantly more fatigued,” Flora Kim, MD",
               "press_article_button_text": "health.com",
-              "press_article_button_url": "https:\/\/www.health.com\/mind-body\/signs-of-sleep-deprivation?slide=fa28f939-bce6-4aa2-879a-e8257c8894a8#fa28f939-bce6-4aa2-879a-e8257c8894a8"
+              "press_article_button_url": "https://www.health.com/mind-body/signs-of-sleep-deprivation?slide=fa28f939-bce6-4aa2-879a-e8257c8894a8#fa28f939-bce6-4aa2-879a-e8257c8894a8"
             }
           },
           "93952b61-0a83-46bc-95f2-30d58ed1c91f": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-31_at_9.47.58_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-31_at_9.47.58_AM.png",
               "press_article_title": "Everything You Need to Know About Polyglutamic Acid, Your Skin's New Hero Hydrator",
               "press_article_caption": "\"Unlike some moisture boosters that penetrate skin, polyglutamic acid is a larger molecule that sits on top, which helps skin glow and increases luminosity (like a natural highlighter!).\" Dr. Flora Kim",
               "press_article_button_text": "goodhousekeeping.com",
-              "press_article_button_url": "https:\/\/www.goodhousekeeping.com\/beauty\/anti-aging\/a34741949\/what-is-polyglutamic-acid\/"
+              "press_article_button_url": "https://www.goodhousekeeping.com/beauty/anti-aging/a34741949/what-is-polyglutamic-acid/"
             }
           },
           "3a6b0ccf-cd06-4277-8c96-ae085f188d6a": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-22_at_10.21.16_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-22_at_10.21.16_AM.png",
               "press_article_title": "Dermatologists Are Prescribing This Acne Medication to Treat Hair Loss",
-              "press_article_caption": "“Gradual thinning at the part line, followed by increasing diffuse hair loss radiating from the top of the head.” While it can happen, women rarely experience receding and\/or go completely bald...",
+              "press_article_caption": "“Gradual thinning at the part line, followed by increasing diffuse hair loss radiating from the top of the head.” While it can happen, women rarely experience receding and/or go completely bald...",
               "press_article_button_text": "Byrdie.com",
-              "press_article_button_url": "https:\/\/www.byrdie.com\/spironolactone-for-hair-loss-5084055"
+              "press_article_button_url": "https://www.byrdie.com/spironolactone-for-hair-loss-5084055"
             }
           },
           "be748d38-62eb-4987-8e43-00cb8621d89a": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-17_at_9.50.46_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-17_at_9.50.46_AM.png",
               "press_article_title": "All That Hand Washing Has Been Hard On Your Hands — These Serums Will Help",
               "press_article_caption": "“It may be paradoxical, but the more we wash hands to prevent infection, the more dry and cracked the skin on our hands become and the more susceptible to infection...\" Dr. Flora Kim",
               "press_article_button_text": "Instyle.com",
-              "press_article_button_url": "https:\/\/www.instyle.com\/beauty\/best-hand-serums"
+              "press_article_button_url": "https://www.instyle.com/beauty/best-hand-serums"
             }
           },
           "9cd7f4d4-7fb4-495c-b3c8-3a8963031126": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-14_at_1.15.00_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-14_at_1.15.00_PM.png",
               "press_article_title": "The Skincare Product That Just Works for Over-40 Skin",
               "press_article_caption": "\"Mature skin will need three things: a larger quantity of moisturizer applied each time (think super generous), a higher frequency of application (multiple times a day), as well as...\" Dr. Flora Kim",
               "press_article_button_text": "WHOWHATWEAR.COM",
-              "press_article_button_url": "https:\/\/www.whowhatwear.com\/best-moisturizers-for-mature-skin"
+              "press_article_button_url": "https://www.whowhatwear.com/best-moisturizers-for-mature-skin"
             }
           },
           "bf6ef925-e02f-4598-ac86-3bf091981516": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-07_at_11.21.46_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-07_at_11.21.46_AM.png",
               "press_article_title": "Blepharitis Cases on the Rise: Here's Why Your Eyelids May Be Swollen Right Now",
               "press_article_caption": "\"Something as simple as swelling due to eating too much salt,\" says Flora Kim, a board-certified dermatologist in Dallas",
               "press_article_button_text": "ALLURE.COM",
-              "press_article_button_url": "https:\/\/www.allure.com\/story\/what-is-blepharitis-swollen-eyelids-treatment"
+              "press_article_button_url": "https://www.allure.com/story/what-is-blepharitis-swollen-eyelids-treatment"
             }
           },
           "e7187dd0-5b1d-4a2b-99da-8f2ef472ff40": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-04_at_10.06.42_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-12-04_at_10.06.42_AM.png",
               "press_article_title": "The 32 Best Fragrance-Free Skin-Care Products, According to Dermatologists",
               "press_article_caption": "\"Fragrance-free products I love to rotate into my personal skin-care regimen are the DefenAge Barrier Cream and BioSerum—a powerful duo with the key ingredient of defensins...\" Dr. Flora Kim",
               "press_article_button_text": "NEWBEAUTY.COM",
-              "press_article_button_url": "https:\/\/www.newbeauty.com\/fragrance-free-skincare-products\/22"
+              "press_article_button_url": "https://www.newbeauty.com/fragrance-free-skincare-products/22"
             }
           },
           "e9f84772-e689-480e-a874-82e36ce08c9c": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-11-25_at_9.59.06_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-11-25_at_9.59.06_AM.png",
               "press_article_title": "How to Strengthen Your Nails",
               "press_article_caption": "Artificial nail application, genetic disposition, malnutrition, illness, dehydration, medication side effects, and underlying nail infections are just some of the common causes of weak nails, according to Flora Kim, M.D.",
               "press_article_button_text": "SHAPE.COM",
-              "press_article_button_url": "https:\/\/www.shape.com\/lifestyle\/beauty-style\/how-to-strengthen-nails"
+              "press_article_button_url": "https://www.shape.com/lifestyle/beauty-style/how-to-strengthen-nails"
             }
           },
           "80a18730-11f5-4541-b5b1-b3045483b95b": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-11-13_at_9.35.33_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-11-13_at_9.35.33_AM.png",
               "press_article_title": "What Is Retinaldehyde — & Is It Really Stronger Than Retinol?",
               "press_article_caption": "\"In human skin, retinaldehyde is a retinoic acid precursor that is formed as an intermediate metabolite in the transformation of retinol to retinoic acid...\" Dr. Flora Kim",
               "press_article_button_text": "THEZOEREPORT.COM",
-              "press_article_button_url": "https:\/\/www.thezoereport.com\/p\/what-is-retinaldehyde-is-it-really-stronger-than-retinol-41788335"
+              "press_article_button_url": "https://www.thezoereport.com/p/what-is-retinaldehyde-is-it-really-stronger-than-retinol-41788335"
             }
           },
           "f1f5bc5e-bf1f-4d3b-8585-ccb107696723": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-11-03_at_11.28.22_AM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-11-03_at_11.28.22_AM.png",
               "press_article_title": "The 14 Best Face Washes for Dry Skin",
               "press_article_caption": "\"When you have dry skin, it is screaming for hydration,\" says board-certified dermatologist Dr. Flora Kim. \"It is super important to think about ingredients that can best help...\"",
               "press_article_button_text": "HARPERSBAZAAR.COM",
-              "press_article_button_url": "https:\/\/www.harpersbazaar.com\/beauty\/skin-care\/g34533931\/best-face-wash-for-dry-skin\/"
+              "press_article_button_url": "https://www.harpersbazaar.com/beauty/skin-care/g34533931/best-face-wash-for-dry-skin/"
             }
           },
           "007b81f3-29ee-4529-ba24-49c6c659cf05": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Screen_Shot_2020-10-30_at_1.01.45_PM.png",
+              "press_article_image": "shopify://shop_images/Screen_Shot_2020-10-30_at_1.01.45_PM.png",
               "press_article_title": "Your Guide to At-Home Chemical Peels",
               "press_article_caption": "At-home chemical peels can be scary. Between all the acids, very strict instructions, and warnings about a \"burning, tingling sensation,\" it's no wonder that they can seem a little daunting...",
               "press_article_button_text": "Shape.com",
-              "press_article_button_url": "https:\/\/www.shape.com\/lifestyle\/beauty-style\/at-home-chemical-peels"
+              "press_article_button_url": "https://www.shape.com/lifestyle/beauty-style/at-home-chemical-peels"
             }
           },
           "77af87c4-f67e-4101-810f-c877097efa9f": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_78ba7c95-872d-4852-b920-b0c40b3bfa9f.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_78ba7c95-872d-4852-b920-b0c40b3bfa9f.png",
               "press_article_title": "The Body Care Trend Is Taking The Beauty Industry By Storm Right Now — Here’s Why",
               "press_article_caption": "Body care is booming. It's a fact you're probably well aware of, even if you don't have access to the hard marketing data. Launch after launch, the skincare industry is traveling down the neck, out the arms, and across the entire body...",
               "press_article_button_text": "thezoereport.com",
-              "press_article_button_url": "https:\/\/www.thezoereport.com\/p\/the-body-care-trend-is-taking-the-beauty-industry-by-storm-right-now-heres-why-34625133"
+              "press_article_button_url": "https://www.thezoereport.com/p/the-body-care-trend-is-taking-the-beauty-industry-by-storm-right-now-heres-why-34625133"
             }
           },
           "ea601603-fe24-4950-92e2-583f2aa5bffe": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_a02fce31-348f-42a2-a2ac-c8ac59c3c23c.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_a02fce31-348f-42a2-a2ac-c8ac59c3c23c.png",
               "press_article_title": "Our Under-Eye Circles Are Practically Nonexistent Now Thanks to This Product",
               "press_article_caption": "I don't know about you, but I get pretty overwhelmed when browsing all the eye creams and eye serums out there. It's both a blessing and a curse that there are so many options. I'm thankful that there are different formulas to choose...",
               "press_article_button_text": "WHOWHATWEAR.com",
-              "press_article_button_url": "https:\/\/www.whowhatwear.com\/best-eye-serums"
+              "press_article_button_url": "https://www.whowhatwear.com/best-eye-serums"
             }
           },
           "6b0d0d09-95ef-4931-aba2-927e4004344d": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_3fc9daa3-00ab-40a9-a542-56fe947f79e9.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_3fc9daa3-00ab-40a9-a542-56fe947f79e9.png",
               "press_article_title": "Heads Up: You’re Probably Breaking This Major Face-Cleansing Rule",
               "press_article_caption": "By now, face cleansing has become second nature for our morning and evening skin-care routines. A simple squirt of product here, a quick lather on our skin there—next thing you know, you’re towel-dried and ready to move...",
               "press_article_button_text": "COVETEUR.com",
-              "press_article_button_url": "https:\/\/coveteur.com\/2020\/10\/15\/water-temperature-face-cleansing-facts\/"
+              "press_article_button_url": "https://coveteur.com/2020/10/15/water-temperature-face-cleansing-facts/"
             }
           },
           "84119ff9-3f7c-4500-bff1-bb808b8c48f7": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_5e475106-9435-4629-a990-9e69a16d6273.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_5e475106-9435-4629-a990-9e69a16d6273.png",
               "press_article_title": "What's The Deal With Aftershave?",
               "press_article_caption": "I always thought being a teenage girl was a particularly unpleasant, albeit temporary, affliction. That being said, I admit I’ve never been a teenage boy.  I vividly remember this one day...",
               "press_article_button_text": "INTOTHEGLOSS.com",
-              "press_article_button_url": "https:\/\/intothegloss.com\/2020\/09\/should-you-use-aftershave\/"
+              "press_article_button_url": "https://intothegloss.com/2020/09/should-you-use-aftershave/"
             }
           },
           "c3e40ba0-ce41-41b0-b2a3-75e7eda49dcd": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_5fbcbc73-b431-4113-8f35-530cd7eb8a58.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_5fbcbc73-b431-4113-8f35-530cd7eb8a58.png",
               "press_article_title": "What to Do If Your Skin's Been Exposed to Wildfire Smoke",
               "press_article_caption": "The environmental pollutants that accompany 2020's unprecedented wildfires can cause serious damage to the body's largest organ (and its first line of defense). We asked medical professionals for insight on how to...",
               "press_article_button_text": "ALLURE.com",
-              "press_article_button_url": "https:\/\/www.allure.com\/story\/wildfire-smoke-skin-irritation-treatment"
+              "press_article_button_url": "https://www.allure.com/story/wildfire-smoke-skin-irritation-treatment"
             }
           },
           "ca46e394-2a58-48c7-855d-802922070bff": {
             "type": "image",
             "settings": {
-              "press_article_image": "shopify:\/\/shop_images\/Rectangle_69_52578554-943b-4e3a-a796-6f84f726242b.png",
+              "press_article_image": "shopify://shop_images/Rectangle_69_52578554-943b-4e3a-a796-6f84f726242b.png",
               "press_article_title": "Everything You Ever Wanted to Know About Petroleum Jelly for Skin",
               "press_article_caption": "Petroleum jelly (also known as petrolatum) has been a staple in homes for over a century thanks to its myriad uses. For years, it had been a dry skin savior, providing instant relief to chapped lips and cracked eczema...",
               "press_article_button_text": "BYRDIE.COM",
-              "press_article_button_url": "https:\/\/www.byrdie.com\/is-petroleum-jelly-safe-2442885"
+              "press_article_button_url": "https://www.byrdie.com/is-petroleum-jelly-safe-2442885"
             }
           }
         },
@@ -1346,8 +1353,7 @@
           "c3e40ba0-ce41-41b0-b2a3-75e7eda49dcd",
           "ca46e394-2a58-48c7-855d-802922070bff"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "cd3accc9-4303-42b1-852d-d8d70b2f3f94": {
         "type": "instagram-app-section",
@@ -1367,8 +1373,7 @@
       },
       "81761b1d-3533-4aa0-8c0c-fa1aa6695c7b": {
         "type": "newyork",
-        "settings": {
-        }
+        "settings": {}
       },
       "cart-template": {
         "type": "cart-template",
@@ -1397,8 +1402,7 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {
-          }
+          "settings": {}
         },
         "hero-1": {
           "type": "hero",
@@ -1409,26 +1413,22 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {
-          }
+          "settings": {}
         },
         "feature-columns": {
           "type": "feature-columns",
           "blocks": {
             "feature-columns-0": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-1": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-2": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1457,18 +1457,15 @@
           "blocks": {
             "quotes-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-1": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-2": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1485,18 +1482,15 @@
           "blocks": {
             "image-bar-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-2": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1504,21 +1498,18 @@
             "image-bar-1",
             "image-bar-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "footer-0": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "footer-1": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1669,23 +1660,20 @@
         },
         "1492033809691": {
           "type": "map",
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033924902": {
           "type": "custom-content",
@@ -1711,18 +1699,15 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-1": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-2": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1761,18 +1746,15 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -1798,8 +1780,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-
-    ]
+    "custom_css": []
   }
 }
