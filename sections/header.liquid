@@ -73,11 +73,12 @@
         {%- assign logo_classes = '' -%}
       {% endif %}
 
-      <div class="grid__item header-hamburger flex flex-row">
-        <div class="hamburger-wrapper">
-          <span class="hamburger-first"></span>
-          <span class="hamburger-last"></span>
-        </div>
+      <div class="grid__item header-hamburger flex flex-row ">
+        <div class="hamburger-wrapper flex flex-col space-y-2 justify-center items-center ">
+          <span class="hamburger-line  bg-black w-full block"></span>
+          <span class="hamburger-line bg-black w-full block"></span>
+          <span class="hamburger-line  bg-black w-full block"></span>
+        <p>Menu</p></div>
         <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top mobile-search-button">
           {% include 'icon-search' %}
           {% comment %}<img src="{{ 'search.png' | asset_url }}">{% endcomment %}

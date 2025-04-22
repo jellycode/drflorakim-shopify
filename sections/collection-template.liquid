@@ -70,7 +70,7 @@
 
         <ul class="collection-list mobile-hid_filter">
           <div class="item-wrapper category">
-            <p class="collection-list-title">TOP ROUTINES<span class="collection-list-title-sign plus active">+</span>
+            <p class="collection-list-title">Skin concerns<span class="collection-list-title-sign plus active">+</span>
               <span class="collection-list-title-sign minus">-</span>
             </p>
             <div class="collection-list-wrapper">
@@ -78,30 +78,6 @@
                 <a href="{{ link.url }}">
                   <li>{{ link.title }}</li>
                 </a>
-              {% endfor %}
-            </div>
-          </div>
-
-          <div class="item-wrapper taglink">
-            <p class="collection-list-title">Skin concerns<span class="collection-list-title-sign plus active">+</span>
-              <span class="collection-list-title-sign minus">-</span>
-            </p>
-            <div class="collection-list-wrapper">
-              {% for tag in collection.all_tags %}
-                <a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}">
-                  <li>{{ tag }}</li>
-                </a>
-                <script>
-                  var loc = window.location + "";
-                  loc = loc.replace("{{shop.secure_url}}", "");
-                  if (loc == "/collections/                         {% if collection.handle != blank %}{{ collection.handle }}
-                {% else %}
-                  all                         {% endif %}/{{ tag | handleize }}") {
-                    $(".taglink").find(".collection-list-wrapper").show();
-                    $(".taglink").find(".collection-list-title-sign.plus").removeClass("active");
-                    $(".taglink").find(".collection-list-title-sign.minus").addClass("active");
-                  }
-                </script>
               {% endfor %}
             </div>
           </div>
@@ -137,7 +113,7 @@
           </div>
 
           <div class="item-wrapper featuredshop">
-            <p class="collection-list-title">featured shops<span class="collection-list-title-sign plus active">+</span>
+            <p class="collection-list-title">Brands<span class="collection-list-title-sign plus active">+</span>
               <span class="collection-list-title-sign minus">-</span>
             </p>
             <div class="collection-list-wrapper">
@@ -159,25 +135,6 @@
             </div>
           </div>
 
-          <div class="item-wrapper brand_list">
-            <p class="collection-list-title">brands<span class="collection-list-title-sign plus active">+</span>
-              <span class="collection-list-title-sign minus">-</span>
-            </p>
-            <div class="collection-list-wrapper">
-              {% for product_type in shop.types %}
-                <li {% if product_type == collection.title %}class="active"{% endif %}>{{ product_type | link_to_type }}</li>
-              {% endfor %}
-              <script>
-                var loc = window.location + "";
-                loc = loc.replace("{{shop.secure_url}}", "");
-                if (loc.indexOf("collections/types") > 0) {
-                  $(".brand_list").find(".collection-list-wrapper").show();
-                  $(".brand_list").find(".collection-list-title-sign.plus").removeClass("active");
-                  $(".brand_list").find(".collection-list-title-sign.minus").addClass("active");
-                }
-              </script>
-            </div>
-          </div>
 
         </ul>
 
@@ -203,26 +160,13 @@
           <div class="mobilemenu">
             <ul class="collection-list">
               <div class="item-wrapper">
-                <p class="collection-list-title">top routines<span class="collection-list-title-sign plus active">+</span>
+                <p class="collection-list-title">Skin concerns<span class="collection-list-title-sign plus active">+</span>
                   <span class="collection-list-title-sign minus">+</span>
                 </p>
                 <div class="collection-list-wrapper">
                   {% for link in linklists.top-routines.links %}
                     <a href="{{ link.url }}">
                       <li>{{ link.title }}</li>
-                    </a>
-                  {% endfor %}
-                </div>
-              </div>
-
-              <div class="item-wrapper">
-                <p class="collection-list-title">Skin concerns<span class="collection-list-title-sign plus active">+</span>
-                  <span class="collection-list-title-sign minus">+</span>
-                </p>
-                <div class="collection-list-wrapper">
-                  {% for tag in collection.all_tags %}
-                    <a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}">
-                      <li>{{ tag }}</li>
                     </a>
                   {% endfor %}
                 </div>
@@ -249,7 +193,7 @@
               </div>
 
               <div class="item-wrapper">
-                <p class="collection-list-title">featured shops<span class="collection-list-title-sign plus active">+</span>
+                <p class="collection-list-title">Brands<span class="collection-list-title-sign plus active">+</span>
                   <span class="collection-list-title-sign minus">+</span>
                 </p>
                 <div class="collection-list-wrapper">
@@ -258,17 +202,6 @@
                       {% else %}
                         <li>{{ vendor | link_to_vendor }}</li>
                     {% endif %}
-                  {% endfor %}
-                </div>
-              </div>
-
-              <div class="item-wrapper brand_list">
-                <p class="collection-list-title">brands<span class="collection-list-title-sign plus active">+</span>
-                  <span class="collection-list-title-sign minus">+</span>
-                </p>
-                <div class="collection-list-wrapper">
-                  {% for product_type in shop.types %}
-                    <li {% if product_type == collection.title %}class="active"{% endif %}>{{ product_type | link_to_type }}</li>
                   {% endfor %}
                 </div>
               </div>
