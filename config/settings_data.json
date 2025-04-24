@@ -333,13 +333,6 @@
               "linktext": "Eye/Neck/Lip Care"
             }
           },
-          "select_nMKcxb": {
-            "type": "select",
-            "settings": {
-              "link": "",
-              "linktext": ""
-            }
-          },
           "1598989521892": {
             "type": "select",
             "settings": {
@@ -394,7 +387,6 @@
           "1598989222425",
           "1598989251553",
           "1598989240423",
-          "select_nMKcxb",
           "1598989521892",
           "1598989537304",
           "1598989617970",
