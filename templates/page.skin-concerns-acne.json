@@ -13,42 +13,21 @@
       "type": "main-page",
       "settings": {}
     },
-    "collection_list_mkVAPK": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_9r3HcF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_c9A4CM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_9LyWUV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_9r3HcF",
-        "featured_collection_c9A4CM",
-        "featured_collection_9LyWUV"
-      ],
-      "name": "Collection list",
+    "collection_9NQjKG": {
+      "type": "collection",
+      "name": "Featured collection",
       "settings": {
-        "title": "Collection list",
-        "grid": 3
+        "title": "Cleansers",
+        "collection": "acne-oily-clogged-pores",
+        "grid": 3,
+        "rows": 2,
+        "show_vendor": false,
+        "show_view_all": false
       }
     }
   },
   "order": [
     "main",
-    "collection_list_mkVAPK"
+    "collection_9NQjKG"
   ]
 }
