@@ -20,7 +20,7 @@
         "title": "Cleansers",
         "collection": "dry-inflamed-irritated-redness-post-procedure-cleansers",
         "grid": 3,
-        "rows": 2,
+        "rows": "0",
         "show_vendor": false,
         "show_view_all": false
       }
@@ -32,7 +32,7 @@
         "title": "Serums / Targeted Therapies",
         "collection": "dry-inflamed-irritated-redness-post-procedure-serums",
         "grid": 3,
-        "rows": 2,
+        "rows": "0",
         "show_vendor": false,
         "show_view_all": false
       }
@@ -44,7 +44,7 @@
         "title": "Moisturizers",
         "collection": "dry-inflamed-irritated-redness-post-procedure-moisturizers",
         "grid": 3,
-        "rows": 2,
+        "rows": "2",
         "show_vendor": false,
         "show_view_all": false
       }
@@ -56,7 +56,7 @@
         "title": "Sun Protection",
         "collection": "fine-lines-wrinkles-sun-protection",
         "grid": 3,
-        "rows": 2,
+        "rows": "2",
         "show_vendor": false,
         "show_view_all": false
       }
