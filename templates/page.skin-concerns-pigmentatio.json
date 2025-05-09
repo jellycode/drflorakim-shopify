@@ -13,36 +13,12 @@
       "type": "main-page",
       "settings": {}
     },
-    "collection_9NQjKG": {
-      "type": "collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Cleansers",
-        "collection": "fine-lines-wrinkles-cleansers",
-        "grid": 3,
-        "rows": 2,
-        "show_vendor": false,
-        "show_view_all": false
-      }
-    },
     "collection_DYKhCc": {
       "type": "collection",
       "name": "Featured collection",
       "settings": {
         "title": "Serums / Targeted Therapies",
-        "collection": "fine-lines-wrinkles-serums-targeted-therapies",
-        "grid": 3,
-        "rows": 2,
-        "show_vendor": false,
-        "show_view_all": false
-      }
-    },
-    "collection_7tGGed": {
-      "type": "collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Moisturizers",
-        "collection": "fine-lines-wrinkles-moisturizers",
+        "collection": "pigmentation-sun-damage-dullness-serums",
         "grid": 3,
         "rows": 2,
         "show_vendor": false,
@@ -54,7 +30,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Sun Protection",
-        "collection": "fine-lines-wrinkles-sun-protection",
+        "collection": "pigmentation-sun-damage-dullness-sun-protection",
         "grid": 3,
         "rows": 2,
         "show_vendor": false,
@@ -64,9 +40,7 @@
   },
   "order": [
     "main",
-    "collection_9NQjKG",
     "collection_DYKhCc",
-    "collection_7tGGed",
     "collection_hNpBTc"
   ]
 }
