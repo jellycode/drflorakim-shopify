@@ -18,7 +18,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Cleansers",
-        "collection": "fine-lines-wrinkles-cleansers",
+        "collection": "dry-inflamed-irritated-redness-post-procedure-cleansers",
         "grid": 3,
         "rows": 2,
         "show_vendor": false,
@@ -30,7 +30,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Serums / Targeted Therapies",
-        "collection": "fine-lines-wrinkles-serums-targeted-therapies",
+        "collection": "dry-inflamed-irritated-redness-post-procedure-serums",
         "grid": 3,
         "rows": 2,
         "show_vendor": false,
@@ -42,7 +42,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Moisturizers",
-        "collection": "fine-lines-wrinkles-moisturizers",
+        "collection": "dry-inflamed-irritated-redness-post-procedure-moisturizers",
         "grid": 3,
         "rows": 2,
         "show_vendor": false,
