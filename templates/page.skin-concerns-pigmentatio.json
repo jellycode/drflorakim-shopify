@@ -20,7 +20,7 @@
         "title": "Serums / Targeted Therapies",
         "collection": "pigmentation-sun-damage-dullness-serums",
         "grid": 3,
-        "rows": 2,
+        "rows": "0",
         "show_vendor": false,
         "show_view_all": false
       }
@@ -32,7 +32,7 @@
         "title": "Sun Protection",
         "collection": "pigmentation-sun-damage-dullness-sun-protection",
         "grid": 3,
-        "rows": 2,
+        "rows": "2",
         "show_vendor": false,
         "show_view_all": false
       }
