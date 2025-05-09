@@ -3034,7 +3034,7 @@ main .shopify-policy__title h1 {
 
 @media (min-width: 1024px) {
   main .shopify-policy__title h1 {
-    white-space: nowrap;
+    white-space: normal;
   }
 }
 
