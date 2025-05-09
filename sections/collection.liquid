@@ -22,10 +22,13 @@
     {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
   {% endcase %}
 
-  {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
-  
-  {% if section.settings.rows == 0 %}
-    {%- assign product_limit = collection.products.size -%}
+  {% comment %} Check if "All" is selected (value 0) and adjust product limit {% endcomment %}
+  {% if section.settings.rows == '0' %}
+    {% comment %} Show all products in the collection {% endcomment %}
+    {%- assign product_limit = 1000 -%}
+  {% else %}
+    {% comment %} Calculate limit based on grid and rows {% endcomment %}
+    {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
   {% endif %}
 
   <ul class="grid grid-cols-3 grid--view-items">
