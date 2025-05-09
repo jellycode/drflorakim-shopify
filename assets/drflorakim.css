@@ -2963,7 +2963,7 @@ button.search-bar__submit .search_icon, button.cart-popup__close .search_icon {
 
 @media (min-width: 1024px) {
   .page-title h1, .shopify-policy__title h1 {
-    white-space: nowrap;
+    white-space: normal;
   }
 }
 
