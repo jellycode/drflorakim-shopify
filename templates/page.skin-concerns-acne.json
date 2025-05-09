@@ -20,7 +20,7 @@
         "title": "Cleansers",
         "collection": "acne-oily-clogged-pores",
         "grid": 3,
-        "rows": "5",
+        "rows": "0",
         "show_vendor": false,
         "show_view_all": false
       }
