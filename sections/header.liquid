@@ -139,6 +139,13 @@
             {% comment %}<img src="{{ 'search_icon.svg' | asset_url }}" style="max-width: 20px;">{% endcomment %}
             <span class="icon__fallback-text ">{{ 'layout.navigation.search' | t }}</span>
           </button>
+		  
+		  <a href="/collections/all" class="site-header__icon px-4">
+            {% include 'icon-store' %}
+			
+		  </a>
+		  
+		  <!--
 
           {% if shop.customer_accounts_enabled %}
             {% if customer %}
@@ -155,6 +162,7 @@
               </a>
             {% endif %}
           {% endif %}
+		-->
 
           <a href="{{ routes.cart_url }}" class="site-header__icon site-header__cart">
             {% include 'icon-cart' %}
