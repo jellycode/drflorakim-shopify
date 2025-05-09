@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "collection_9NQjKG": {
+      "type": "collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Cleansers",
+        "collection": "acne-oily-clogged-pores",
+        "grid": 3,
+        "rows": "0",
+        "show_vendor": false,
+        "show_view_all": false
+      }
+    },
+    "collection_kzn7M9": {
+      "type": "collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Moisturizers",
+        "collection": "acne-oily-clogged-pores-moisturizers",
+        "grid": 3,
+        "rows": "0",
+        "show_vendor": false,
+        "show_view_all": false
+      }
+    },
+    "collection_KXY3fV": {
+      "type": "collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Sun Protection",
+        "collection": "acne-oily-clogged-pores-sun-protection",
+        "grid": 3,
+        "rows": "0",
+        "show_vendor": false,
+        "show_view_all": false
+      }
+    },
+    "collection_FxDmMe": {
+      "type": "collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Targeted Therapies",
+        "collection": "acne-oily-clogged-pores-targeted-therapies",
+        "grid": 3,
+        "rows": "0",
+        "show_vendor": false,
+        "show_view_all": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection_9NQjKG",
+    "collection_FxDmMe",
+    "collection_kzn7M9",
+    "collection_KXY3fV"
+  ]
+}
