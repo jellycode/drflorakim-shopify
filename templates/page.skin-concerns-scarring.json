@@ -17,44 +17,8 @@
       "type": "collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Cleansers",
-        "collection": "acne-oily-clogged-pores",
-        "grid": 3,
-        "rows": "0",
-        "show_vendor": false,
-        "show_view_all": false
-      }
-    },
-    "collection_kzn7M9": {
-      "type": "collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Moisturizers",
-        "collection": "acne-oily-clogged-pores-moisturizers",
-        "grid": 3,
-        "rows": "0",
-        "show_vendor": false,
-        "show_view_all": false
-      }
-    },
-    "collection_KXY3fV": {
-      "type": "collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Sun Protection",
-        "collection": "acne-oily-clogged-pores-sun-protection",
-        "grid": 3,
-        "rows": "0",
-        "show_vendor": false,
-        "show_view_all": false
-      }
-    },
-    "collection_FxDmMe": {
-      "type": "collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Targeted Therapies",
-        "collection": "acne-oily-clogged-pores-targeted-therapies",
+        "title": "",
+        "collection": "scarring",
         "grid": 3,
         "rows": "0",
         "show_vendor": false,
@@ -64,9 +28,6 @@
   },
   "order": [
     "main",
-    "collection_9NQjKG",
-    "collection_FxDmMe",
-    "collection_kzn7M9",
-    "collection_KXY3fV"
+    "collection_9NQjKG"
   ]
 }
